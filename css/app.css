@@ -6100,6 +6100,20 @@ html.IGv2 .section.cta {
       background-color: transparent;
       color: #0d263c; }
 
+html.IGv2 .section.find-an-advisor {
+  background-color: #f1f7f7; }
+  @media screen and (min-width: 64em) {
+    html.IGv2 .section.find-an-advisor {
+      padding-top: 4rem;
+      padding-bottom: 8.4rem; } }
+  html.IGv2 .section.find-an-advisor .outline-btn {
+    margin-top: 3rem; }
+  html.IGv2 .section.find-an-advisor .tp_03 {
+    margin-bottom: 1.5rem; }
+  @media screen and (max-width: 39.9375em) {
+    html.IGv2 .section.find-an-advisor .tp_03 {
+      text-align: center; } }
+
 @media screen and (min-width: 64em) {
   html.IGv2 .section.trending .row + .row .columns + .columns {
     padding-right: 2.3rem; } }

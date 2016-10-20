@@ -1603,6 +1603,32 @@ h4 {
 	}
 }
 
+.section.find-an-advisor{
+	background-color: $alternateBackground;
+
+	@media #{$large-up} {
+
+		padding-top: 4rem;
+		padding-bottom:8.4rem;
+	}
+
+	.outline-btn{
+		margin-top: 3rem;
+	}
+
+	.tp_03{
+		margin-bottom: 1.5rem;
+	}
+
+	@media #{$small-only} {
+
+		.tp_03{
+			text-align: center;
+		}
+	}
+
+}
+
 .section.trending {
 	.row {
 		+ .row {
