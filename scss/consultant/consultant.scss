@@ -842,6 +842,15 @@ h4 {
 
 							.outline-btn {
 								margin-bottom: 1.1rem;
+
+								&.secondary{
+									@media #{$small-only}{
+										&:hover {
+											color: white;
+											background-color: transparent;
+										}
+									}
+								}//17/10/16 update
 							}
 
 							.icon {
