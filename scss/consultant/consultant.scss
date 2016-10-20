@@ -694,7 +694,7 @@ h4 {
 							}
 
 							h1 {
-								margin-bottom: .7rem;
+								margin-bottom: 2rem;
 
 								@media #{$small-only} {
 									margin-bottom: .6rem;
@@ -716,10 +716,61 @@ h4 {
 
 								@media #{$small-only} {
 									margin-bottom: .3rem;
+									width: 11rem;
+									height: 14rem;
 								}
 
 								img {
 									height: 28rem;
+
+									@media #{$small-only}{
+										height: 14rem;
+									}
+								}
+							}
+
+							.underline{
+
+								@include vertical-separator("&", .2rem, .5rem, 30%);
+								
+								&::after {
+									border-color: rgba(13,38,60,0.3);
+									width: 334px;
+									margin: 0 auto;
+									left:0;
+									right:0;
+
+									@media #{$medium-only}{
+										width: 250px;
+										padding-top:0;
+										padding-bottom: 0;
+									}
+
+									@media #{$small-only}{
+										width: 230px;
+										padding-top:0;
+									}
+								}
+
+								margin-bottom: 0.5rem;
+								padding-top: 1.5rem;
+								padding-bottom: 0.5rem;
+
+								@media #{$small-only}{
+										padding-top:0.5;
+										padding-bottom:0;
+									}
+
+							}
+
+							.tp_08{
+
+								@media #{$medium-only} {
+									margin-top: 2rem;
+									margin-bottom: 0;
+								}
+								@media #{$small-only} {
+									margin-bottom: 0.5rem;
 								}
 							}
 
