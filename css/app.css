@@ -6001,6 +6001,8 @@ html.IGv2 {
               margin-right: 1.3rem; }
             html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .outline-btn {
               width: 100%; }
+            html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .dropdown {
+              float: right; }
             @media screen and (max-width: 39.9375em) {
               html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions {
                 margin-top: 2rem; } }
@@ -7201,11 +7203,11 @@ html.IGv2 {
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .section.find-an-advisor .tp_03 {
         text-align: center; } }
-  html.IGv2 .section.trending .info-toggle-content :nth-child(2) {
-    text-align: right; }
   @media screen and (min-width: 64em) {
     html.IGv2 .section.trending .row + .row .columns + .columns {
       padding-right: 2.3rem; } }
+  html.IGv2 .section.trending .row + .row .columns + .columns:nth-child(2) {
+    text-align: right; }
   html.IGv2 .section.trending .row + .row .columns + .columns .outline-btn {
     margin-top: 7.4rem;
     margin-bottom: 2.2rem; }
@@ -7281,22 +7283,6 @@ html.IGv2 {
           transform: translateY(-50%);
       z-index: 100;
       cursor: pointer; }
-      html.IGv2 .homepage-carousel .slick-arrow.carousel-prev, html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-prev {
-        left: 0; }
-        @media screen and (min-width: 40em) {
-          html.IGv2 .homepage-carousel .slick-arrow.carousel-prev, html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-prev {
-            left: -2rem; } }
-        @media screen and (min-width: 64em) {
-          html.IGv2 .homepage-carousel .slick-arrow.carousel-prev, html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-prev {
-            left: -6rem; } }
-      html.IGv2 .homepage-carousel .slick-arrow.carousel-next, html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-next {
-        right: 0; }
-        @media screen and (min-width: 40em) {
-          html.IGv2 .homepage-carousel .slick-arrow.carousel-next, html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-next {
-            right: -2rem; } }
-        @media screen and (min-width: 64em) {
-          html.IGv2 .homepage-carousel .slick-arrow.carousel-next, html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-next {
-            right: -6rem; } }
     html.IGv2 .homepage-carousel .slick-dots, html.IGv2 .personnel-bio-overlay .slick-dots {
       bottom: -5.1rem;
       left: 0; }
@@ -7316,6 +7302,38 @@ html.IGv2 {
           height: 100%; }
           html.IGv2 .homepage-carousel .slick-dots li button::before, html.IGv2 .personnel-bio-overlay .slick-dots li button::before {
             content: ""; }
+  html.IGv2 .homepage-carousel .slick-arrow.carousel-prev {
+    left: 0; }
+    @media screen and (min-width: 40em) {
+      html.IGv2 .homepage-carousel .slick-arrow.carousel-prev {
+        left: -2rem; } }
+    @media screen and (min-width: 64em) {
+      html.IGv2 .homepage-carousel .slick-arrow.carousel-prev {
+        left: -6rem; } }
+  html.IGv2 .homepage-carousel .slick-arrow.carousel-next {
+    right: 0; }
+    @media screen and (min-width: 40em) {
+      html.IGv2 .homepage-carousel .slick-arrow.carousel-next {
+        right: -2rem; } }
+    @media screen and (min-width: 64em) {
+      html.IGv2 .homepage-carousel .slick-arrow.carousel-next {
+        right: -6rem; } }
+  html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-prev {
+    left: 0; }
+    @media screen and (min-width: 40em) {
+      html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-prev {
+        left: 2rem; } }
+    @media screen and (min-width: 64em) {
+      html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-prev {
+        left: 6rem; } }
+  html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-next {
+    right: 0; }
+    @media screen and (min-width: 40em) {
+      html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-next {
+        right: 2rem; } }
+    @media screen and (min-width: 64em) {
+      html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-next {
+        right: 6rem; } }
   html.IGv2 .block-link {
     cursor: pointer; }
     html.IGv2 .block-link:hover .portrait {
