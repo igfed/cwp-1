@@ -4650,6 +4650,7 @@ html.IGv2 {
   /*--------------------------------MAIN ELEMENTS----------------------------------------*/
   /*-------Fonts------------*/
   /*------Graphics---------*/
+  /*-------Video-----------*/
   /*--------Grid-----------*/
   /*------Buttons----------*/
   /*------------Forms-------------*/
@@ -4671,6 +4672,7 @@ html.IGv2 {
   /*-----------------14.Have Questions-----------------*/
   /*----------------15.Have Questions (office template version)------------*/
   /*---------------16.Adversisement------------------*/
+  /*---------------16.Adversisement (Video)------------------*/
   /*---------------17.More - Advice-------------------*/ }
   html.IGv2 {
     font-size: 62.5%;
@@ -5018,6 +5020,61 @@ html.IGv2 {
       height: 1.8rem;
       top: .2rem;
       left: -.3rem; }
+  html.IGv2 .video-container {
+    left: 0;
+    margin: 0 auto .6rem;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%; }
+    html.IGv2 .video-container .video-container-responsive {
+      height: 0;
+      margin: auto;
+      padding-bottom: 56.25%;
+      position: relative;
+      width: 100%;
+      z-index: 1; }
+    html.IGv2 .video-container .BrightcoveExperience {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%; }
+    html.IGv2 .video-container .video-spinner-container {
+      background-color: #0c273c;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 9999; }
+      html.IGv2 .video-container .video-spinner-container .video-spinner {
+        background: #0c273c url("../img/ui/spinner.gif") no-repeat scroll center center;
+        bottom: 0;
+        height: 120px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 120px;
+        z-index: 99999; }
+    html.IGv2 .video-container .video-image {
+      background-image: url("../img/ui/video/placeholder.png");
+      background-size: 100% auto;
+      bottom: 0;
+      cursor: pointer;
+      height: auto;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 250; }
+      @media screen and (max-width: 39.9375em) {
+        html.IGv2 .video-container .video-image {
+          background-image: url("../img/ui/video/placeholder-small.png"); } }
   html.IGv2 .row {
     max-width: 120rem; }
     @media screen and (max-width: 39.9375em) {
@@ -6657,61 +6714,6 @@ html.IGv2 {
     html.IGv2 .section.video .row {
       max-width: 790px;
       margin: 0 auto; }
-      html.IGv2 .section.video .row .video-container {
-        left: 0;
-        margin: 0 auto .6rem;
-        position: relative;
-        right: 0;
-        top: 0;
-        width: 100%; }
-        html.IGv2 .section.video .row .video-container .video-container-responsive {
-          height: 0;
-          margin: auto;
-          padding-bottom: 56.25%;
-          position: relative;
-          width: 100%;
-          z-index: 1; }
-        html.IGv2 .section.video .row .video-container .BrightcoveExperience {
-          height: 100%;
-          left: 0;
-          position: absolute;
-          top: 0;
-          width: 100%; }
-        html.IGv2 .section.video .row .video-container .video-spinner-container {
-          background-color: #0c273c;
-          height: 100%;
-          left: 0;
-          position: absolute;
-          top: 0;
-          width: 100%;
-          z-index: 9999; }
-          html.IGv2 .section.video .row .video-container .video-spinner-container .video-spinner {
-            background: #0c273c url("../img/ui/spinner.gif") no-repeat scroll center center;
-            bottom: 0;
-            height: 120px;
-            left: 0;
-            margin: auto;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 120px;
-            z-index: 99999; }
-        html.IGv2 .section.video .row .video-container .video-image {
-          background-image: url("../img/ui/video/placeholder.png");
-          background-size: 100% auto;
-          bottom: 0;
-          cursor: pointer;
-          height: auto;
-          left: 0;
-          margin: auto;
-          position: absolute;
-          right: 0;
-          top: 0;
-          width: 100%;
-          z-index: 250; }
-          @media screen and (max-width: 39.9375em) {
-            html.IGv2 .section.video .row .video-container .video-image {
-              background-image: url("../img/ui/video/placeholder-small.png"); } }
       html.IGv2 .section.video .row + .row a:hover {
         text-decoration: underline; }
       html.IGv2 .section.video .row + .row .columns + .columns {
@@ -6863,8 +6865,7 @@ html.IGv2 {
         display: -ms-flexbox;
         display: flex; } }
     html.IGv2 .section.events .row .row:first-child {
-      max-width: 87rem;
-      margin: 0 auto 13.5rem; }
+      max-width: 87rem; }
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .section.events .row .row:first-child {
           margin-bottom: 1.9rem; } }
@@ -7203,6 +7204,23 @@ html.IGv2 {
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .section.find-an-advisor .tp_03 {
         text-align: center; } }
+  @media screen and (min-width: 40em) {
+    html.IGv2 .advertisement .info-toggle-content .columns:nth-child(2) {
+      float: left; }
+    html.IGv2 .advertisement .illustration {
+      float: right; } }
+  html.IGv2 .advertisement, html.IGv2 .advertisement-video {
+    background-color: #fbf7eb; }
+    html.IGv2 .advertisement .tp_03 br, html.IGv2 .advertisement-video .tp_03 br {
+      display: none; }
+    @media screen and (min-width: 40em) {
+      html.IGv2 .advertisement .info-toggle-content .columns:nth-child(2), html.IGv2 .advertisement-video .info-toggle-content .columns:nth-child(2) {
+        padding-left: 3.6rem; } }
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      html.IGv2 .advertisement .tp_03 br, html.IGv2 .advertisement-video .tp_03 br {
+        display: block; } }
+  html.IGv2 .advertisement-video .info-toggle-content .columns:nth-child(1) a:hover {
+    text-decoration: underline; }
   @media screen and (min-width: 64em) {
     html.IGv2 .section.trending .row + .row .columns + .columns {
       padding-right: 2.3rem; } }
