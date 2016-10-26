@@ -7,16 +7,166 @@
         <title>Consultant Pages</title>
         <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
     </head>
     <body>
         <div class="body-content">
-            <div class="section personnel profile">
+         <!-- Header navigation -->
+            <div class="header-wrap">
+    
+              <!-- Utility Topbar -->
+              <div class="utility-topbar-row">
+                <!-- Utility topbar -->
+                <div class="large-12 columns nopadding show-for-large"> 
+                   <div class="utility-topbar-wrap">
+                    <div class="top-bar utility-topbar text-right ">
+                      <ul class="dropdown menu" data-dropdown-menu data-options="disableHover:true;closingTime:5000;clickOpen:true;">
+                        <li>
+                          <a href="#" class="main-topbar-link with-subitems">Login</a>
+                          <ul class="menu vertical text-left utility-topbar-submenu">
+                            <li><a href="https://www.clientvu.ca/login/cana/cai/clie/priusacquiro.do" class="main-topbar-sublink">Client Login</a></li>
+                            <li><a href="https://bvi.bnc.ca/index/investorsgroup/indexen.html" class="main-topbar-sublink">Solutions Banking<sup>TM</sup></a></li>
+                          </ul>
+                        </li>
+                        <li class="divider-menu-link"></li>
+                        <li><a href="http://www.investorsgroup.com/en/client-resources" class="main-topbar-link">Client support</a></li>
+                        <li class="divider-menu-link"></li>
+                        <li><a href="http://www.investorsgroup.com/fr/default.aspx" class="main-topbar-link">Français</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Main Topbar -->
+              <div class="main-topbar-row ">
+                <!-- LOGO -->
+                <div class="small-6 medium-6 large-3 columns left nopadding">
+                  <!-- Logo for large -->
+                  <img src="http://www.investorsgroup.com/images/Logo_IG90_combined_TopLeft_E_RGB.svg" alt="" class="ig-brand-logo">
+                  <p class="ig-brand-slogan">Invest in Life</p>    
+                </div>
+
+                <!-- Humberger Icon & Main Topbar -->
+                <div class="small-6 medium-6 large-9 columns nopadding">
+                  <!-- Topbar for large -->
+                  <div class="main-topbar-wrap show-for-large">
+                    <div class="top-bar text-right main-topbar" data-options="is_hover: false">
+                      <div id="responsive-menu">
+       
+                          <ul class="dropdown menu main-topbar-menu" id="main-topbar-menu" data-dropdown-menu data-options="disableHover:true;closingTime:5000;clickOpen:true;">
+                            <li>
+                              <a href="#" class="main-topbar-link with-subitems">Services</a>
+                              <ul class="menu vertical text-left main-topbar-submenu">
+                                <li><a href="http://www.investorsgroup.com/en/opportunities/investment" class="main-topbar-sublink">Investments<span class="divider-submenu-link"></span></a></li>
+                                <li><a href="http://www.investorsgroup.com/en/opportunities/retirement" class="main-topbar-sublink">Retirement<span class="divider-submenu-link"></span></a></li>
+                                <li><a href="http://www.investorsgroup.com/en/opportunities/mortgage" class="main-topbar-sublink">Mortgage<span class="divider-submenu-link"></span></a></li>
+                                <li><a href="http://www.investorsgroup.com/en/opportunities/estate-planning" class="main-topbar-sublink">Estate Planning<span class="divider-submenu-link"></span></a></li>
+                                <li><a href="http://www.investorsgroup.com/en/opportunities/tax-planning" class="main-topbar-sublink">Tax Planning<span class="divider-submenu-link"></span></a></li>
+                                <li><a href="http://www.investorsgroup.com/en/opportunities/insurance" class="main-topbar-sublink">Insurance</a></li>
+                              </ul>
+                            </li>
+                            <li class="divider-menu-link"></li>
+                            <li><a href="http://investorsgroup.com/more/en/" class="main-topbar-link">Advice &amp; Stories</a></li>
+                            <li class="findAdvisor"><a href="http://www.investorsgroup.com/en/find-an-advisor" class="main-topbar-link">Find an advisor</a></li>
+                            <li class="form-input-search">
+                             <form id="siteSearch" class="search-form" action="/en/search" onsubmit="return emptysearch_validateForm();">
+                                <input class="search-input" type="text" name="Search" placeholder="">
+                                <span class="search-input-close"></span>
+                              </form> 
+                            </li>
+                          </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- humberger icon -->
+                  <div class="topbar mb-main-topbar-wrap right hide-for-large">
+                     <div class="title-bar text-right">
+                        <span data-responsive-toggle="example-menu" data-hide-for="large">
+                          <button class="menu-icon" type="button" data-toggle id="menu-button"></button> 
+                        </span>
+                      </div>
+                  </div>
+                </div>
+
+                <!-- Accordion Menu -->
+                <div class="small-12 medium-12 hide-for-large">
+                  <!-- Header accordion wrapper -->
+                  <div id="example-menu" class="header-accordion-wrap" id="">
+                    <!-- Close button -->
+                    <div class="closeBtn-wrap">
+                      <button class="closeBtn--accordion" id="closeBtn--accordion"></button>
+                    </div>
+
+                    <!-- form -->
+                    <form action="" class="mb-search-form">
+                      <div class="row collapse">
+                        <!-- Form -->
+                        <div class="small-11 columns">
+                          <span class="mb-search">
+                            <input type="text" name="mb-search" 
+                                   placeholder="Search Investors Group"
+                                   class="mb-search-input">
+                          </span>
+                        </div>
+                        <div class="small-1 columns text-right">
+                          <span class="">
+                            <button type="reset" value="Reset" 
+                                    class="mb-search-reset">
+                            </button>  
+                          </span> 
+                        </div>  
+                      </div>
+                    </form>
+                    <!-- mb-accordion menu -->
+                    <ul class="vertical menu header-accordion-menu" data-accordion-menu>
+                      <li>
+                        <a href="#" class="menu-link">Services</a>
+                        <ul class="menu vertical nested header-accordion-submenu">
+                          <li><a href="http://www.investorsgroup.com/en/opportunities/investment" class="submenu-link">Investments</a></li>
+                          <li class="main-link-divider"></li>
+                          <li><a href="http://www.investorsgroup.com/en/opportunities/retirement" class="submenu-link">Retirement</a></li>
+                          <li class="main-link-divider"></li>
+                          <li><a href="http://www.investorsgroup.com/en/opportunities/mortgage" class="submenu-link">Mortgage</a></li>
+                          <li class="main-link-divider"></li>
+                          <li><a href="http://www.investorsgroup.com/en/opportunities/estate-planning" class="submenu-link">Estate Planning</a></li>
+                          <li class="main-link-divider"></li>
+                          <li><a href="http://www.investorsgroup.com/en/opportunities/tax-planning" class="submenu-link">Tax Planning</a></li>
+                          <li class="main-link-divider"></li>
+                          <li><a href="http://www.investorsgroup.com/en/opportunities/insurance" class="submenu-link">Insurance</a></li>
+                        </ul>
+                      </li>
+                      <li class="main-link-divider"></li>
+                      <li><a href="http://www.investorsgroup.com/en/find-an-advisor" class="menu-link">Find an Advisor</a></li>
+                      <li class="main-link-divider"></li>
+                      <li>
+                        <a href="#" class="menu-link">Login</a>
+                        <ul class="menu vertical nested header-accordion-submenu">
+                          <li><a href="https://www.clientvu.ca/login/cana/cai/clie/priusacquiro.do" class="submenu-link">Client Login</a></li>
+                          <li class="main-link-divider"></li>
+                          <li><a href="https://bvi.bnc.ca/index/investorsgroup/indexen.html" class="submenu-link">Solutions Banking<sup>TM</sup></a></li>
+                        </ul>
+                      </li>
+                      <li class="main-link-divider"></li>
+                      <li><a href="#" class="menu-link">Client Support</a></li>
+                      <li class="main-link-divider"></li>
+                      <li><a href="#" class="menu-link lang">Français</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- header ends -->
+            
+
+             <div class="section personnel profile">
                 <div class="row">
                 </div>
                 <div class="row">
                     <div class="small-12 columns">
                         <div class="row">
-                            <div class="small-12 medium-11 medium-centered columns details">
+                            <div class="small-12 medium-10 large-9 medium-centered columns details">
                                 <div class="portrait">
                                     <img src="img/profile-photos/michael-scott.jpg" alt="Angela Martin" />
                                 </div>
@@ -41,8 +191,7 @@
                         </div>
                         <div class="row form-actions">
                             <div class="small-proportional-grid">
-                                <div>
-                                    <div class="small-4 medium-5 medium-push-1 columns">
+                                    <div class="small-6 medium-5 medium-push-1 columns">
                                         <ul class="dropdown menu" data-dropdown-menu>
                                             <li>
                                                 <a class="outline-btn secondary small-icon phone dropdown-button" type="button">
@@ -81,13 +230,12 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="small-4 show-for-small-only columns">
+                                    <div class="small-6 show-for-small-only columns">
                                         <a href="mailto:a@b.com" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
                                     </div>
-                                </div>
                             </div>
                             <div class="small-12 medium-5 medium-pull-1 columns">
-                                <a class="outline-btn primary" type="button">Request an Appointment</a>
+                                <a class="outline-btn primary" type="button" href="#appointment-michael-scott">Request an Appointment</a>
                             </div>
                         </div>
                         <div class="row show-for-small-only">
@@ -107,6 +255,8 @@
                     </div>
                 </div>
             </div>
+
+
 
             <div class="section hours info-toggle-small active" info-toggle-aria="true">
                 <div class="row info-toggle-trigger">
@@ -139,11 +289,10 @@
                                 <dd>Closed</dd>
                         </dl>
 
-                        <p class="tp_12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ex ac lacus tristique sollicitudin.</p>
+                         <p class="tp_12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ex ac lacus tristique sollicitudin.</p>
 
                     </div>
                 </div>
-
             </div>
 
             <div class="section languages info-toggle-small active" info-toggle-aria="true">
@@ -168,7 +317,9 @@
                             <li>Spanish</li>
                             <li>Tamil</li>
                         </ul>
-                         <p class="tp_12">Corporate published content will only be provided in the official languages (English &amp; French)</p>
+
+                        <p class="tp_12">Corporate published content will only be provided in the official languages (English &amp; French)</p>
+
                     </div>
                 </div>
             </div>
@@ -213,7 +364,23 @@
                                 <p class="tp_08">Comm (Hons), CFP, CLU</p>
                                 <p class="tp_06">regional director</p>
                                 <p class="tp_09">Planificateur financier, Représentant en épargne collective, Conseiller en sécurité financière, Conseiller en assurance et en rentes collectives</p>
-                                <a href="#joleen-mary-ann" class="underline-link">View Bio</a>
+                                <a href="#bio-joleen-mary-ann" class="underline-link overlay-hide">View Bio</a>
+                                <div class="overlay-only">
+                                    <a href="tel:+15555555555" class="tp_09">
+                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                                        <span class="hide-for-small-only">555-555-5555</span>
+                                    </a>
+                                    <a href="mailto:a@b.com" class="tp_09">
+                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span>
+                                        <span class="hide-for-small-only">Michael.Scott@investorsgroup.com</span>
+                                    </a>
+                                </div>
+                                <p class="social-icons overlay-only">
+                                    <a href="#"><i class="icon facebook">Facebook</i></a>
+                                    <a href="#"><i class="icon linkedin">Linked In</i></a>
+                                    <a href="#"><i class="icon twitter">Twitter</i></a>
+                                </p>
+                                <p class="tp_09 overlay-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum sagittis lectus, et ornare eros consectetur vel. Nam sed neque eu dui ultrices placerat sit amet vitae elit. Nulla lobortis ultrices neque ac lobortis. Nam imperdiet, risus nec consectetur pretium, lectus eros hendrerit odio, id pretium velit orci tristique lacus. Duis ac elit mauris. Maecenas convallis volutpat dolor eu tincidunt. Duis est mi, bibendum ac malesuada nec, congue ultricies erat. Pellentesque sodales a arcu nec mattis. Ut a fringilla ipsum. Phasellus interdum dolor arcu, quis vestibulum tortor imperdiet et. Phasellus ac massa non ante ultricies fringilla. Sed viverra justo ut.quis vestibulum tortor imperdiet etquis vestibulum tortor imperdiet etfff</p>
                             </div>
                         </div>
                     </div>
@@ -240,7 +407,23 @@
                                 <p class="tp_08">Comm (Hons), CFP, CLU</p>
                                 <p class="tp_06">executive financial consultant</p>
                                 <p class="tp_09">Planificateur financier, Représentant en épargne collective, Conseiller en sécurité financière, Conseiller en assurance et en rentes collectives</p>
-                                <a href="#angela-martin" class="underline-link">View Bio</a>
+                                <a href="#bio-angela-martin" class="underline-link overlay-hide">View Bio</a>
+                                <div class="overlay-only">
+                                    <a href="tel:+15555555555" class="tp_09">
+                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                                        <span class="hide-for-small-only">555-555-5555</span>
+                                    </a>
+                                    <a href="mailto:a@b.com" class="tp_09">
+                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span>
+                                        <span class="hide-for-small-only">Michael.Scott@investorsgroup.com</span>
+                                    </a>
+                                </div>
+                                <p class="social-icons overlay-only">
+                                    <a href="#"><i class="icon facebook">Facebook</i></a>
+                                    <a href="#"><i class="icon linkedin">Linked In</i></a>
+                                    <a href="#"><i class="icon twitter">Twitter</i></a>
+                                </p>
+                                <p class="tp_09 overlay-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum sagittis lectus, et ornare eros consectetur vel. Nam sed neque eu dui ultrices placerat sit amet vitae elit. Nulla lobortis ultrices neque ac lobortis. Nam imperdiet, risus nec consectetur pretium, lectus eros hendrerit odio, id pretium velit orci tristique lacus. Duis ac elit mauris. Maecenas convallis volutpat dolor eu tincidunt. Duis est mi, bibendum ac malesuada nec, congue ultricies erat. Pellentesque sodales a arcu nec mattis. Ut a fringilla ipsum. Phasellus interdum dolor arcu, quis vestibulum tortor imperdiet et. Phasellus ac massa non ante ultricies fringilla. Sed viverra justo ut.quis vestibulum tortor imperdiet etquis vestibulum tortor imperdiet etfff</p>
                             </div>
                             <div class="small-12 medium-6 columns block-link">
                                 <div class="portrait">
@@ -249,8 +432,23 @@
                                 <h3>Jim Halpert</h3>
                                 <p class="tp_08">Comm (Hons), CFP, CLU</p>
                                 <p class="tp_06">associate consultant</p>
-                                <p class="tp_09">Planificateur financier, Représentant en épargne collective, Conseiller en sécurité financière, Conseiller en assurance et en rentes collectives</p>
-                                <a href="#jim-halpert" class="underline-link">View Bio</a>
+                                <a href="#bio-jim-halpert" class="underline-link overlay-hide">View Bio</a>
+                                <div class="overlay-only">
+                                    <a href="tel:+15555555555" class="tp_09">
+                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                                        <span class="hide-for-small-only">555-555-5555</span>
+                                    </a>
+                                    <a href="mailto:a@b.com" class="tp_09">
+                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span>
+                                        <span class="hide-for-small-only">Michael.Scott@investorsgroup.com</span>
+                                    </a>
+                                </div>
+                                <p class="social-icons overlay-only">
+                                    <a href="#"><i class="icon facebook">Facebook</i></a>
+                                    <a href="#"><i class="icon linkedin">Linked In</i></a>
+                                    <a href="#"><i class="icon twitter">Twitter</i></a>
+                                </p>
+                                <p class="tp_09 overlay-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum sagittis lectus, et ornare eros consectetur vel. Nam sed neque eu dui ultrices placerat sit amet vitae elit.</p>
                             </div>
                         </div>
                         <div class="row">
@@ -262,7 +460,168 @@
                                 <p class="tp_08">Comm (Hons), CFP, CLU</p>
                                 <p class="tp_06">associate consultant</p>
                                 <p class="tp_09">Planificateur financier, Représentant en épargne collective, Conseiller en sécurité financière, Conseiller en assurance et en rentes collectives</p>
-                                <a href="#pam-beesly" class="underline-link">View Bio</a>
+                                <a href="#bio-pam-beesly" class="underline-link overlay-hide">View Bio</a>
+                                <div class="overlay-only">
+                                    <a href="tel:+15555555555" class="tp_09">
+                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                                        <span class="hide-for-small-only">555-555-5555</span>
+                                    </a>
+                                    <a href="mailto:a@b.com" class="tp_09">
+                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span>
+                                        <span class="hide-for-small-only">Michael.Scott@investorsgroup.com</span>
+                                    </a>
+                                </div>
+                                <p class="social-icons overlay-only">
+                                    <a href="#"><i class="icon facebook">Facebook</i></a>
+                                    <a href="#"><i class="icon linkedin">Linked In</i></a>
+                                    <a href="#"><i class="icon twitter">Twitter</i></a>
+                                </p>
+                                <p class="tp_09 overlay-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum sagittis lectus, et ornare eros consectetur vel. Nam sed neque eu dui ultrices placerat sit amet vitae elit. Nulla lobortis ultrices neque ac lobortis. Nam imperdiet, risus nec consectetur pretium, lectus eros hendrerit odio, id pretium velit orci tristique lacus. Duis ac elit mauris. Maecenas convallis volutpat dolor eu tincidunt. Duis est mi, bibendum ac malesuada nec, congue ultricies erat. Pellentesque sodales a arcu nec mattis. Ut a fringilla ipsum. Phasellus interdum dolor arcu, quis vestibulum tortor imperdiet et. Phasellus ac massa non ante ultricies fringilla. Sed viverra justo ut.quis vestibulum tortor imperdiet etquis vestibulum tortor imperdiet etfff</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section video">
+                <div class="row">
+                    <div class="small-12 columns">
+                        <div class="video-container">
+                            <div class="video-spinner-container">
+                                <div class="video-spinner"></div>
+                            </div>
+                            <a href="#" title="video" class="js-video-play-btn">
+                                <div class="video-image js-video-play"></div>
+                            </a>
+                            <div class="video-container-responsive">
+                                <!-- Start of Brightcove Player -->
+                                <div style="display:none"></div>
+                                <!--
+                                By use of this code snippet, I agree to the Brightcove Publisher T and C
+                                found at https://accounts.brightcove.com/en/terms-and-conditions/.
+                                -->
+                                <object id="myExperience4692154245001" class="BrightcoveExperience">
+                                    <param name="htmlFallback" value="true" />
+                                    <param name="bgcolor" value="#FFFFFF " />
+                                    <param name="width" value="100%" />
+                                    <param name="height" value="100%" />
+                                    <param name="playerID" value="4721138328001" />
+                                    <param name="playerKey" value="AQ~~,AAADjafw_sk~,383Vbs13HVAXHnb_e-BAb9SMMY6kMHnV" />
+                                    <param name="isVid" value="true" />
+                                    <param name="isUI" value="true" />
+                                    <param name="dynamicStreaming" value="true" />
+                                    <param name="wmode" value="opaque" />
+                                    <param name="@videoPlayer" value="4727877521001" />
+                                    <param name="includeAPI" value="true" />
+                                    <param name="templateLoadHandler" value="onTemplateLoad" />
+                                    <param name="templateReadyHandler" value="onTemplateReady" />
+                                </object>
+                                <!-- End of Brightcove Player -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns hide-for-small-only text-right">
+                        <a href="//www.investorsgroup.com/external/app/tribal/pdf/invest-in-life-Transcription-EN.pdf" target="_blank" class="tp_24">Transcript</a>
+                    </div>
+                    <div class="small-12 columns">
+                        <p class="tp_03">Lorem ipsum dolor sit amet, consece adipiscing elit.</p>
+                        <p class="tp_07 hide-for-small-only">Nam viverra risus sed justo porttitor vehicula. Aliquam pretium metus id enim varius, eget scelerisque est sed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section organizations info-toggle-small active" info-toggle-aria="true">
+                <div class="row info-toggle-trigger">
+                    <div class="small-9 medium-12 columns">
+                        <h2>organizations we support</h2>
+                    </div>
+                    <div class="small-3 columns show-for-small-only">
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="row info-toggle-content">
+                    <div class="small-12 columns">
+                        <ul>
+                            <li>
+                                <img src="img/organizations/volunteer.gif" alt="Volunteer Canada" />
+                            </li>
+                            <li>
+                                <img src="img/organizations/imagine.gif" alt="Imagine Canada" />
+                            </li>
+                            <li>
+                                <img src="img/organizations/free-children.gif" alt="Free the Children" />
+                            </li>
+                            <li>
+                                <img src="img/organizations/athletes.gif" alt="Athletes Can" />
+                            </li>
+                            <li>
+                                <img src="img/organizations/coach.gif" alt="Coach.ca" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section careers info-toggle-small active" info-toggle-aria="true">
+                <div class="row info-toggle-trigger">
+                    <div class="small-6 columns">
+                        <h2>Careers &mdash;</h2>
+                    </div>
+                    <div class="small-6 columns show-for-small-only">
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="row info-toggle-content">
+                    <div class="small-12 columns">
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam.</h3>
+                                <p class="tp_07">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae elit ed justo pharetra condimentum nec id mauris. Curabitur sit amet magna sit amet felis pharetra varius et scelerisque arcu. Etiam ut. amet felis pharetra</p>
+                                <a class="outline-btn constrained" type="button" href="#apply-career">Apply Now</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <h3 class="tp_05">why join investors group?</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 medium-6 columns">
+                                <div class="illustration" data-illustrationid="consultant-about"></div>
+                                <h4>Lorem ipsum dolor sit amet</h4>
+                                <p class="tp_09">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula, tortor eu consequat egesta. Praesent vehicula,</p>
+                            </div>
+                            <div class="small-12 medium-6 columns">
+                                <div class="illustration" data-illustrationid="consultant-about"></div>
+                                <h4>Lorem ipsum dolor sit amet elit</h4>
+                                <p class="tp_09">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula, tortor eu consequat egesta.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 medium-6 columns">
+                                <div class="illustration" data-illustrationid="consultant-about"></div>
+                                <h4>Lorem ipsum dolor sit amet elit</h4>
+                                <p class="tp_09">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula, tortor eu consequat egesta.</p>
+                            </div>
+                            <div class="small-12 medium-6 columns">
+                                <div class="illustration" data-illustrationid="consultant-about"></div>
+                                <h4>Lorem ipsum dolor</h4>
+                                <p class="tp_09">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula, tortor eu consequat egesta.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <p class="tp_07">Ready to start your own business? Lorem ipsum dolor sit amet, vitae consectetur adipiscing elit. Nullam vitae cond amet sed elit. lorem.</p>
+                            </div>
+                        </div>
+                        <div class="row form-actions">
+                            <div class="small-12 medium-5 medium-push-1 columns">
+                                <a class="outline-btn constrained" type="button" href="#apply-business">Apply Now</a>
+                            </div>
+                            <div class="small-12 medium-5 medium-pull-1 columns">
+                                <a class="outline-btn secondary" type="button" href="#subscribe-careers">subscribe to careers</a>
                             </div>
                         </div>
                     </div>
@@ -281,8 +640,8 @@
                 <div class="row info-toggle-content">
                     <div class="small-12 columns">
                         <div class="row">
-                            <div class="small-12">
-                                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae elit&nbsp;sed.</h3>
+                            <div class="small-12 columns">
+                                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae elit sed.</h3>
                             </div>
                         </div>
                         <div class="row">
@@ -292,7 +651,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula, tortor eu consequat egesta.</p>
                                 <p>Jun 6 - 8, 2016</p>
                                 <p>Winnipeg, Manitoba</p>
-                                <a href="#event-1" class="underline-link">Learn More</a>
+                                <a href="#event-1" class="underline-link event-link">Learn More</a>
                             </div>
                             <div class="small-12 medium-4 columns">
                                 <div class="illustration" data-illustrationid="consultant-about"></div>
@@ -300,14 +659,82 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula, tortor eu consequat egesta.</p>
                                 <p>Sep 11 - 13, 2016</p>
                                 <p>Toronto, Ontario</p>
-                                <a href="#event-1" class="underline-link">Learn More</a>
+                                <a href="#event-2" class="underline-link event-link">Learn More</a>
                             </div>
                             <div class="small-12 medium-4 columns">
                                 <div class="illustration" data-illustrationid="consultant-about"></div>
                                 <h4>Lorem ipsum dolor sit amet, consectetur</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula, tortor eu consequat egesta.</p>
                                 <p>Sep 26, 2016</p>
-                                <a href="#event-1" class="underline-link">Learn More</a>
+                                <a href="#event-3" class="underline-link event-link">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section associations">
+                <div class="row">
+                    <div class="small-12 columns">
+                        <h2>Associations and Community &mdash;</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <div class="info-toggle active" info-toggle-aria="true">
+                            <div class="row info-toggle-trigger">
+                                <div class="small-9 columns">
+                                    <h3>Associations</h3>
+                                </div>
+                                <div class="small-3 columns">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="row info-toggle-content">
+                                <div class="small-12 columns">
+                                    <dl>
+                                        <dt>President's Club Awards&reg;, Investors Group</dt>
+                                            <dd>2013</dd>
+                                        <dt>President's Club Awards&reg;, Investors Group</dt>
+                                            <dd>2002</dd>
+                                        <dt>Member, Canadian Insolvency Practitioners Association</dt>
+                                            <dd>1994 - 1999</dd>
+                                        <dt>Entrepreneur of the Year &ndash; Finalist. Ottawa Business Journal</dt>
+                                            <dd>1995</dd>
+                                        <dt>Chair, Ethics &amp; Discipline, Ontario Mortgage Brokers Association</dt>
+                                            <dd>1993 - 1994</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <div class="info-toggle active" info-toggle-aria="true">
+                            <div class="row info-toggle-trigger">
+                                <div class="small-9 columns">
+                                    <h3>Community</h3>
+                                </div>
+                                <div class="small-3 columns">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="row info-toggle-content">
+                                <div class="small-12 columns">
+                                    <dl>
+                                        <dt>President's Club Awards&reg;, Investors Group</dt>
+                                            <dd>2013</dd>
+                                        <dt>President's Club Awards&reg;, Investors Group</dt>
+                                            <dd>2002</dd>
+                                        <dt>Member, Canadian Insolvency Practitioners Association</dt>
+                                            <dd>1994 - 1999</dd>
+                                        <dt>Entrepreneur of the Year &ndash; Finalist. Ottawa Business Journal</dt>
+                                            <dd>1995</dd>
+                                        <dt>Chair, Ethics &amp; Discipline, Ontario Mortgage Brokers Association</dt>
+                                            <dd>1993 - 1994</dd>
+                                    </dl>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -325,8 +752,8 @@
                 </div>
                 <div class="row info-toggle-content">
                     <div class="small-12 columns">
-                        <div class="row">
-                            <div class="small-12 medium-4 large-5 large-push-1 columns">
+                        <div class="row maps">
+                            <div class="small-12 medium-5 large-4 large-push-1 columns">
                                 <a class="map-anchor">
                                     <div class="map-container">
                                         <div class="map-icon"></div>
@@ -334,13 +761,13 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="small-12 medium-6 large-7 columns">
+                            <div class="small-12 medium-7 large-7 columns">
                                 <h3>305 Milner Avenue, Suit 701 Toronto, On M1B&nbsp;&nbsp;3V4</h3>
                                 <a class="outline-btn secondary" type="button">Get Directions</a>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="small-12 medium-4 large-5 large-push-1 columns">
+                        <div class="row maps">
+                            <div class="small-12 medium-5 large-4 large-push-1 columns">
                                 <a class="map-anchor">
                                     <div class="map-container">
                                         <div class="map-icon"
@@ -352,16 +779,16 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="small-12 medium-6 large-7 columns">
+                            <div class="small-12 medium-7 large-7 columns">
                                 <h3>250 Queen Street, Suit 300 Toronto, On M4B&nbsp;&nbsp;3W5</h3>
                                 <a class="outline-btn secondary" type="button">Get Directions</a>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row contact">
                             <div class="small-12 medium-6 columns">
                                 <ul class="dropdown menu large-constrained small-grid" data-dropdown-menu>
                                     <li>
-                                        <a class="outline-btn constrained" type="button">
+                                        <a class="outline-btn constrained dropdown-button" type="button">
                                             <span class="hide-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Contact Numbers</span>
                                         </a>
                                         <ul class="menu">
@@ -394,7 +821,7 @@
                                 </ul>
                             </div>
                             <div class="small-12 medium-6 columns">
-                               <a href="mailto:a@b.com" class="tp_08">Michael.Scott@investorsgroup.com</a>
+                                <a href="mailto:a@b.com" class="tp_08">Michael.Scott@investorsgroup.com</a>
                             </div>
                         </div>
                     </div>
@@ -409,23 +836,1145 @@
                 </div>
                 <div class="row">
                     <div class="small-12 columns">
-                        <p class="tp_07">Get financial advice that goes beyond the bank. Our advisors will consider your financial goals and help find the path to get&nbsp;you&nbsp;there.</p>
+                        <p class="tp_07">Get financial advice that goes beyond the bank. Our advisors will consider your financial goals and help find the path to get you there.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="small-12 columns">
-                        <a class="outline-btn constrained" type="button">request appointment</a>
+                        <a class="outline-btn constrained" type="button" href="#appointment-michael-scott">request appointment</a>
                     </div>
                 </div>
             </div>
 
+            <div class="section find-an-advisor" info-toggle-aria="true">
+                <div class="row">
+                  <div class="small-12 medium-4 columns">
+                    <div class="illustration" data-illustrationid="consultant-about"></div>
+                  </div>
+                      <div class="small-12 medium-8 columns">
+                       <p class="tp_03">Find an Advisor</p>
+                        <p class="tp_09">Our consultants can help no matter what financial situation you're in. Use these tools to set up your meeting today.</p>
+
+                        <div class="small-12 columns">
+                        <a class="outline-btn constrained" type="button" href="#appointment-michael-scott">find an advisor</a>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section trending info-toggle-small active" info-toggle-aria="true">
+                <div class="row info-toggle-trigger">
+                    <div class="small-9 medium-12 columns">
+                        <h2>trending advice &amp; stories &mdash;</h2>
+                    </div>
+                    <div class="small-3 columns show-for-small-only">
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="row info-toggle-content">
+                    <div class="small-12 columns">
+                        <div class="homepage-carousel js-homepage-carousel">
+
+                            <div class="carousel-slides block-link">
+                                <img src="img/trending/productivity.jpg" alt="">
+                                <h3>
+                                    Do more with your day
+                                </h3>
+                                <p>
+                                    Want to get more done in your workday? Try out these productivity tips.
+                                </p>
+                                <a href="http://investorsgroup.com/more/en/2016/08/what-is-helicopter-money/" class="cta underline-link">
+                                    Learn more
+                                </a>
+                            </div>
+
+                            <div class="carousel-slides block-link">
+                                <img src="img/trending/response.jpg" alt="">
+                                <h3>
+                                    Readers response
+                                </h3>
+                                <p>
+                                    Our "25 Ways to Lead a Fuller Life" story resonated with many of our readers. Some suggested a few&hellip;
+                                </p>
+                                <a href="http://investorsgroup.com/more/en/2016/08/make-your-business-more-valuable/" class="cta underline-link">
+                                    Learn more
+                                </a>
+                            </div>
+
+                            <div class="carousel-slides block-link">
+                                <img src="img/trending/productivity.jpg" alt="">
+                                <h3>
+                                    Do more with your day
+                                </h3>
+                                <p>
+                                    Want to get more done in your workday? Try out these productivity tips.
+                                </p>
+                                <a href="http://investorsgroup.com/more/en/2016/08/what-is-helicopter-money/" class="cta underline-link">
+                                    Learn more
+                                </a>
+                            </div>
+
+                            <div class="carousel-slides block-link">
+                                <img src="img/trending/response.jpg" alt="">
+                                <h3>
+                                    Readers response
+                                </h3>
+                                <p>
+                                    Our "25 Ways to Lead a Fuller Life" story resonated with many of our readers. Some suggested a few&hellip;
+                                </p>
+                                <a href="http://investorsgroup.com/more/en/2016/08/make-your-business-more-valuable/" class="cta underline-link">
+                                    Learn more
+                                </a>
+                            </div>
+
+                            <div class="carousel-slides block-link">
+                                <img src="img/trending/productivity.jpg" alt="">
+                                <h3>
+                                    Do more with your day
+                                </h3>
+                                <p>
+                                    Want to get more done in your workday? Try out these productivity tips.
+                                </p>
+                                <a href="http://investorsgroup.com/more/en/2016/08/what-is-helicopter-money/" class="cta underline-link">
+                                    Learn more
+                                </a>
+                            </div>
+
+                            <div class="carousel-slides block-link">
+                                <img src="img/trending/response.jpg" alt="">
+                                <h3>
+                                    Readers response
+                                </h3>
+                                <p>
+                                    Our "25 Ways to Lead a Fuller Life" story resonated with many of our readers. Some suggested a few&hellip;
+                                </p>
+                                <a href="http://investorsgroup.com/more/en/2016/08/make-your-business-more-valuable/" class="cta underline-link">
+                                    Learn more
+                                </a>
+                            </div>
+
+                            <div class="carousel-slides block-link">
+                                <img src="img/trending/productivity.jpg" alt="">
+                                <h3>
+                                    Do more with your day
+                                </h3>
+                                <p>
+                                    Want to get more done in your workday? Try out these productivity tips.
+                                </p>
+                                <a href="http://investorsgroup.com/more/en/2016/08/what-is-helicopter-money/" class="cta underline-link">
+                                    Learn more
+                                </a>
+                            </div>
+
+                            <div class="carousel-slides block-link">
+                                <img src="img/trending/response.jpg" alt="">
+                                <h3>
+                                    Readers response
+                                </h3>
+                                <p>
+                                    Our "25 Ways to Lead a Fuller Life" story resonated with many of our readers. Some suggested a few&hellip;
+                                </p>
+                                <a href="http://investorsgroup.com/more/en/2016/08/make-your-business-more-valuable/" class="cta underline-link">
+                                    Learn more
+                                </a>
+                            </div>
+
+                            <div class="carousel-slides block-link">
+                                <img src="img/trending/productivity.jpg" alt="">
+                                <h3>
+                                    Do more with your day
+                                </h3>
+                                <p>
+                                    Want to get more done in your workday? Try out these productivity tips.
+                                </p>
+                                <a href="http://investorsgroup.com/more/en/2016/08/what-is-helicopter-money/" class="cta underline-link">
+                                    Learn more
+                                </a>
+                            </div>
+
+                            <div class="carousel-slides block-link">
+                                <img src="img/trending/response.jpg" alt="">
+                                <h3>
+                                    Readers response
+                                </h3>
+                                <p>
+                                    Our "25 Ways to Lead a Fuller Life" story resonated with many of our readers. Some suggested a few&hellip;
+                                </p>
+                                <a href="http://investorsgroup.com/more/en/2016/08/make-your-business-more-valuable/" class="cta underline-link">
+                                    Learn more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-5 medium-push-1 columns">
+                        <a class="outline-btn constrained" type="button">subscribe to more stories</a>
+                    </div>
+                    <div class="small-12 medium-5 medium-pull-1 columns">
+                        <a class="outline-btn secondary" type="button">more stories</a>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Footer navigation -->
+            <div class="footer">
+                <!-- BackToTop -->
+                <div class="backtotop-row">
+                    <div class="large-12 large-centered columns nopadding">
+                        <section class="footer-backTop text-right">
+                            <a class="backTop-link" href="">
+                                <img alt="" src="http://investorsgroup.com/en/images/corp/svg/tp-icon.png">
+                                </img>
+                            </a>
+                        </section>
+                    </div>
+                </div>
+                <!-- Tabs -->
+                <div class="tab-row">
+                    <!-- Show for large -->
+                    <section class="footer-tabs show-for-large">
+                        <div class="large-4 columns">
+                            <h3 class="tab-header">
+                                Company
+                            </h3>
+                            <ul class="footer-tab-list">
+                                <li>
+                                    <a class="footer-tab-item" href="http://www.investorsgroup.com/en/who-we-are">
+                                        Who We Are
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="footer-tab-item" href="http://www.investorsgroup.com/en/media-room">
+                                        Media Room
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="footer-tab-item" href="http://www.investorsgroup.com/en/careers">
+                                        Careers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="footer-tab-item" href="http://www.investorsgroup.com/en/contact-us">
+                                        Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="large-4 columns">
+                            <h3 class="tab-header">
+                                Financial Advice
+                            </h3>
+                            <ul class="footer-tab-list">
+                                <li>
+                                    <a class="footer-tab-item" href="http://www.investorsgroup.com/en/products">
+                                        Products
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="footer-tab-item" href="http://www.investorsgroup.com/en/how-can-we-help">
+                                        How Can We Help
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="footer-tab-item" href="http://www.investorsgroup.com/en/value-of-the-plan">
+                                        Value Of The Plan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="footer-tab-item" href="http://www.investorsgroup.com/more/en/">
+                                        More - Advice & Stories
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="large-4 columns">
+                            <h3 class="tab-header">
+                                Resources
+                            </h3>
+                            <ul class="footer-tab-list">
+                                <li>
+                                    <a class="footer-tab-item" href="https://www.clientvu.ca/login/cana/cai/clie/priusacquiro.do">
+                                        Client Account Access
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="footer-tab-item" href="https://bvi.bnc.ca/index/investorsgroup/indexen.html">
+                                        Solutions Banking Access
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="footer-tab-item" href="http://www.investorsgroup.com/en/products/invest/mutual-funds">
+                                        Mutual Funds
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="footer-tab-item" href="http://www.investorsgroup.com/">
+                                        Mortgage Rates
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- Show for small -->
+                    <section class="footer-accordion-section hide-for-large">
+                        <ul class="accordion footer-accordion-menu" data-accordion="" data-allow-all-closed="true">
+                            <li class="accordion-item footer-accordion-item" data-accordion-item="">
+                                <a class="accordion-title menu-link" href="#">
+                                    Company
+                                </a>
+                                <ul class="accordion-content accordion-submenu" data-tab-content="">
+                                    <li>
+                                        <a class="submenu-link" href="http://www.investorsgroup.com/en/who-we-are">
+                                            Who We Are
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="submenu-link" href="http://www.investorsgroup.com/en/media-room">
+                                            Media Room
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="submenu-link" href="http://www.investorsgroup.com/en/careers">
+                                            Careers
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="submenu-link" href="http://www.investorsgroup.com/en/contact-us">
+                                            Contact Us
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="accordion-item footer-accordion-item" data-accordion-item="">
+                                <a class="accordion-title menu-link" href="#">
+                                    Financial Advice
+                                </a>
+                                <ul class="accordion-content accordion-submenu" data-tab-content="">
+                                    <li>
+                                        <a class="submenu-link" href="http://www.investorsgroup.com/en/products">
+                                            Products
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="submenu-link" href="http://www.investorsgroup.com/en/how-can-we-help">
+                                            How Can We Help
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="submenu-link" href="http://www.investorsgroup.com/en/value-of-the-plan">
+                                            Value Of The Plan
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="submenu-link" href="http://www.investorsgroup.com/more/en/">
+                                            More - Advice & Stories
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="accordion-item footer-accordion-item" data-accordion-item="">
+                                <a class="accordion-title menu-link" href="#">
+                                    Resources
+                                </a>
+                                <ul class="accordion-content accordion-submenu" data-tab-content="">
+                                    <li>
+                                        <a class="submenu-link" href="https://www.clientvu.ca/login/cana/cai/clie/priusacquiro.do">
+                                            Client Account Access
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="submenu-link" href="https://bvi.bnc.ca/index/investorsgroup/indexen.html">
+                                            Solutions Banking Access
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="submenu-link" href="http://www.investorsgroup.com/en/products/invest/mutual-funds">
+                                            Mutual Funds
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="submenu-link" href="http://www.investorsgroup.com/">
+                                            Mortgage Rates
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <!-- Social Media -->
+                <div class="social-media-row">
+                    <div class="large-12 columns">
+                        <!--Check this out-->
+                        <div class="menu-centered">
+                            <ul class="menu">
+                                <li>
+                                    <a class="social-media-link" href="https://www.facebook.com/InvestorsGroup">
+                                        <img alt="" src="http://www.igmfinancial.com/english/images/igcom/fb-icon.png"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social-media-link" href="https://www.linkedin.com/company/investors-group">
+                                        <img alt="" src="http://www.igmfinancial.com/english/images/igcom/li-icon.png"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social-media-link" href="https://twitter.com/Investors_Group">
+                                        <img alt="" src="http://www.igmfinancial.com/english/images/igcom/tw-icon.png"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social-media-link" href="https://www.youtube.com/user/InvestorsGroupCanada">
+                                        <img alt="" src="http://www.igmfinancial.com/english/images/igcom/yt-icon.png"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Copyright -->
+                <div class="footer-copyright">
+                    <div class="large-12 columns nopadding show-for-large">
+                        <div class="menu-centered dt-copyright-menu">
+                            <ul class="menu">
+                                <li class="menu-text">
+                                    © 2016 IGM Financial Inc. All rights Reserved
+                                </li>
+                                <li>
+                                    <a href="http://www.investorsgroup.com/en/legal">
+                                        Legal
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.investorsgroup.com/en/legal/use">
+                                        Term Of Use
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.investorsgroup.com/en/legal/privacy-and-personal-information">
+                                        Privacy Policy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.investorsgroup.com/en/contact-us/accessibility">
+                                        Accessibility
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.investorsgroup.com/fr/default.aspx">
+                                        Aficher En Français
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-12 columns nopadding hide-for-large">
+                        <div class="menu-centered mb-copyright-menu">
+                            <ul class="menu">
+                                <li class="menu-text">
+                                    © 2016 IGM Financial Inc. All rights Reserved
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-12 columns nopadding hide-for-large">
+                        <div class="menu-centered mb-copyright-menu">
+                            <ul class="menu">
+                                <li>
+                                    <a href="http://www.investorsgroup.com/en/legal">
+                                        Legal
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.investorsgroup.com/en/legal/use">
+                                        Term Of Use
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.investorsgroup.com/en/legal/privacy-and-personal-information">
+                                        Privacy Policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-12 columns nopadding hide-for-large">
+                        <div class="menu-centered mb-copyright-menu">
+                            <ul class="menu">
+                                <li>
+                                    <a href="http://www.investorsgroup.com/en/contact-us/accessibility">
+                                        Accessibility
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.investorsgroup.com/fr/default.aspx">
+                                        Aficher En Français
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer ends -->
         </div>
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/what-input/what-input.js"></script>
-        <script src="bower_components/foundation-sites/dist/foundation.js"></script>
-        <script src="js/app.js"></script>
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtM1GEOMvof3wP-LOZnei_p19te8PeN2M&callback=handleMapInit">
-        </script>
+
+        <div class="form-modals">
+            <form method="post" id="apply-modal">
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="small-12 large-8 columns">
+                        <h3>Apply Now</h3>
+                    </div>
+                    <div class="small-12 large-8 columns">
+                        <p class="tp_09">Fill in your personal information below. You may also attach a resume. We will contact you to discuss the role of advisor at Investors Group.</p>
+                    </div>
+                    <div class="small-12 columns">
+                        <p class="server-error"><i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="small-12 columns">
+                        <div class="row">
+
+                            <div class="small-12 large-6 columns">
+                                <label><span>First Name</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="firstName"
+                                        name="firstName"
+                                        type="text"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="firstName-error" class="error" for="firstName"></label>
+                            </div>
+
+                            <div class="small-12 large-6 columns">
+                                <label><span>Last Name</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="lastName"
+                                        name="lastName"
+                                        type="text"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="lastName-error" class="error" for="lastName"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 large-6 columns">
+                                <label><span>Email</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="email"
+                                        name="email"
+                                        type="email"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="email-error" class="error" for="email"></label>
+                            </div>
+
+                            <div class="small-12 medium-4 large-2 columns">
+                                <label><span>Phone</span>
+                                    <select
+                                        id="phoneType"
+                                        name="phoneType"
+                                        required>
+                                            <option value=""></option>
+                                            <option value="home">Home</option>
+                                            <option value="mobile">Mobile</option>
+                                            <option value="office">Office</option>
+                                    </select>
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="phoneType-error" class="error" for="phoneType"></label>
+                            </div>
+
+                            <div class="small-12 medium-8 large-4 columns">
+                                <label><span>Phone Number</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="phoneNumber"
+                                        name="phoneNumber"
+                                        type="tel"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="phoneNumber-error" class="error" for="phoneNumber"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 columns">
+                                <label><span>Personal Message (optional)</span>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        ></textarea>
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 columns">
+                                <p class="tp_25">attach resume (optional)</p>
+                            </div>
+                            <div class="small-12 columns">
+                                <p class="tp_25">attach coverletter (optional)</p>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 columns">
+                                <label class="consent"><span class="tp_09">By providing my telephone number and email address, I CONSENT to Investors Group using this information to contact me for marketing purposes.</span>
+                                    <input
+                                        id="consent"
+                                        name="consent"
+                                        type="checkbox"
+                                        required
+                                        />
+                                </label>
+                                <label id="consent-error" class="error" for="consent"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="small-12 medium-4 large-3 columns">
+                                <a href="#" class="outline-btn">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form method="post" id="appointment-modal">
+                <div class="row">
+                </div>
+                <div class="row">
+                  <div class="small-4">
+                    <img src="img/Logo_small-print.png" alt="Investors Group" />
+                  </div>
+                    <div class="small-12 large-8 columns">
+                        <h3>Request an appointment with Nathan Drakeson</h3>
+                    </div>
+                    <div class="small-12 large-8 columns">
+                        <p class="tp_05">september 11 - 13, 2016</p>
+                        <p class="tp_05">11:00am - 12:00pm</p>
+                        <p class="tp_05">toronto, ontario</p>
+                    </div>
+                    <div class="small-12 large-8 columns">
+                        <p class="tp_09">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
+                    </div>
+                    <div class="small-12 columns">
+                        <p class="server-error"><i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="small-12 columns">
+                        <div class="row">
+
+                            <div class="small-12 large-6 columns">
+                                <label><span>First Name</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="firstName"
+                                        name="firstName"
+                                        type="text"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="firstName-error" class="error" for="firstName"></label>
+                            </div>
+
+                            <div class="small-12 large-6 columns">
+                                <label><span>Last Name</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="lastName"
+                                        name="lastName"
+                                        type="text"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="lastName-error" class="error" for="lastName"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 large-6 columns">
+                                <label><span>Email</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="email"
+                                        name="email"
+                                        type="email"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="email-error" class="error" for="email"></label>
+                            </div>
+
+                            <div class="small-12 medium-4 large-2 columns">
+                                <label><span>Phone</span>
+                                    <select
+                                        id="phoneType"
+                                        name="phoneType"
+                                        required>
+                                            <option value=""></option>
+                                            <option value="home">Home</option>
+                                            <option value="mobile">Mobile</option>
+                                            <option value="office">Office</option>
+                                    </select>
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="phoneType-error" class="error" for="phoneType"></label>
+                            </div>
+
+                            <div class="small-12 medium-8 large-4 columns">
+                                <label><span>Phone Number</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="phoneNumber"
+                                        name="phoneNumber"
+                                        type="tel"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="phoneNumber-error" class="error" for="phoneNumber"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 medium-4 large-3 columns">
+                                <label><span>best time to chat</span>
+                                    <select
+                                        id="callTime"
+                                        name="callTime"
+                                        required>
+                                            <option value=""></option>
+                                            <option value="morning">Morning</option>
+                                            <option value="afternoon">Afternoon</option>
+                                            <option value="evening">Evening</option>
+                                    </select>
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="callTime-error" class="error" for="callTime"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 columns section-bar">
+                                <span></span><p class="tp_25">topics to discuss</p>
+                            </div>
+                            <div class="small-12 medium-6 large-4 columns">
+                                <label class="checkbox"><span class="tp_25">tax planning</span>
+                                    <input
+                                        id="taxPlanning"
+                                        name="taxPlanning"
+                                        type="checkbox"
+                                        />
+                                </label>
+                            </div>
+                            <div class="small-12 medium-6 large-4 columns">
+                                <label class="checkbox"><span class="tp_25">mortgage</span>
+                                    <input
+                                        id="mortgage"
+                                        name="mortgage"
+                                        type="checkbox"
+                                        />
+                                </label>
+                            </div>
+                            <div class="small-12 medium-6 large-4 columns">
+                                <label class="checkbox"><span class="tp_25">financial review</span>
+                                    <input
+                                        id="financialReview"
+                                        name="financialReview"
+                                        type="checkbox"
+                                        />
+                                </label>
+                            </div>
+                            <div class="small-12 medium-6 large-4 columns">
+                                <label class="checkbox"><span class="tp_25">retirement saving</span>
+                                    <input
+                                        id="retirementSaving"
+                                        name="retirementSaving"
+                                        type="checkbox"
+                                        />
+                                </label>
+                            </div>
+                            <div class="small-12 medium-6 large-4 columns">
+                                <label class="checkbox"><span class="tp_25">insurance</span>
+                                    <input
+                                        id="insurance"
+                                        name="insurance"
+                                        type="checkbox"
+                                        />
+                                </label>
+                            </div>
+                            <div class="small-12 medium-6 large-4 columns">
+                                <label class="checkbox"><span class="tp_25">charitable gift planning</span>
+                                    <input
+                                        id="charitablePlanning"
+                                        name="charitablePlanning"
+                                        type="checkbox"
+                                        />
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 columns">
+                                <label><span>briefly describe situation (optional)</span>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        ></textarea>
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 columns">
+                                <label class="consent"><span class="tp_09">By providing my telephone number and email address, I CONSENT to Investors Group using this information to contact me for marketing purposes.</span>
+                                    <input
+                                        id="consent"
+                                        name="consent"
+                                        type="checkbox"
+                                        required
+                                        />
+                                </label>
+                                <label id="consent-error" class="error" for="consent"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="small-12 medium-4 large-3 columns">
+                                <a href="#" class="outline-btn">Send Request</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form method="post" id="event-modal">
+                <div class="row">
+                    <div class="small-12 large-8 columns">
+                        <img src="img/Logo_small-print.png" alt="Investors Group" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 large-8 columns">
+                        <h3>Event ullamco pas laboris nisi ut aliquip ex ea commodo</h3>
+                    </div>
+                    <div class="small-12 large-8 columns">
+                        <p class="tp_05">september 11 - 13, 2016</p>
+                        <p class="tp_05">11:00am - 12:00pm</p>
+                        <p class="tp_05">toronto, ontario</p>
+                    </div>
+                    <div class="small-12 large-8 columns">
+                        <p class="tp_09">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
+                    </div>
+                    <div class="small-12 columns">
+                        <p class="server-error"><i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="small-12 columns">
+                        <div class="row">
+
+                            <div class="small-12 large-6 columns">
+                                <label><span>First Name</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="firstName"
+                                        name="firstName"
+                                        type="text"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="firstName-error" class="error" for="firstName"></label>
+                            </div>
+
+                            <div class="small-12 large-6 columns">
+                                <label><span>Last Name</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="lastName"
+                                        name="lastName"
+                                        type="text"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="lastName-error" class="error" for="lastName"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 large-6 columns">
+                                <label><span>Email</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="email"
+                                        name="email"
+                                        type="email"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="email-error" class="error" for="email"></label>
+                            </div>
+
+                            <div class="small-12 medium-4 large-2 columns">
+                                <label><span>Phone</span>
+                                    <select
+                                        id="phoneType"
+                                        name="phoneType"
+                                        required>
+                                            <option value=""></option>
+                                            <option value="home">Home</option>
+                                            <option value="mobile">Mobile</option>
+                                            <option value="office">Office</option>
+                                    </select>
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="phoneType-error" class="error" for="phoneType"></label>
+                            </div>
+
+                            <div class="small-12 medium-8 large-4 columns">
+                                <label><span>Phone Number</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="phoneNumber"
+                                        name="phoneNumber"
+                                        type="tel"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="phoneNumber-error" class="error" for="phoneNumber"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 medium-4 large-3 columns">
+                                <label><span>Number of Guests</span>
+                                    <select
+                                        id="guestCount"
+                                        name="guestCount"
+                                        required>
+                                            <option value=""></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="5">5</option>
+                                            <option value="80">80</option>
+                                    </select>
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="guestCount-error" class="error" for="guestCount"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 columns">
+                                <label><span>Personal Message (optional)</span>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        ></textarea>
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 columns">
+                                <label class="consent"><span class="tp_09">By providing my telephone number and email address, I CONSENT to Investors Group using this information to contact me for marketing purposes.</span>
+                                    <input
+                                        id="consent"
+                                        name="consent"
+                                        type="checkbox"
+                                        required
+                                        />
+                                </label>
+                                <label id="consent-error" class="error" for="consent"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="small-12 medium-4 large-3 columns">
+                                <a href="#" class="outline-btn">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form method="post" id="subscribe-modal">
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="small-12 large-8 columns">
+                        <h3>Subscribe to Johnathan Mariott’s Careers Newsletter</h3>
+                    </div>
+                    <div class="small-12 large-8 columns">
+                        <p class="tp_09">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
+                    </div>
+                    <div class="small-12 columns">
+                        <div class="row">
+
+                            <div class="small-12 large-6 columns">
+                                <label><span>First Name</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="firstName"
+                                        name="firstName"
+                                        type="text"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="firstName-error" class="error" for="firstName"></label>
+                            </div>
+
+                            <div class="small-12 large-6 columns">
+                                <label><span>Last Name</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="lastName"
+                                        name="lastName"
+                                        type="text"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="lastName-error" class="error" for="lastName"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 large-6 columns">
+                                <label><span>Email</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="email"
+                                        name="email"
+                                        type="email"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="email-error" class="error" for="email"></label>
+                            </div>
+
+                            <div class="small-12 medium-4 large-2 columns">
+                                <label><span>Phone</span>
+                                    <select
+                                        id="phoneType"
+                                        name="phoneType"
+                                        required>
+                                            <option value=""></option>
+                                            <option value="home">Home</option>
+                                            <option value="mobile">Mobile</option>
+                                            <option value="office">Office</option>
+                                    </select>
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="phoneType-error" class="error" for="phoneType"></label>
+                            </div>
+
+                            <div class="small-12 medium-8 large-4 columns">
+                                <label><span>Phone Number</span>
+                                    <input
+                                        spellcheck="false"
+                                        id="phoneNumber"
+                                        name="phoneNumber"
+                                        type="tel"
+                                        required
+                                        />
+                                    <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+                                </label>
+                                <label id="phoneNumber-error" class="error" for="phoneNumber"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="small-12 columns">
+                                <label class="consent"><span class="tp_09">By providing my telephone number and email address, I CONSENT to Investors Group using this information to contact me for marketing purposes.</span>
+                                    <input
+                                        id="consent"
+                                        name="consent"
+                                        type="checkbox"
+                                        required
+                                        />
+                                </label>
+                                <label id="consent-error" class="error" for="consent"></label>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="small-12 medium-4 large-3 columns">
+                                <a href="#" class="outline-btn">Subscribe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="success-message" id="success-modal">
+                <div class="row">
+                    <div class="small-12 columns">
+                        <div class="check"></div><span>Success!</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <h3 class="tp_03">Your application has been successfully sent!</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <p class="tp_09">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="small-12 medium-4 medium-push-4 large-2 large-push-5 columns">
+                        <a href="#" data-close class="outline-btn">Okay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="js/app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtM1GEOMvof3wP-LOZnei_p19te8PeN2M&callback=handleMapInit">
+    </script>
+    <script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+
     </body>
 </html>
