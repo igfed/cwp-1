@@ -5117,6 +5117,14 @@ html.IGv2 {
           html.IGv2 .small-proportional-grid > div > div.columns + div.columns::after {
             border-color: #174263;
             top: calc(30% - 1rem); } }
+  html.IGv2 .clear {
+    clear: both; }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    html.IGv2 .hide-for-medium-only {
+      display: none; } }
+  @media screen and (min-width: 64em) {
+    html.IGv2 .hide-for-large-only {
+      display: none; } }
   html.IGv2 a.outline-btn {
     background: #0ed59a none repeat scroll 0 0;
     border: 2px solid #0ed59a;
@@ -6146,6 +6154,21 @@ html.IGv2 {
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .explore p .fa {
           margin-top: -.2rem; } }
+  html.IGv2 .section.hours-languages .hide-for-medium-only .columns:first-child {
+    width: 60%; }
+    html.IGv2 .section.hours-languages .hide-for-medium-only .columns:first-child p {
+      width: 42%;
+      margin-left: 16rem;
+      text-align: center; }
+  html.IGv2 .section.hours-languages .hide-for-medium-only .columns:last-child {
+    width: 36%;
+    float: right; }
+    html.IGv2 .section.hours-languages .hide-for-medium-only .columns:last-child p {
+      width: 70%;
+      text-align: center; }
+  html.IGv2 .section.hours-languages .hide-for-large-only {
+    clear: both;
+    text-align: center; }
   html.IGv2 .section.hours dl, html.IGv2 .section.languages dl, html.IGv2 .section.associations dl {
     margin-bottom: 0;
     margin-top: 0; }
@@ -6292,11 +6315,10 @@ html.IGv2 {
       max-width: 75rem; } }
   @media screen and (min-width: 64em) {
     html.IGv2 .section.hours .row:last-child .columns:first-child, html.IGv2 .section.languages .row:last-child .columns:first-child {
-      width: 16.4rem;
-      padding-left: 1.4rem; }
+      width: auto; }
     html.IGv2 .section.hours .row:last-child .columns:last-child, html.IGv2 .section.languages .row:last-child .columns:last-child {
       width: calc(100% - 16.4rem);
-      padding-left: 2.2rem; } }
+      padding-left: 3rem; } }
   @media screen and (max-width: 39.9375em) {
     html.IGv2 .section.hours .row:last-child .columns:last-child, html.IGv2 .section.languages .row:last-child .columns:last-child {
       padding-bottom: 2.4rem; } }
@@ -6437,19 +6459,28 @@ html.IGv2 {
       width: 70%;
       text-align: center;
       margin: 0 auto; } }
-  @media screen and (min-width: 64em) {
-    html.IGv2 .section.hours {
-      padding-right: 2rem; } }
-  @media screen and (min-width: 64em) and (max-width: 74.9375em) {
-    html.IGv2 .section.hours {
-      padding-right: 0; } }
-  @media screen and (min-width: 64em) {
-    html.IGv2 .section.languages {
-      padding-left: 10rem; }
-      html.IGv2 .section.languages .row:last-child .columns:first-child {
-        padding-left: 0; }
-      html.IGv2 .section.languages .row:last-child .columns:last-child {
-        padding-left: 0; } }
+  html.IGv2 .section.hours {
+    padding-left: 0; }
+    @media screen and (min-width: 64em) {
+      html.IGv2 .section.hours {
+        padding-right: 2rem;
+        width: 60%; } }
+    @media screen and (min-width: 64em) and (max-width: 74.9375em) {
+      html.IGv2 .section.hours {
+        padding-right: 0; } }
+  html.IGv2 .section.languages {
+    padding-left: 0;
+    padding-right: 0; }
+    @media screen and (min-width: 64em) {
+      html.IGv2 .section.languages {
+        width: 36%;
+        float: right; } }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .section.languages .info-toggle-trigger {
+        border-top: 1px solid #c1cbd0; } }
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      html.IGv2 .section.languages .info-toggle-trigger {
+        border-top: 1px solid #c1cbd0; } }
   html.IGv2 .section.about {
     background-color: #fbf7eb; }
     @media screen and (min-width: 64em) {
@@ -6948,11 +6979,15 @@ html.IGv2 {
           color: #0d263c; }
         @media screen and (min-width: 40em) {
           html.IGv2 .section.events .row .row .columns .underline-link {
-            letter-spacing: 2px;
             position: absolute;
             top: 100%;
             -ms-transform: translateY(-100%);
                 transform: translateY(-100%); } }
+  html.IGv2 .section.events .info-toggle-content .small-12 .row:nth-child(1) {
+    margin: 0 auto; }
+    html.IGv2 .section.events .info-toggle-content .small-12 .row:nth-child(1) .small-12 {
+      padding-right: 0;
+      padding-bottom: 10rem; }
   @media screen and (max-width: 39.9375em) {
     html.IGv2 .section.associations {
       padding-bottom: 0; } }
@@ -7068,6 +7103,8 @@ html.IGv2 {
         padding-bottom: 7.3rem; } }
     html.IGv2 .section.inquiries .row .row {
       margin: 0; }
+      html.IGv2 .section.inquiries .row .row .columns + .columns:last-child {
+        padding-top: 0; }
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .section.inquiries .row .row .columns + .columns {
           margin-top: 1.7rem; } }
@@ -7112,10 +7149,10 @@ html.IGv2 {
       html.IGv2 .section.inquiries .contact .columns:last-child::after {
         border-left: 0.2rem solid #c1cbd0;
         content: "";
-        height: 190%;
+        height: 130%;
         left: -0.1rem;
         position: absolute;
-        top: -45%; }
+        top: -15%; }
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .section.inquiries .contact .columns:last-child {
         margin-top: 4.2rem;
@@ -7150,6 +7187,11 @@ html.IGv2 {
     text-align: center;
     background-color: #fbf7eb;
     padding-bottom: 6.2rem; }
+    html.IGv2 .section.cta .row:nth-child(2) {
+      margin: 0 auto;
+      max-width: 87rem; }
+      html.IGv2 .section.cta .row:nth-child(2) .columns {
+        text-align: left; }
     @media screen and (min-width: 40em) {
       html.IGv2 .section.cta {
         padding-top: 4rem;
@@ -7180,6 +7222,8 @@ html.IGv2 {
         color: #0d263c; }
   html.IGv2 .section.find-an-advisor {
     background-color: #f1f7f7; }
+    html.IGv2 .section.find-an-advisor .row .columns:nth-child(2) {
+      max-width: 52rem; }
     @media screen and (min-width: 64em) {
       html.IGv2 .section.find-an-advisor {
         padding-top: 7rem;
