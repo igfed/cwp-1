@@ -1242,6 +1242,7 @@ p.server-error {
 }
 
 .reveal-overlay {
+	background-color: #fff;
 	@media #{$small-only} {
 		overflow: hidden;
 	}
