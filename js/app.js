@@ -202,10 +202,10 @@
     }
 
     function GuiModule(overlayReference) {
-        var personnelLinkSelector = '.personnel a.underline-link[href^="#bio-"], .personnel a.outline-btn[href^="#bio-"]',
+        var personnelLinkSelector = '.personnel:not(.no-bio) a.underline-link[href^="#bio-"], .personnel:not(.no-bio) a.outline-btn[href^="#bio-"]',
             $personnelLinks = $(personnelLinkSelector),
-            $personnelDetails = $('.personnel .details, .personnel .block-link'),
-            $personnelOverlayMarkup = $('.personnel .details, .personnel .block-link'),
+            $personnelDetails = $('.personnel:not(.no-bio) .details, .personnel:not(.no-bio) .block-link'),
+            $personnelOverlayMarkup = $('.personnel:not(.no-bio) .details, .personnel:not(.no-bio) .block-link'),
             personnelDetailsOverlayClass = 'personnel-bio-overlay personnel',
             $personnelDetailsMarkup,
             personnelDetailsCarouselInited = false,
