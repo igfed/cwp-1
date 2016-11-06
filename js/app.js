@@ -258,7 +258,7 @@
 
             if (location.hash.indexOf(fullHashFragment) === 0) {
                 overlay.openOverlay(
-                    $(formLocations[hashRoot]).clone() /*+ "?id=" + location.hash.replace(fullHashFragment, '')*/,
+                    $(formLocations[hashRoot]),
                     handleFormOverlayOpen, handleOverlayClose, hashRoot !== 'subscribe');
                 matchesHash = true;
             }
@@ -298,8 +298,12 @@
         }
 
         function handleOverlayClose(event) {
-            var yPos;
+            var yPos,
+                form = $('#modalOverlay > form');
 
+            if (form.attr('id')) {
+                $('.form-modals').append(form);
+            }
             if ("pushState" in history)
                 history.pushState("", document.title, location.pathname + location.search);
             else {
