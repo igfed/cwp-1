@@ -1204,11 +1204,41 @@ p.server-error {
 .form-modals {
 	display: none;
 
+}
+
+.reveal-overlay{
 	.time{
 
 		@media #{$small-only}{
-			margin-top: 0;
+			margin-top: 0!important;
+			.tp_05:last-child{
+				margin-bottom: 0!important;
+			}
 		}
+	}
+
+	.copy{
+		@media #{$small-only}{
+			margin-top: 3rem!important;
+		}
+	}
+
+	.form-fields{
+		@media #{$small-only}{
+			margin-top: 0!important;
+		}
+	}
+
+	.error{
+		@media #{$small-only}{
+			margin-top: 0!important;
+		}
+	}
+
+	.form-button{
+		margin: 0 auto;
+		float: none;
+		text-align: center;
 	}
 }
 
@@ -2926,6 +2956,12 @@ a.map-anchor {
 	.info-toggle-content{
 		.columns{
 			text-align: center;
+
+			@media (max-width: 730px){
+				max-width: 47rem;
+			    margin: 0 auto;
+			    float: none;
+			}
 		}
 	}
 
@@ -3451,6 +3487,25 @@ a.map-anchor {
 		}
 	}
 
+	.maps{
+		.columns{
+			&:last-child{
+				h3{
+					@media #{$small-only}{
+						max-width: 32rem;
+						float: none;
+						margin: 0 auto;
+						text-align: center;
+					}
+				}
+			}
+
+			@media #{$small-only}{
+				margin-top: 1rem;
+			}
+		}
+	}
+
 	.row {
 		.row {
 			margin: 0;
@@ -3550,9 +3605,30 @@ a.map-anchor {
 			margin-top: 6rem!important;
 		}
 
+
 		.contact-numbers-btn {
+
+			.outline-btn{
+				padding-left: 4rem;
+				margin-bottom: 2rem;
+			}
+
+			@media #{$small-only}{
+				margin-left: auto;
+				margin-right: auto;
+				float: none;
+				width: 29rem;
+			}
 			@media #{$medium-only} {
 				padding-right: 0!important;
+				margin-left: auto;
+				margin-right: auto;
+				float: none;
+				max-width: 28rem;
+			}
+
+			.is-dropdown-submenu{
+				right: auto;
 			}
 		}
 
