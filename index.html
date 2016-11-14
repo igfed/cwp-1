@@ -658,7 +658,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula, tortor eu consequat egesta.</p>
                                 <p>Jun 6 - 8, 2016</p>
                                 <p>Winnipeg, Manitoba</p>
-                                <a href="#event-1" class="underline-link event-link">Learn More</a>
+                                <a data-open="event-1" class="underline-link event-link">Learn More</a>
                             </div>
                             <div class="small-12 medium-4 columns">
                                 <div class="illustration" data-illustrationid="consultant-about"></div>
@@ -1770,7 +1770,8 @@
                     </div>
                 </div>
             </form>
-            <form method="post" id="event-modal">
+            <div class="reveal full" id="event-1" data-reveal>
+              <form method="post">
                 <div class="row">
                     <div class="small-12 large-8 columns">
                         <img src="img/Logo_small-print.png" alt="Investors Group" />
@@ -1925,7 +1926,12 @@
                         </div>
                     </div>
                 </div>
-            </form>
+              </form>
+              <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            
             <form method="post" id="subscribe-modal">
                 <div class="row">
                 </div>
@@ -2038,7 +2044,7 @@
                     </div>
                 </div>
             </form>
-            <div class="success-message" id="success-modal">
+            <div id="success-modal" class="reveal full success-message" data-reveal>
                 <div class="row">
                     <div class="small-12 columns">
                         <div class="check"></div><span>Success!</span>
