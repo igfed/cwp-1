@@ -202,10 +202,10 @@
     }
 
     function GuiModule(overlayReference) {
-        var personnelLinkSelector = '.personnel a.underline-link[href^="#bio-"], .personnel a.outline-btn[href^="#bio-"]',
+        var personnelLinkSelector = '.personnel:not(.no-bio) a.underline-link[href^="#bio-"], .personnel:not(.no-bio) a.outline-btn[href^="#bio-"]',
             $personnelLinks = $(personnelLinkSelector),
-            $personnelDetails = $('.personnel .details, .personnel .block-link'),
-            $personnelOverlayMarkup = $('.personnel .details, .personnel .block-link'),
+            $personnelDetails = $('.personnel:not(.no-bio) .details, .personnel:not(.no-bio) .block-link'),
+            $personnelOverlayMarkup = $('.personnel:not(.no-bio) .details, .personnel:not(.no-bio) .block-link'),
             personnelDetailsOverlayClass = 'personnel-bio-overlay personnel',
             $personnelDetailsMarkup,
             personnelDetailsCarouselInited = false,
@@ -258,7 +258,7 @@
 
             if (location.hash.indexOf(fullHashFragment) === 0) {
                 overlay.openOverlay(
-                    $(formLocations[hashRoot]).clone() /*+ "?id=" + location.hash.replace(fullHashFragment, '')*/,
+                    $(formLocations[hashRoot]),
                     handleFormOverlayOpen, handleOverlayClose, hashRoot !== 'subscribe');
                 matchesHash = true;
             }
@@ -298,8 +298,12 @@
         }
 
         function handleOverlayClose(event) {
-            var yPos;
+            var yPos,
+                form = $('#modalOverlay > form');
 
+            if (form.attr('id')) {
+                $('.form-modals').append(form);
+            }
             if ("pushState" in history)
                 history.pushState("", document.title, location.pathname + location.search);
             else {
