@@ -614,4 +614,76 @@
             videoPlayer.play();
         }
     }
+
+    var form = $('[data-reveal] form');
+    form.each(function() {
+        var $this = $(this)
+        $this.validate();
+        $this.on('submit', function(){
+            if ($this.valid && $this.valid()) {
+                $this.removeClass('server-error');
+                $this.addClass('submitting');
+
+                //perform submission action
+                //return true;
+                //and on return:
+
+                $('#success-modal').foundation('open');
+                return false;
+            } else {
+                return false;
+            }
+        });
+        $this.find('.outline-btn').on('click', function(event) {
+            $this.submit();
+            return false;
+        });
+    });
+
+    $('input[type=text], input[type=password], input[type=tel], input[type=email]').popupPlaceholder();
+    $('select, textarea').popupPlaceholder();
+
 })();
+
+function FormValidationModule(form, overlayReference) {
+        var validationScript = '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js',
+            additionalScript = '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/additional-methods.min.js',
+            overlay = overlayReference;
+
+        init();
+
+        function init() {
+            $.getScript(validationScript)
+                .then(function() {
+                    $.getScript(additionalScript);
+                })
+                .then(function() {
+                    form.validate();
+                });
+
+            form.on('submit', handleSubmit);
+
+            form.find('.outline-btn').on('click', function(event) {
+                form.submit();
+                return false;
+            });
+        }
+
+        //-----
+
+        function handleSubmit() {
+            if (form.valid && form.valid()) {
+                form.removeClass('server-error');
+                form.addClass('submitting');
+
+                //perform submission action
+                //return true;
+                //and on return:
+
+                overlay.openOverlay('forms/success.html');
+                return false;
+            } else {
+                return false;
+            }
+        }
+    }

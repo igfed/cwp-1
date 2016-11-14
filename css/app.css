@@ -4308,7 +4308,8 @@ table.hover tr:nth-of-type(even):hover {
         left: -85px; }
     .header-wrap .main-topbar-row .ig-brand-logo {
       width: 220px;
-      height: 33px; }
+      height: 33px;
+      margin-left: 0; }
       @media screen and (min-width: 64em) {
         .header-wrap .main-topbar-row .ig-brand-logo {
           margin-top: 16px; } }
@@ -4658,6 +4659,7 @@ html.IGv2 {
   /*---------------------------------------MODULES-------------------------------------*/
   /*--------------1.Global Navigation-----------*/
   /*--------------2.Hero Contact Info-----------*/
+  /*---------------Announcements------------------*/
   /*--------------3.Office Hours---------------*/
   /*---------------4.Languages------------------*/
   /*--------------5.About Section---------------*/
@@ -4936,6 +4938,9 @@ html.IGv2 {
         height: 14rem;
         margin-top: 0;
         margin-bottom: .5rem; } }
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      html.IGv2 .portrait {
+        margin-bottom: 0.5rem; } }
     html.IGv2 .portrait img {
       height: 23rem;
       max-width: none;
@@ -4994,12 +4999,13 @@ html.IGv2 {
     html.IGv2 .icon.cfp {
       background-image: url("../img/certifications/cfp.png");
       width: 2.2rem;
-      height: 1.46667rem; }
+      height: 1.46667rem;
+      margin-left: 3rem; }
       @media screen and (min-width: 64em) {
         html.IGv2 .icon.cfp {
           width: 3.4rem;
           height: 2.26667rem;
-          margin-bottom: 0.9rem; } }
+          margin-bottom: 0.2rem; } }
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .icon .icons {
         display: block;
@@ -5020,6 +5026,20 @@ html.IGv2 {
       height: 1.8rem;
       top: .2rem;
       left: -.3rem; }
+  html.IGv2 .transcript a {
+    border-bottom: 2px solid black; }
+  html.IGv2 .video-wrapper {
+    position: relative;
+    padding-bottom: 50.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden; }
+  html.IGv2 .youtube-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
   html.IGv2 .video-container {
     left: 0;
     margin: 0 auto .6rem;
@@ -5117,6 +5137,19 @@ html.IGv2 {
           html.IGv2 .small-proportional-grid > div > div.columns + div.columns::after {
             border-color: #174263;
             top: calc(30% - 1rem); } }
+  html.IGv2 .clear {
+    clear: both; }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    html.IGv2 .hide-for-medium-only {
+      display: none; } }
+  @media screen and (min-width: 64em) {
+    html.IGv2 .hide-for-large-only {
+      display: none; } }
+  @media screen and (max-width: 39.9375em) {
+    html.IGv2 .mobile-centered {
+      text-align: center !important; } }
+  html.IGv2 .no-padding {
+    padding: 0 !important; }
   html.IGv2 a.outline-btn {
     background: #0ed59a none repeat scroll 0 0;
     border: 2px solid #0ed59a;
@@ -5136,8 +5169,8 @@ html.IGv2 {
     text-decoration: none;
     text-transform: lowercase;
     transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
-    min-width: 23rem;
-    max-width: 25rem;
+    min-width: 21rem;
+    max-width: 28rem;
     padding-left: 2rem;
     padding-right: 2rem;
     z-index: 0;
@@ -5159,9 +5192,7 @@ html.IGv2 {
       background-color: #bbb; }
     @media screen and (max-width: 39.9375em) {
       html.IGv2 a.outline-btn {
-        max-width: 100% !important;
-        text-align: center;
-        min-width: 100%; } }
+        text-align: center; } }
     html.IGv2 a.outline-btn:hover {
       color: #fff;
       text-decoration: none; }
@@ -5252,7 +5283,6 @@ html.IGv2 {
           margin-top: -6px; } }
     @media screen and (max-width: 39.9375em) {
       html.IGv2 a.outline-btn {
-        max-width: 100% !important;
         text-align: center; } }
   html.IGv2 .dropdown.menu {
     /*Dropdown button*/
@@ -5263,7 +5293,8 @@ html.IGv2 {
       /*Icon*/
       /*Media Query*/ }
       html.IGv2 .dropdown.menu a.outline-btn.dropdown-button {
-        padding-right: 4rem; }
+        padding-right: 4rem;
+        width: 28rem; }
       html.IGv2 .dropdown.menu a.outline-btn::after {
         border-color: #0d263c transparent transparent;
         border-width: .6rem .6rem 0;
@@ -5297,8 +5328,6 @@ html.IGv2 {
       html.IGv2 .dropdown.menu > li.is-dropdown-submenu-parent.is-active a.outline-btn::after {
         -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
-      html.IGv2 .dropdown.menu > li.is-dropdown-submenu-parent.is-active a.outline-btn.secondary::after {
-        border-color: #fff transparent transparent; }
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .dropdown.menu > li.is-dropdown-submenu-parent.is-active a.outline-btn.secondary.small-icon {
           background-color: transparent; } }
@@ -5308,7 +5337,7 @@ html.IGv2 {
       border: none;
       border-radius: 5.5px;
       box-shadow: 0 1px 7.5px rgba(0, 0, 0, 0.35);
-      min-width: 23rem;
+      min-width: 28rem;
       padding: .8rem 0 2.5rem; }
       html.IGv2 .dropdown.menu .is-dropdown-submenu li.emphasize {
         text-align: center;
@@ -5712,6 +5741,24 @@ html.IGv2 {
   html.IGv2 .form-modals {
     display: none; }
   @media screen and (max-width: 39.9375em) {
+    html.IGv2 .reveal-overlay .time {
+      margin-top: 0 !important; }
+      html.IGv2 .reveal-overlay .time .tp_05:last-child {
+        margin-bottom: 0 !important; } }
+  @media screen and (max-width: 39.9375em) {
+    html.IGv2 .reveal-overlay .copy {
+      margin-top: 3rem !important; } }
+  @media screen and (max-width: 39.9375em) {
+    html.IGv2 .reveal-overlay .form-fields {
+      margin-top: 0 !important; } }
+  @media screen and (max-width: 39.9375em) {
+    html.IGv2 .reveal-overlay .error {
+      margin-top: 0 !important; } }
+  html.IGv2 .reveal-overlay .form-button {
+    margin: 0 auto;
+    float: none;
+    text-align: center; }
+  @media screen and (max-width: 39.9375em) {
     html.IGv2 .info-toggle-small .info-toggle-content {
       height: 0;
       overflow: hidden;
@@ -5772,12 +5819,14 @@ html.IGv2 {
     padding-bottom: 1.5rem; }
   html.IGv2 .overlay-only {
     display: none; }
-  @media screen and (max-width: 39.9375em) {
-    html.IGv2 .reveal-overlay {
-      overflow: hidden; } }
-  @media screen and (max-width: 39.9375em) {
-    html.IGv2 .reveal-overlay .reveal.full {
-      padding: 0; } }
+  html.IGv2 .reveal-overlay {
+    background-color: #fff; }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .reveal-overlay {
+        overflow: hidden; } }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .reveal-overlay .reveal.full {
+        padding: 0; } }
   html.IGv2 body[data-whatinput="mouse"] select:focus {
     outline: none; }
   html.IGv2 a.map-anchor {
@@ -5816,7 +5865,7 @@ html.IGv2 {
           content: "";
           width: 2.8rem;
           height: 3.7rem;
-          background-image: url("../img/ui/map-marker.png");
+          background-image: url("../img/ui/map-marker-blue.png");
           background-position-y: 0;
           background-repeat: no-repeat;
           background-size: cover;
@@ -5864,11 +5913,17 @@ html.IGv2 {
               html.IGv2 .section.personnel > .row + .row .columns .row h3 + p.tp_08 {
                 line-height: 2rem;
                 margin-bottom: -.2rem; } }
+            @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+              html.IGv2 .section.personnel > .row + .row .columns .row h3 + p {
+                margin-bottom: 0; } }
             html.IGv2 .section.personnel > .row + .row .columns .row h3 + p + p + p {
               margin-top: 2.1rem; }
               @media screen and (max-width: 39.9375em) {
                 html.IGv2 .section.personnel > .row + .row .columns .row h3 + p + p + p {
                   margin-top: -0.2rem; } }
+              @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+                html.IGv2 .section.personnel > .row + .row .columns .row h3 + p + p + p {
+                  margin-top: 1.5rem; } }
         html.IGv2 .section.personnel > .row + .row .columns .row a.underline-link {
           position: relative;
           margin-top: 2.8rem; }
@@ -5889,7 +5944,13 @@ html.IGv2 {
             @media screen and (max-width: 39.9375em) {
               html.IGv2 .section.personnel > .row + .row .columns .row a.underline-link::after {
                 top: -1.2rem; } }
-        @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        @media screen and (min-width: 40em) {
+          html.IGv2 .section.personnel > .row + .row .columns .row .columns:first-child {
+            padding-right: 4rem; } }
+        @media screen and (min-width: 40em) {
+          html.IGv2 .section.personnel > .row + .row .columns .row .columns:last-child {
+            padding-left: 4rem; } }
+        @media screen and (max-width: 39.9375em) {
           html.IGv2 .section.personnel > .row + .row .columns .row .columns:first-child {
             padding-left: 0; }
           html.IGv2 .section.personnel > .row + .row .columns .row .columns:last-child {
@@ -5908,6 +5969,7 @@ html.IGv2 {
       background-color: #7ec4b9;
       padding-top: 9.5rem;
       padding-bottom: 2rem;
+      padding-bottom: 0;
       /*Media Query*/ }
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .section.personnel.profile {
@@ -5917,10 +5979,12 @@ html.IGv2 {
         html.IGv2 .section.personnel.profile > .row + .row .columns .row {
           position: relative; }
           html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details h1 {
-            margin-bottom: 2rem; }
+            margin-bottom: 2rem;
+            text-transform: capitalize; }
             @media screen and (max-width: 39.9375em) {
               html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details h1 {
-                margin-bottom: .6rem; }
+                margin-bottom: .6rem;
+                margin-top: 0rem; }
                 html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details h1 + p {
                   margin-bottom: -.2rem; }
                   html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details h1 + p + p {
@@ -5934,6 +5998,9 @@ html.IGv2 {
                 margin-bottom: .3rem;
                 width: 11rem;
                 height: 14rem; } }
+            @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+              html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .portrait {
+                margin-bottom: 1rem; } }
             html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .portrait img {
               height: 28rem; }
               @media screen and (max-width: 39.9375em) {
@@ -5941,8 +6008,8 @@ html.IGv2 {
                   height: 14rem; } }
           html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .underline {
             margin-bottom: 0.5rem;
-            padding-top: 1.5rem;
-            padding-bottom: 0.5rem; }
+            padding-top: 1.2rem;
+            padding-bottom: 1rem; }
             html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .underline {
               position: relative;
               margin-top: 0.5rem; }
@@ -5953,6 +6020,14 @@ html.IGv2 {
                 top: -0.3rem;
                 position: absolute;
                 left: 35%; }
+            @media screen and (max-width: 39.9375em) {
+              html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .underline {
+                padding-top: 0.5rem;
+                padding-bottom: 0; } }
+            @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+              html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .underline {
+                padding-top: 0.5rem;
+                padding-bottom: 0.2rem; } }
             html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .underline::after {
               border-color: rgba(13, 38, 60, 0.3);
               width: 334px;
@@ -5968,17 +6043,15 @@ html.IGv2 {
                 html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .underline::after {
                   width: 230px;
                   padding-top: 0; } }
+          html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .tp_08 {
+            line-height: 2.2rem; }
+            @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+              html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .tp_08 {
+                margin-top: 2rem;
+                margin-bottom: 0; } }
             @media screen and (max-width: 39.9375em) {
-              html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .underline {
-                padding-top: 0.5;
-                padding-bottom: 0; } }
-          @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-            html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .tp_08 {
-              margin-top: 2rem;
-              margin-bottom: 0; } }
-          @media screen and (max-width: 39.9375em) {
-            html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .tp_08 {
-              margin-bottom: 0.5rem; } }
+              html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .tp_08 {
+                margin-bottom: 0.5rem; } }
           @media screen and (min-width: 64em) {
             html.IGv2 .section.personnel.profile > .row + .row .columns .row > .columns.details .tp_09 {
               line-height: 2.5rem; } }
@@ -6041,6 +6114,8 @@ html.IGv2 {
               @media screen and (max-width: 39.9375em) {
                 html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.explore {
                   margin-top: 0.5rem; } }
+              html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.explore .tp_05 {
+                margin-bottom: 0; }
             html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.show-for-small-only {
               display: none; }
               @media screen and (max-width: 39.9375em) {
@@ -6048,7 +6123,8 @@ html.IGv2 {
                   display: block;
                   margin-top: 3rem; } }
             html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row .outline-btn {
-              margin-bottom: 1.1rem; }
+              margin-bottom: 1.1rem;
+              width: 28rem; }
               @media screen and (max-width: 39.9375em) {
                 html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row .outline-btn.secondary:hover {
                   color: white;
@@ -6056,8 +6132,6 @@ html.IGv2 {
             html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row .icon {
               margin-left: 1.3rem;
               margin-right: 1.3rem; }
-            html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .outline-btn {
-              width: 100%; }
             html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .dropdown {
               float: right; }
             @media screen and (max-width: 39.9375em) {
@@ -6067,7 +6141,8 @@ html.IGv2 {
               border: none;
               border-radius: 5.5px;
               box-shadow: 0 1px 7.5px rgba(0, 0, 0, 0.35);
-              padding: .8rem 0 2.5rem; }
+              padding: .8rem 0 2.5rem;
+              min-width: 28rem; }
               @media screen and (max-width: 39.9375em) {
                 html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .is-dropdown-submenu {
                   left: 70%;
@@ -6112,9 +6187,6 @@ html.IGv2 {
                 html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .small-12 {
                   padding: 0;
                   text-align: center; } }
-              @media screen and (max-width: 39.9375em) {
-                html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .small-12 .outline-btn {
-                  max-width: 100%; } }
             @media screen and (min-width: 40em) and (max-width: 63.9375em) {
               html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .columns.medium-centered {
                 padding-left: 2.75rem;
@@ -6141,11 +6213,228 @@ html.IGv2 {
     html.IGv2 .explore p .fa {
       display: block;
       font-size: 5rem;
-      top: -10px;
-      position: relative; }
+      top: -5px;
+      position: relative;
+      line-height: 4rem; }
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .explore p .fa {
           margin-top: -.2rem; } }
+  html.IGv2 .section.announcements {
+    background-color: #0e75d5;
+    color: white;
+    padding-bottom: 0; }
+    html.IGv2 .section.announcements .row .row .columns .row .medium-8 {
+      float: left; }
+    html.IGv2 .section.announcements .columns {
+      margin: 0 auto; }
+    html.IGv2 .section.announcements .tp_09 {
+      color: white;
+      padding-top: 2rem;
+      padding-bottom: 2rem; }
+    html.IGv2 .section.announcements .tp_12 {
+      color: white;
+      text-align: center;
+      margin-bottom: 0; }
+    html.IGv2 .section.announcements .announcement-box {
+      background-color: #2f88db;
+      float: none;
+      margin: 0 auto;
+      border-top-right-radius: 0.6rem;
+      border-top-left-radius: 0.6rem;
+      padding: 0.5rem 1rem;
+      max-width: 170px; }
+    html.IGv2 .section.announcements .exclamation-mark {
+      background-color: #fff;
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+      float: right;
+      margin-top: 3rem;
+      margin-right: 3rem; }
+      html.IGv2 .section.announcements .exclamation-mark p {
+        color: #0e75d5;
+        text-align: center;
+        line-height: 4rem;
+        font-size: 2.5rem; }
+  html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week {
+    margin-bottom: 0;
+    margin-top: 0; }
+    @media screen and (min-width: 40em) {
+      html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week {
+        margin-top: .4rem; } }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week {
+        width: 270px;
+        margin: 0 auto; } }
+    html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd {
+      font-family: "whitney_bookregular";
+      font-size: 1.6rem;
+      color: #0d263c;
+      width: 50%;
+      float: left;
+      margin: 0 0 1.2rem; }
+      @media screen and (min-width: 64em) {
+        html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd {
+          font-size: 1.8rem;
+          line-height: 2.8rem; } }
+      @media screen and (max-width: 39.9375em) {
+        html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd {
+          font-size: 1.4rem;
+          line-height: 1.9rem; } }
+      @media screen and (max-width: 39.9375em) {
+        html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd {
+          padding-left: 1.1rem;
+          font-size: 1.6rem;
+          margin-bottom: 1.1rem; } }
+      @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd {
+          font-size: 1.6rem; } }
+      html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd {
+        font-weight: 400; }
+      html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day {
+        font-family: "whitney_bookregular";
+        font-size: 1.6rem;
+        color: #0d263c; }
+        @media screen and (min-width: 64em) {
+          html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day {
+            font-size: 1.8rem;
+            line-height: 2.8rem; } }
+        @media screen and (max-width: 39.9375em) {
+          html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day {
+            font-size: 1.4rem;
+            line-height: 1.9rem; } }
+        html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day {
+          font-family: "whitney_semiboldregular"; }
+        html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day {
+          position: relative;
+          margin-left: 0; }
+          html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day::after, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day::after {
+            border-left: 0.2rem solid #c1cbd0;
+            content: "";
+            height: 80%;
+            left: -0.1rem;
+            position: absolute;
+            top: 10%; }
+        @media screen and (max-width: 39.9375em) {
+          html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day {
+            font-size: 1.6rem; } }
+        @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+          html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day {
+            font-size: 1.6rem; } }
+        html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day::after, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day::after {
+          border-color: #0ed59a;
+          left: -.8rem; }
+          @media screen and (max-width: 39.9375em) {
+            html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day::after, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day::after {
+              left: .3rem;
+              height: 120%;
+              top: 0; } }
+        html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day + dd {
+          font-family: "whitney_bookregular";
+          font-size: 1.6rem;
+          color: #0d263c; }
+          @media screen and (min-width: 64em) {
+            html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day + dd {
+              font-size: 1.8rem;
+              line-height: 2.8rem; } }
+          @media screen and (max-width: 39.9375em) {
+            html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day + dd {
+              font-size: 1.4rem;
+              line-height: 1.9rem; } }
+          html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day + dd {
+            font-family: "whitney_semiboldregular"; }
+          @media screen and (max-width: 39.9375em) {
+            html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day + dd {
+              font-size: 1.6rem; } }
+          @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+            html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd.current-day + dd {
+              font-size: 1.6rem; } }
+      html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt + dd, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd + dd {
+        width: 50%; }
+        @media screen and (max-width: 39.9375em) {
+          html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt + dd, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd + dd {
+            padding-left: 1.3rem; } }
+        @media screen and (min-width: 64em) and (max-width: 74.9375em) {
+          html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dt + dd, html.IGv2 .section.hours-languages .info-toggle-content dl.day-of-week dd + dd {
+            padding-left: 1rem; } }
+  html.IGv2 .section.hours-languages .info-toggle-content ul {
+    font-family: "whitney_lightregular";
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #0d263c;
+    list-style: none;
+    margin: .4rem 0 0; }
+    @media screen and (min-width: 64em) {
+      html.IGv2 .section.hours-languages .info-toggle-content ul {
+        font-size: 2.8rem;
+        line-height: 4.1rem; } }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .section.hours-languages .info-toggle-content ul {
+        margin-top: -.3rem;
+        padding-bottom: 1.6rem;
+        overflow: hidden;
+        width: 24rem;
+        float: none;
+        margin: 0 auto; } }
+    html.IGv2 .section.hours-languages .info-toggle-content ul li {
+      line-height: 3.6rem; }
+      @media screen and (max-width: 39.9375em) {
+        html.IGv2 .section.hours-languages .info-toggle-content ul li {
+          font-size: 2.2rem;
+          line-height: 3.4rem;
+          width: 50%;
+          float: left; }
+          html.IGv2 .section.hours-languages .info-toggle-content ul li:nth-child(odd) {
+            padding-left: 1.8rem; }
+          html.IGv2 .section.hours-languages .info-toggle-content ul li:nth-child(even) {
+            padding-left: 2.2rem; } }
+      @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        html.IGv2 .section.hours-languages .info-toggle-content ul li {
+          width: 50%;
+          float: left; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    html.IGv2 .section.hours-languages .hours .info-toggle-content .columns:first-child {
+      margin: 0 auto;
+      float: none; } }
+  @media screen and (min-width: 64em) {
+    html.IGv2 .section.hours-languages .hours .info-toggle-content .columns:first-child {
+      margin-right: 3rem; } }
+  @media screen and (min-width: 64em) {
+    html.IGv2 .section.hours-languages .hours .info-toggle-content .columns:last-child {
+      margin-left: 3rem; } }
+  @media screen and (max-width: 39.9375em) {
+    html.IGv2 .section.hours-languages .hours .info-toggle-content .columns:last-child {
+      margin: 0 auto; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    html.IGv2 .section.hours-languages .languages .info-toggle-content .columns:first-child {
+      margin: 0 auto;
+      float: none; } }
+  html.IGv2 .section.hours-languages .languages .info-toggle-content .columns:last-child ul li:nth-child(even) {
+    width: auto; }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    html.IGv2 .section.hours-languages .hide-for-small-only .columns {
+      text-align: center; }
+      html.IGv2 .section.hours-languages .hide-for-small-only .columns p {
+        width: 88%; } }
+  @media screen and (min-width: 64em) {
+    html.IGv2 .section.hours-languages .hide-for-small-only .columns:first-child {
+      margin-left: 3rem;
+      width: 34%; } }
+  html.IGv2 .section.hours-languages .hide-for-medium-only .columns:first-child {
+    max-width: 50rem; }
+    html.IGv2 .section.hours-languages .hide-for-medium-only .columns:first-child p {
+      margin-left: 16rem;
+      text-align: center; }
+  html.IGv2 .section.hours-languages .hide-for-medium-only .columns:last-child {
+    width: 38%;
+    float: right;
+    max-width: 36rem; }
+    html.IGv2 .section.hours-languages .hide-for-medium-only .columns:last-child p {
+      text-align: center; }
+  html.IGv2 .section.hours-languages .hide-for-large-only {
+    clear: both;
+    text-align: center;
+    padding-top: 5rem; }
   html.IGv2 .section.hours dl, html.IGv2 .section.languages dl, html.IGv2 .section.associations dl {
     margin-bottom: 0;
     margin-top: 0; }
@@ -6263,6 +6552,10 @@ html.IGv2 {
         overflow: hidden; } }
     html.IGv2 .section.hours ul li, html.IGv2 .section.languages ul li, html.IGv2 .section.associations ul li {
       line-height: 3.6rem; }
+      @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        html.IGv2 .section.hours ul li, html.IGv2 .section.languages ul li, html.IGv2 .section.associations ul li {
+          width: 50%;
+          float: left; } }
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .section.hours ul li, html.IGv2 .section.languages ul li, html.IGv2 .section.associations ul li {
           font-size: 2.2rem;
@@ -6273,6 +6566,9 @@ html.IGv2 {
             padding-left: 1.8rem; }
           html.IGv2 .section.hours ul li:nth-child(even), html.IGv2 .section.languages ul li:nth-child(even), html.IGv2 .section.associations ul li:nth-child(even) {
             padding-left: 2.2rem; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    html.IGv2 .section.hours, html.IGv2 .section.languages {
+      padding-right: 0; } }
   @media screen and (min-width: 64em) {
     html.IGv2 .section.hours, html.IGv2 .section.languages {
       width: 50%;
@@ -6280,37 +6576,41 @@ html.IGv2 {
       clear: none;
       padding-top: 4rem;
       padding-bottom: 7rem; } }
+  @media screen and (min-width: 64em) {
+    html.IGv2 .section.hours > .row, html.IGv2 .section.languages > .row {
+      max-width: 60rem; } }
+  html.IGv2 .section.hours .info-toggle-content .columns:nth-of-type(1), html.IGv2 .section.languages .info-toggle-content .columns:nth-of-type(1) {
+    padding-right: 3rem; }
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-    html.IGv2 .section.hours .row h2, html.IGv2 .section.languages .row h2 {
+    html.IGv2 .section.hours .info-toggle-content h2, html.IGv2 .section.languages .info-toggle-content h2 {
       margin-bottom: 2.6rem; } }
   @media screen and (max-width: 39.9375em) {
-    html.IGv2 .section.hours .row:last-child, html.IGv2 .section.languages .row:last-child {
+    html.IGv2 .section.hours .info-toggle-content:last-child, html.IGv2 .section.languages .info-toggle-content:last-child {
       margin-left: -.2rem;
       margin-right: -.2rem; } }
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-    html.IGv2 .section.hours .row:last-child, html.IGv2 .section.languages .row:last-child {
+    html.IGv2 .section.hours .info-toggle-content:last-child, html.IGv2 .section.languages .info-toggle-content:last-child {
       max-width: 75rem; } }
   @media screen and (min-width: 64em) {
-    html.IGv2 .section.hours .row:last-child .columns:first-child, html.IGv2 .section.languages .row:last-child .columns:first-child {
-      width: 16.4rem;
-      padding-left: 1.4rem; }
-    html.IGv2 .section.hours .row:last-child .columns:last-child, html.IGv2 .section.languages .row:last-child .columns:last-child {
+    html.IGv2 .section.hours .info-toggle-content:last-child .columns:first-child, html.IGv2 .section.languages .info-toggle-content:last-child .columns:first-child {
+      width: auto; }
+    html.IGv2 .section.hours .info-toggle-content:last-child .columns:last-child, html.IGv2 .section.languages .info-toggle-content:last-child .columns:last-child {
       width: calc(100% - 16.4rem);
-      padding-left: 2.2rem; } }
+      padding-left: 3rem; } }
   @media screen and (max-width: 39.9375em) {
-    html.IGv2 .section.hours .row:last-child .columns:last-child, html.IGv2 .section.languages .row:last-child .columns:last-child {
+    html.IGv2 .section.hours .info-toggle-content:last-child .columns:last-child, html.IGv2 .section.languages .info-toggle-content:last-child .columns:last-child {
       padding-bottom: 2.4rem; } }
-  html.IGv2 .section.hours .row:last-child .columns dl.day-of-week, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week {
+  html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week {
     margin-bottom: 0;
     margin-top: 0; }
     @media screen and (min-width: 40em) {
-      html.IGv2 .section.hours .row:last-child .columns dl.day-of-week, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week {
+      html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week {
         margin-top: .4rem; } }
     @media screen and (max-width: 39.9375em) {
-      html.IGv2 .section.hours .row:last-child .columns dl.day-of-week, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week {
+      html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week {
         width: 270px;
         margin: 0 auto; } }
-    html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd {
+    html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd {
       font-family: "whitney_bookregular";
       font-size: 1.6rem;
       color: #0d263c;
@@ -6318,41 +6618,41 @@ html.IGv2 {
       float: left;
       margin: 0 0 1.2rem; }
       @media screen and (min-width: 64em) {
-        html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd {
+        html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd {
           font-size: 1.8rem;
           line-height: 2.8rem; } }
       @media screen and (max-width: 39.9375em) {
-        html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd {
+        html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd {
           font-size: 1.4rem;
           line-height: 1.9rem; } }
       @media screen and (max-width: 39.9375em) {
-        html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd {
+        html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd {
           padding-left: 1.1rem;
           font-size: 1.6rem;
           margin-bottom: 1.1rem; } }
       @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-        html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd {
+        html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd {
           font-size: 1.6rem; } }
-      html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd {
+      html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd {
         font-weight: 400; }
-      html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day {
+      html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day {
         font-family: "whitney_bookregular";
         font-size: 1.6rem;
         color: #0d263c; }
         @media screen and (min-width: 64em) {
-          html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day {
+          html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day {
             font-size: 1.8rem;
             line-height: 2.8rem; } }
         @media screen and (max-width: 39.9375em) {
-          html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day {
+          html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day {
             font-size: 1.4rem;
             line-height: 1.9rem; } }
-        html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day {
+        html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day {
           font-family: "whitney_semiboldregular"; }
-        html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day {
+        html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day {
           position: relative;
           margin-left: 0; }
-          html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day::after, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day::after, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day::after, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day::after {
+          html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day::after, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day::after, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day::after, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day::after {
             border-left: 0.2rem solid #c1cbd0;
             content: "";
             height: 80%;
@@ -6360,48 +6660,48 @@ html.IGv2 {
             position: absolute;
             top: 10%; }
         @media screen and (max-width: 39.9375em) {
-          html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day {
+          html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day {
             font-size: 1.6rem; } }
         @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-          html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day {
+          html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day {
             font-size: 1.6rem; } }
-        html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day::after, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day::after, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day::after, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day::after {
+        html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day::after, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day::after, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day::after, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day::after {
           border-color: #0ed59a;
           left: -.8rem; }
           @media screen and (max-width: 39.9375em) {
-            html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day::after, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day::after, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day::after, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day::after {
+            html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day::after, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day::after, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day::after, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day::after {
               left: .3rem;
               height: 120%;
               top: 0; } }
-        html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day + dd {
+        html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day + dd {
           font-family: "whitney_bookregular";
           font-size: 1.6rem;
           color: #0d263c; }
           @media screen and (min-width: 64em) {
-            html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day + dd {
+            html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day + dd {
               font-size: 1.8rem;
               line-height: 2.8rem; } }
           @media screen and (max-width: 39.9375em) {
-            html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day + dd {
+            html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day + dd {
               font-size: 1.4rem;
               line-height: 1.9rem; } }
-          html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day + dd {
+          html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day + dd {
             font-family: "whitney_semiboldregular"; }
           @media screen and (max-width: 39.9375em) {
-            html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day + dd {
+            html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day + dd {
               font-size: 1.6rem; } }
           @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-            html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd.current-day + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd.current-day + dd {
+            html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd.current-day + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt.current-day + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd.current-day + dd {
               font-size: 1.6rem; } }
-      html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt + dd, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd + dd {
+      html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt + dd, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd + dd {
         width: 50%; }
         @media screen and (max-width: 39.9375em) {
-          html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt + dd, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd + dd {
+          html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt + dd, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd + dd {
             padding-left: 1.3rem; } }
         @media screen and (min-width: 64em) and (max-width: 74.9375em) {
-          html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dt + dd, html.IGv2 .section.hours .row:last-child .columns dl.day-of-week dd + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dt + dd, html.IGv2 .section.languages .row:last-child .columns dl.day-of-week dd + dd {
+          html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dt + dd, html.IGv2 .section.hours .info-toggle-content:last-child .columns dl.day-of-week dd + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dt + dd, html.IGv2 .section.languages .info-toggle-content:last-child .columns dl.day-of-week dd + dd {
             padding-left: 1rem; } }
-  html.IGv2 .section.hours .row:last-child .columns ul, html.IGv2 .section.languages .row:last-child .columns ul {
+  html.IGv2 .section.hours .info-toggle-content:last-child .columns ul, html.IGv2 .section.languages .info-toggle-content:last-child .columns ul {
     font-family: "whitney_lightregular";
     font-size: 1.6rem;
     line-height: 2.4rem;
@@ -6409,47 +6709,50 @@ html.IGv2 {
     list-style: none;
     margin: .4rem 0 0; }
     @media screen and (min-width: 64em) {
-      html.IGv2 .section.hours .row:last-child .columns ul, html.IGv2 .section.languages .row:last-child .columns ul {
+      html.IGv2 .section.hours .info-toggle-content:last-child .columns ul, html.IGv2 .section.languages .info-toggle-content:last-child .columns ul {
         font-size: 2.8rem;
         line-height: 4.1rem; } }
     @media screen and (max-width: 39.9375em) {
-      html.IGv2 .section.hours .row:last-child .columns ul, html.IGv2 .section.languages .row:last-child .columns ul {
+      html.IGv2 .section.hours .info-toggle-content:last-child .columns ul, html.IGv2 .section.languages .info-toggle-content:last-child .columns ul {
         margin-top: -.3rem;
         padding-bottom: 1.6rem;
         overflow: hidden;
         width: 24rem;
         float: none;
         margin: 0 auto; } }
-    html.IGv2 .section.hours .row:last-child .columns ul li, html.IGv2 .section.languages .row:last-child .columns ul li {
+    html.IGv2 .section.hours .info-toggle-content:last-child .columns ul li, html.IGv2 .section.languages .info-toggle-content:last-child .columns ul li {
       line-height: 3.6rem; }
       @media screen and (max-width: 39.9375em) {
-        html.IGv2 .section.hours .row:last-child .columns ul li, html.IGv2 .section.languages .row:last-child .columns ul li {
+        html.IGv2 .section.hours .info-toggle-content:last-child .columns ul li, html.IGv2 .section.languages .info-toggle-content:last-child .columns ul li {
           font-size: 2.2rem;
           line-height: 3.4rem;
           width: 50%;
           float: left; }
-          html.IGv2 .section.hours .row:last-child .columns ul li:nth-child(odd), html.IGv2 .section.languages .row:last-child .columns ul li:nth-child(odd) {
+          html.IGv2 .section.hours .info-toggle-content:last-child .columns ul li:nth-child(odd), html.IGv2 .section.languages .info-toggle-content:last-child .columns ul li:nth-child(odd) {
             padding-left: 1.8rem; }
-          html.IGv2 .section.hours .row:last-child .columns ul li:nth-child(even), html.IGv2 .section.languages .row:last-child .columns ul li:nth-child(even) {
+          html.IGv2 .section.hours .info-toggle-content:last-child .columns ul li:nth-child(even), html.IGv2 .section.languages .info-toggle-content:last-child .columns ul li:nth-child(even) {
             padding-left: 2.2rem; } }
   @media screen and (max-width: 39.9375em) {
-    html.IGv2 .section.hours .row:last-child .columns p, html.IGv2 .section.languages .row:last-child .columns p {
+    html.IGv2 .section.hours .info-toggle-content:last-child .columns p, html.IGv2 .section.languages .info-toggle-content:last-child .columns p {
       width: 70%;
       text-align: center;
       margin: 0 auto; } }
-  @media screen and (min-width: 64em) {
-    html.IGv2 .section.hours {
-      padding-right: 2rem; } }
-  @media screen and (min-width: 64em) and (max-width: 74.9375em) {
-    html.IGv2 .section.hours {
-      padding-right: 0; } }
-  @media screen and (min-width: 64em) {
-    html.IGv2 .section.languages {
-      padding-left: 10rem; }
-      html.IGv2 .section.languages .row:last-child .columns:first-child {
-        padding-left: 0; }
-      html.IGv2 .section.languages .row:last-child .columns:last-child {
-        padding-left: 0; } }
+  html.IGv2 .section.hours {
+    padding-left: 0; }
+    @media screen and (min-width: 64em) {
+      html.IGv2 .section.hours {
+        padding-right: 2rem;
+        width: 60%; } }
+    @media screen and (min-width: 64em) and (max-width: 74.9375em) {
+      html.IGv2 .section.hours {
+        padding-right: 0; } }
+  html.IGv2 .section.languages {
+    padding-left: 0;
+    padding-right: 0; }
+    @media screen and (min-width: 64em) {
+      html.IGv2 .section.languages {
+        width: 36%;
+        float: right; } }
   html.IGv2 .section.about {
     background-color: #fbf7eb; }
     @media screen and (min-width: 64em) {
@@ -6612,7 +6915,7 @@ html.IGv2 {
                     border-color: #0d263c; } }
           html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.social-icons {
             text-align: center;
-            margin-bottom: 1.2rem; }
+            margin-bottom: 2rem; }
             html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.social-icons {
               position: relative;
               margin-top: 3rem; }
@@ -6730,30 +7033,55 @@ html.IGv2 {
         text-align: center;
         margin-top: 4.1rem;
         margin-bottom: 3.1rem; } }
+  html.IGv2 .section.organizations .info-toggle-content .columns {
+    text-align: center; }
+    @media (max-width: 730px) {
+      html.IGv2 .section.organizations .info-toggle-content .columns {
+        max-width: 47rem;
+        margin: 0 auto;
+        float: none; } }
   html.IGv2 .section.organizations ul {
     margin: 0 0 3.7rem;
     list-style: outside none none;
     text-align: center;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -ms-flex-align: center;
+        -ms-grid-row-align: center;
         align-items: center;
+    display: inline;
     -ms-flex-pack: distribute;
         justify-content: space-around; }
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .section.organizations ul {
-        margin-bottom: 1.3rem; } }
+        margin-bottom: 1.3rem;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        display: inline-block; } }
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      html.IGv2 .section.organizations ul {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        display: inline-block; } }
     html.IGv2 .section.organizations ul li {
       padding: 2.5rem 1rem;
-      display: inline-block; }
-      @media screen and (max-width: 39.9375em) {
+      padding-right: 4rem;
+      display: inline; }
+      html.IGv2 .section.organizations ul li:last-child {
+        padding-right: 0; }
+      @media screen and (min-width: 64em) and (max-width: 74.9375em) {
         html.IGv2 .section.organizations ul li {
-          padding: 1.6rem 0; } }
+          display: inline; } }
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .section.organizations ul li img {
-          width: 78%; } }
+          max-width: 20%;
+          min-width: 10rem;
+          padding: 2.5rem 1rem; } }
+      @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        html.IGv2 .section.organizations ul li img {
+          width: 10%;
+          min-width: 8rem; } }
+      @media screen and (min-width: 64em) {
+        html.IGv2 .section.organizations ul li img {
+          width: 8rem; } }
   html.IGv2 .section.careers {
     background-color: #f1f7f7; }
     html.IGv2 .section.careers .row .row {
@@ -6948,53 +7276,59 @@ html.IGv2 {
           color: #0d263c; }
         @media screen and (min-width: 40em) {
           html.IGv2 .section.events .row .row .columns .underline-link {
-            letter-spacing: 2px;
             position: absolute;
             top: 100%;
             -ms-transform: translateY(-100%);
                 transform: translateY(-100%); } }
-  @media screen and (max-width: 39.9375em) {
-    html.IGv2 .section.associations {
-      padding-bottom: 0; } }
-  html.IGv2 .section.associations h2 {
-    margin-bottom: 1.5rem; }
-    @media screen and (min-width: 40em) {
-      html.IGv2 .section.associations h2 {
-        margin-bottom: 3.8rem; } }
-  html.IGv2 .section.associations h3 {
-    margin-bottom: 2rem;
-    font-family: "whitney_scmedium";
-    font-size: 1.8rem;
-    line-height: 1.8rem;
-    color: #0d263c;
-    text-transform: lowercase; }
-    @media screen and (min-width: 40em) {
-      html.IGv2 .section.associations h3 {
-        font-size: 2.8rem;
-        line-height: 2.5rem; } }
+  html.IGv2 .section.events .info-toggle-content .small-12 .row:nth-child(1) {
+    margin: 0 auto; }
+    html.IGv2 .section.events .info-toggle-content .small-12 .row:nth-child(1) .small-12 {
+      padding-right: 0;
+      padding-bottom: 10rem; }
+  html.IGv2 .section.associations {
+    padding-bottom: 10rem; }
     @media screen and (max-width: 39.9375em) {
-      html.IGv2 .section.associations h3 {
-        font-size: 1.4rem;
-        line-height: 2.4rem; } }
+      html.IGv2 .section.associations {
+        padding-bottom: 0; } }
+    html.IGv2 .section.associations h2 {
+      margin-bottom: 1.5rem; }
+      @media screen and (min-width: 40em) {
+        html.IGv2 .section.associations h2 {
+          margin-bottom: 3.8rem; } }
+    html.IGv2 .section.associations h3 {
+      margin-bottom: 2rem;
+      font-family: "whitney_scmedium";
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+      color: #0d263c;
+      text-transform: lowercase; }
+      @media screen and (min-width: 40em) {
+        html.IGv2 .section.associations h3 {
+          font-size: 2.8rem;
+          line-height: 2.5rem; } }
+      @media screen and (max-width: 39.9375em) {
+        html.IGv2 .section.associations h3 {
+          font-size: 1.4rem;
+          line-height: 2.4rem; } }
+      @media screen and (min-width: 40em) {
+        html.IGv2 .section.associations h3 {
+          font-size: 2.4rem;
+          margin-bottom: 1.8rem; } }
     @media screen and (min-width: 40em) {
-      html.IGv2 .section.associations h3 {
-        font-size: 2.4rem;
-        margin-bottom: 1.8rem; } }
-  @media screen and (min-width: 40em) {
-    html.IGv2 .section.associations .row:not(:first-child) {
-      padding-left: 2.5rem; } }
+      html.IGv2 .section.associations .row:not(:first-child) {
+        padding-left: 2.5rem; } }
   @media screen and (min-width: 40em) and (min-width: 64em) {
     html.IGv2 .section.associations .row:not(:first-child) {
       padding-left: 5rem; } }
   @media screen and (min-width: 40em) and (min-width: 75em) {
     html.IGv2 .section.associations .row:not(:first-child) {
       padding-left: 10.3rem; } }
-  html.IGv2 .section.associations .row:not(:first-child) .columns {
-    border-top: 1px solid #c1cbd0;
-    padding: 1.1rem 0 1.5rem; }
-    @media screen and (min-width: 40em) {
-      html.IGv2 .section.associations .row:not(:first-child) .columns {
-        padding: 3.6rem 1rem 2rem 2.5rem; } }
+    html.IGv2 .section.associations .row:not(:first-child) .columns {
+      border-top: 1px solid #c1cbd0;
+      padding: 1.1rem 0 1.5rem; }
+      @media screen and (min-width: 40em) {
+        html.IGv2 .section.associations .row:not(:first-child) .columns {
+          padding: 3.6rem 1rem 2rem 2.5rem; } }
   @media screen and (min-width: 40em) and (min-width: 64em) {
     html.IGv2 .section.associations .row:not(:first-child) .columns {
       padding-left: 5rem;
@@ -7003,51 +7337,49 @@ html.IGv2 {
     html.IGv2 .section.associations .row:not(:first-child) .columns {
       padding-left: 10.3rem;
       padding-right: 3.5rem; } }
-  html.IGv2 .section.associations .row:last-child .columns {
-    border-bottom: 1px solid #c1cbd0;
-    padding-bottom: 1.4rem; }
-  html.IGv2 .section.associations .row .row {
-    padding: 0;
-    margin: 0; }
-    html.IGv2 .section.associations .row .row .columns {
-      border: none;
-      padding: 0; }
-  html.IGv2 .section.associations dl {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    @media screen and (min-width: 40em) {
-      html.IGv2 .section.associations dl {
-        padding-right: 5.3rem; } }
-    html.IGv2 .section.associations dl dt {
-      width: 75%; }
-      @media screen and (max-width: 39.9375em) {
-        html.IGv2 .section.associations dl dt {
-          padding: 0;
-          width: 66.666%; } }
-      html.IGv2 .section.associations dl dt + dd {
-        text-align: right;
-        width: 25%;
-        -ms-flex-item-align: end;
-            align-self: flex-end;
-        font-family: "whitney_bookregular";
-        font-size: 1.6rem;
-        color: #0d263c; }
-        @media screen and (min-width: 64em) {
-          html.IGv2 .section.associations dl dt + dd {
-            font-size: 1.8rem;
-            line-height: 2.8rem; } }
+    html.IGv2 .section.associations .row:last-child .columns {
+      border-bottom: 1px solid #c1cbd0;
+      padding-bottom: 1.4rem; }
+    html.IGv2 .section.associations .row .row {
+      padding: 0;
+      margin: 0; }
+      html.IGv2 .section.associations .row .row .columns {
+        border: none;
+        padding: 0; }
+    html.IGv2 .section.associations dl {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      @media screen and (min-width: 40em) {
+        html.IGv2 .section.associations dl {
+          padding-right: 5.3rem; } }
+      html.IGv2 .section.associations dl dt {
+        width: 75%; }
         @media screen and (max-width: 39.9375em) {
-          html.IGv2 .section.associations dl dt + dd {
-            font-size: 1.4rem;
-            line-height: 1.9rem; } }
-        html.IGv2 .section.associations dl dt + dd {
-          font-family: "whitney_semiboldregular"; }
-        @media screen and (max-width: 39.9375em) {
-          html.IGv2 .section.associations dl dt + dd {
+          html.IGv2 .section.associations dl dt {
             padding: 0;
-            width: 33.333%; } }
+            width: 66.666%; } }
+        html.IGv2 .section.associations dl dt + dd {
+          text-align: right;
+          width: 25%;
+          font-family: "whitney_bookregular";
+          font-size: 1.6rem;
+          color: #0d263c; }
+          @media screen and (min-width: 64em) {
+            html.IGv2 .section.associations dl dt + dd {
+              font-size: 1.8rem;
+              line-height: 2.8rem; } }
+          @media screen and (max-width: 39.9375em) {
+            html.IGv2 .section.associations dl dt + dd {
+              font-size: 1.4rem;
+              line-height: 1.9rem; } }
+          html.IGv2 .section.associations dl dt + dd {
+            font-family: "whitney_semiboldregular"; }
+          @media screen and (max-width: 39.9375em) {
+            html.IGv2 .section.associations dl dt + dd {
+              padding: 0;
+              width: 33.333%; } }
   html.IGv2 .section.inquiries {
     background-color: #f1f7f7; }
     html.IGv2 .section.inquiries h3 {
@@ -7066,8 +7398,19 @@ html.IGv2 {
       html.IGv2 .section.inquiries .info-toggle-content > div {
         padding-top: 3.3rem;
         padding-bottom: 7.3rem; } }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .section.inquiries .maps .columns:last-child h3 {
+        max-width: 32rem;
+        float: none;
+        margin: 0 auto;
+        text-align: center; } }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .section.inquiries .maps .columns {
+        margin-top: 1rem; } }
     html.IGv2 .section.inquiries .row .row {
       margin: 0; }
+      html.IGv2 .section.inquiries .row .row .columns + .columns:last-child {
+        padding-top: 0; }
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .section.inquiries .row .row .columns + .columns {
           margin-top: 1.7rem; } }
@@ -7106,16 +7449,47 @@ html.IGv2 {
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .section.inquiries .dropdown {
           float: none; } }
+      @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        html.IGv2 .section.inquiries .dropdown {
+          float: none; } }
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      html.IGv2 .section.inquiries .contact {
+        text-align: center;
+        margin-top: 6rem !important; } }
+    html.IGv2 .section.inquiries .contact .contact-numbers-btn .outline-btn {
+      padding-left: 4rem;
+      margin-bottom: 2rem; }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .section.inquiries .contact .contact-numbers-btn {
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        width: 29rem; } }
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      html.IGv2 .section.inquiries .contact .contact-numbers-btn {
+        padding-right: 0 !important;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        max-width: 28rem; } }
+    html.IGv2 .section.inquiries .contact .contact-numbers-btn .is-dropdown-submenu {
+      right: auto; }
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      html.IGv2 .section.inquiries .contact .email {
+        padding-left: 0 !important; } }
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      html.IGv2 .section.inquiries .contact .email:after {
+        height: 0 !important; } }
     html.IGv2 .section.inquiries .contact .columns:last-child {
       position: relative;
       margin-left: 0; }
       html.IGv2 .section.inquiries .contact .columns:last-child::after {
         border-left: 0.2rem solid #c1cbd0;
         content: "";
-        height: 190%;
+        height: 130%;
         left: -0.1rem;
         position: absolute;
-        top: -45%; }
+        top: -15%; }
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .section.inquiries .contact .columns:last-child {
         margin-top: 4.2rem;
@@ -7150,6 +7524,11 @@ html.IGv2 {
     text-align: center;
     background-color: #fbf7eb;
     padding-bottom: 6.2rem; }
+    html.IGv2 .section.cta .row:nth-child(2) {
+      margin: 0 auto;
+      max-width: 87rem; }
+      html.IGv2 .section.cta .row:nth-child(2) .columns {
+        text-align: left; }
     @media screen and (min-width: 40em) {
       html.IGv2 .section.cta {
         padding-top: 4rem;
@@ -7169,6 +7548,8 @@ html.IGv2 {
       html.IGv2 .section.cta p {
         font-size: 2.2rem;
         line-height: 2.8rem; } }
+    html.IGv2 .section.cta .tp_07 {
+      text-align: center; }
     html.IGv2 .section.cta .outline-btn {
       margin-top: 5.3rem;
       width: auto; }
@@ -7180,6 +7561,8 @@ html.IGv2 {
         color: #0d263c; }
   html.IGv2 .section.find-an-advisor {
     background-color: #f1f7f7; }
+    html.IGv2 .section.find-an-advisor .row .columns:nth-child(2) {
+      max-width: 52rem; }
     @media screen and (min-width: 64em) {
       html.IGv2 .section.find-an-advisor {
         padding-top: 7rem;
@@ -7219,6 +7602,8 @@ html.IGv2 {
     @media screen and (min-width: 40em) and (max-width: 63.9375em) {
       html.IGv2 .advertisement .tp_03 br, html.IGv2 .advertisement-video .tp_03 br {
         display: block; } }
+  html.IGv2 .advertisement-video .video-wrapper {
+    padding-bottom: 42.25%; }
   html.IGv2 .advertisement-video .info-toggle-content .columns:nth-child(1) a:hover {
     text-decoration: underline; }
   @media screen and (min-width: 64em) {
