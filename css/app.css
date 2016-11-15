@@ -4309,7 +4309,8 @@ table.hover tr:nth-of-type(even):hover {
     .header-wrap .main-topbar-row .ig-brand-logo {
       width: 220px;
       height: 33px;
-      margin-left: 0; }
+      margin-left: 0;
+      margin-bottom: 0; }
       @media screen and (min-width: 64em) {
         .header-wrap .main-topbar-row .ig-brand-logo {
           margin-top: 16px; } }
