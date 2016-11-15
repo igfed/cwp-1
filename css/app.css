@@ -4886,6 +4886,8 @@ html.IGv2 {
     @media screen and (max-width: 39.9375em) {
       html.IGv2 h4 {
         margin-bottom: 1rem; } }
+  html.IGv2 .consultant_name {
+    text-transform: capitalize; }
   html.IGv2 .illustration {
     background-image: url("../img/illustrations/placeholder.png");
     background-position-y: 0;
@@ -7382,6 +7384,7 @@ html.IGv2 {
   html.IGv2 .section.inquiries {
     background-color: #f1f7f7; }
     html.IGv2 .section.inquiries h3 {
+      text-transform: capitalize;
       margin-bottom: 2.6rem; }
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .section.inquiries h3 {

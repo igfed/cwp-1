@@ -1,6 +1,7 @@
 (function ($) {
     'use strict';
 
+
     $.fn.infoToggle = function() {
         this.each(function() {
             var $reveal = $(this),
@@ -610,4 +611,12 @@
             videoPlayer.play();
         }
     }
+
 })();
+
+$(function textTransformLowercase(){
+     $('.consultant_name, .maps h3').text(function (_, val) {
+    return val.toLowerCase();
+    });
+}());  
+
