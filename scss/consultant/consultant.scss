@@ -40,7 +40,7 @@ h4 {
 
 .illustration {
 	//add overrides for specific images based on attribute value
-	background-image: url("../img/illustrations/placeholder.png");
+	// background-image: url("../img/illustrations/placeholder.png");
 	background-position-y: 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1077,7 +1077,7 @@ form {
 	.section-bar {
 		position: relative;
 		text-align: center;
-		margin-bottom: 4rem;
+		margin-bottom: 4rem!important;
 		margin-top: 4rem;
 
 		p {
@@ -1240,9 +1240,11 @@ p.server-error {
 	}
 
 	.form-button{
-		margin: 0 auto;
-		float: none;
-		text-align: center;
+		@media #{$small-only}{
+			margin: 0 auto;
+			float: none;
+			text-align: center;
+		}
 	}
 }
 
@@ -1296,11 +1298,11 @@ p.server-error {
 		@include info-toggle-base;
 	}
 
-	.info-toggle-content {
-		@media #{$medium-up} {
-			height: auto !important;
-		}
-	}
+	// .info-toggle-content {
+	// 	@media #{$medium-up} {
+	// 		height: auto !important;
+	// 	}
+	// }
 
 	.info-toggle-trigger {
 		.fa-chevron-down {
@@ -2149,6 +2151,13 @@ a.map-anchor {
 						margin: 0 auto;
 					}
 				}
+
+				p{
+					&.show-for-small-only{
+						width: 26rem;
+						margin: 0 auto;
+					}
+				}
 			}
 		}
 	}
@@ -2159,6 +2168,11 @@ a.map-anchor {
 		.info-toggle-content{
 			.columns{
 				&:first-child{
+					.illustration{
+						@media #{$medium-only}{
+							margin: 0 auto;
+						}
+					}
 					@media #{$medium-only}{
 						margin: 0 auto;
 						float: none;
@@ -2172,6 +2186,13 @@ a.map-anchor {
 								width: auto;
 							}
 						}
+					}
+				}
+
+				p{
+					&.show-for-small-only{
+						width: 26rem;
+						margin: 0 auto;
 					}
 				}
 			}
@@ -3031,6 +3052,10 @@ a.map-anchor {
 .section.careers {
 	background-color: $alternateBackground;
 
+	.info-toggle-content {
+		height: auto !important;
+	}
+
 	.row {
 		.row {
 			margin: 0;
@@ -3332,7 +3357,7 @@ a.map-anchor {
 .section.associations {
 	padding-bottom: 10rem;
 	@media #{$small-only} {
-		padding-bottom: 0;
+		padding-bottom: 2rem;
 	}
 
 	h2 {
@@ -3609,6 +3634,7 @@ a.map-anchor {
 		@media #{$medium-only}{
 			text-align: center;
 			margin-top: 6rem!important;
+
 		}
 
 
@@ -3616,7 +3642,6 @@ a.map-anchor {
 
 			.outline-btn{
 				padding-left: 4rem;
-				margin-bottom: 2rem;
 			}
 
 			@media #{$small-only}{
@@ -3651,9 +3676,12 @@ a.map-anchor {
 		}
 
 		.columns{
-			// width: auto;
 
 			&:last-child {
+
+				@media #{$medium-only}{
+					margin-top: 2rem;
+				}
 
 				@include horizontal-separator("&", .2rem, 0, 130%);
 
@@ -3661,6 +3689,7 @@ a.map-anchor {
 						@media #{$small-only} {
 							margin-top: 4.2rem;
 							text-align: center;
+							margin-top: 2rem;
 
 						@media #{$medium-only} {
 							padding-left: 2.5rem;
