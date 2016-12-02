@@ -1,6 +1,7 @@
 (function ($) {
     'use strict';
 
+
     $.fn.infoToggle = function() {
         this.each(function() {
             var $reveal = $(this),
@@ -379,6 +380,7 @@
         //-----
 
         function geocodeAddress(address, map) {
+
             geocoder.geocode({'address': address}, function(results, status) {
                 if (status === 'OK') {
                     setAddressOnMap(results[0].geometry.location, map);
@@ -410,7 +412,7 @@
                             lat: parseFloat(icon.attr('data-lat')),
                             lng: parseFloat(icon.attr('data-lng'))
                         },
-                        targetAddress = parentContainer.find('h3').html(),
+                        targetAddress = parentContainer.find('.map-address').html(),
                         targetString,
                         zoom = icon.attr('data-zoom') ? parseInt(icon.attr('data-zoom')) : 15,
                         map = new google.maps.Map(icon.get(0), {
@@ -683,3 +685,10 @@ function FormValidationModule(form, overlayReference) {
             }
         }
     }
+})();
+
+$(function textTransformLowercase(){
+     $('.consultant_name, .maps h3').text(function (_, val) {
+    return val.toLowerCase();
+    });
+}());  
