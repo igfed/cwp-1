@@ -175,11 +175,13 @@ $bluewood: #314659;
           right: 0; top: 13px;
           height: 40px;
           padding-top:  4px; cursor: pointer;
+          background-color: #fff;
           &:focus {
             width: 100%;
             position: absolute;
+            background-color: #fff;
             border-bottom: 1px solid #a9a9a9;
-            margin-right: 150px; 
+            margin-right: 120px; 
 
             + .search-input-close::after {
                 content: '\00a0'; cursor: pointer;
@@ -210,6 +212,7 @@ $bluewood: #314659;
       width: 220px; height: 33px;
       //max-width: 220px; max-height: 33px;
       margin-left: 0;
+      margin-bottom: 0;
       @media screen and (min-width: 64em) { margin-top: 16px; }
     }
     .ig-brand-slogan {

@@ -4284,12 +4284,14 @@ table.hover tr:nth-of-type(even):hover {
         top: 13px;
         height: 40px;
         padding-top: 4px;
-        cursor: pointer; }
+        cursor: pointer;
+        background-color: #fff; }
         .header-wrap .main-topbar-row .main-topbar .form-input-search .search-input:focus {
           width: 100%;
           position: absolute;
+          background-color: #fff;
           border-bottom: 1px solid #a9a9a9;
-          margin-right: 150px; }
+          margin-right: 120px; }
           .header-wrap .main-topbar-row .main-topbar .form-input-search .search-input:focus + .search-input-close::after {
             content: '\00a0';
             cursor: pointer;
@@ -4309,7 +4311,8 @@ table.hover tr:nth-of-type(even):hover {
     .header-wrap .main-topbar-row .ig-brand-logo {
       width: 220px;
       height: 33px;
-      margin-left: 0; }
+      margin-left: 0;
+      margin-bottom: 0; }
       @media screen and (min-width: 64em) {
         .header-wrap .main-topbar-row .ig-brand-logo {
           margin-top: 16px; } }
@@ -4658,6 +4661,7 @@ html.IGv2 {
   /*----------Maps----------------*/
   /*---------------------------------------MODULES-------------------------------------*/
   /*--------------1.Global Navigation-----------*/
+  /*-----------------2.Office-------------------*/
   /*--------------2.Hero Contact Info-----------*/
   /*---------------Announcements------------------*/
   /*--------------3.Office Hours---------------*/
@@ -4885,8 +4889,23 @@ html.IGv2 {
     @media screen and (max-width: 39.9375em) {
       html.IGv2 h4 {
         margin-bottom: 1rem; } }
+  html.IGv2 .consultant_name {
+    text-transform: capitalize; }
+  html.IGv2 .explore {
+    text-align: center; }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .explore p {
+        margin-bottom: 0rem; } }
+    html.IGv2 .explore p .fa {
+      display: block;
+      font-size: 5rem;
+      top: -5px;
+      position: relative;
+      line-height: 4rem; }
+      @media screen and (max-width: 39.9375em) {
+        html.IGv2 .explore p .fa {
+          margin-top: -.2rem; } }
   html.IGv2 .illustration {
-    background-image: url("../img/illustrations/placeholder.png");
     background-position-y: 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4895,12 +4914,17 @@ html.IGv2 {
     height: 138px;
     width: 138px;
     position: relative;
-    left: -.2rem; }
+    left: -.2rem;
+    overflow: hidden; }
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .illustration {
         position: static;
         display: block;
         margin: 0 auto; } }
+    html.IGv2 .illustration img {
+      height: 100% !important;
+      width: auto;
+      max-width: none !important; }
   html.IGv2 .social-icons {
     margin-bottom: 1.1rem; }
     html.IGv2 .social-icons a:hover {
@@ -5118,6 +5142,8 @@ html.IGv2 {
     html.IGv2 .small-proportional-grid {
       display: table;
       width: 100%; }
+      html.IGv2 .small-proportional-grid .outline-btn {
+        width: auto !important; }
       html.IGv2 .small-proportional-grid > div {
         display: table-row; }
         html.IGv2 .small-proportional-grid > div > div.columns {
@@ -5150,6 +5176,8 @@ html.IGv2 {
       text-align: center !important; } }
   html.IGv2 .no-padding {
     padding: 0 !important; }
+  html.IGv2 .width-auto {
+    width: auto !important; }
   html.IGv2 a.outline-btn {
     background: #0ed59a none repeat scroll 0 0;
     border: 2px solid #0ed59a;
@@ -5170,7 +5198,6 @@ html.IGv2 {
     text-transform: lowercase;
     transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
     min-width: 21rem;
-    max-width: 28rem;
     padding-left: 2rem;
     padding-right: 2rem;
     z-index: 0;
@@ -5475,15 +5502,15 @@ html.IGv2 {
     width: 4.5rem;
     position: absolute;
     right: 2.3rem;
-    top: 2.6rem; }
+    top: 2.6rem;
+    display: block; }
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .close-button {
         height: 2.5rem;
         width: 2.5rem; } }
     html.IGv2 .close-button span {
       color: #000;
-      font-size: 4rem;
-      line-height: 1.8rem; }
+      font-size: 4rem; }
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .close-button span {
           font-size: 3rem;
@@ -5492,12 +5519,92 @@ html.IGv2 {
       html.IGv2 .close-button {
         right: 2rem;
         top: 2rem; } }
+  html.IGv2 .form-actions .dropdown {
+    float: right; }
+  @media screen and (max-width: 39.9375em) {
+    html.IGv2 .form-actions {
+      margin-top: 2rem; } }
+  html.IGv2 .form-actions .is-dropdown-submenu {
+    border: none;
+    border-radius: 5.5px;
+    box-shadow: 0 1px 7.5px rgba(0, 0, 0, 0.35);
+    padding: .8rem 0 2.5rem;
+    min-width: 28rem; }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .form-actions .is-dropdown-submenu {
+        left: 70%;
+        top: 40px; } }
+  @media screen and (max-width: 39.9375em) {
+    html.IGv2 .form-actions .small-proportional-grid {
+      margin-bottom: 1.4rem; } }
+  html.IGv2 .form-actions .small-6 {
+    padding-right: 2.5rem;
+    text-align: right; }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .form-actions .small-6 {
+        padding: 0; }
+        html.IGv2 .form-actions .small-6 .phone {
+          width: 53%;
+          float: right;
+          margin-right: 1.5rem; } }
+    @media screen and (max-width: 39.9375em) and (max-width: 39.9375em) {
+      html.IGv2 .form-actions .small-6 .phone {
+        margin-right: 0; } }
+    @media screen and (max-width: 39.9375em) {
+          html.IGv2 .form-actions .small-6 .phone .show-for-small-only {
+            padding-right: 1.5rem;
+            float: right; }
+        html.IGv2 .form-actions .small-6 .email {
+          width: 55%;
+          float: left;
+          margin-left: 1.5rem; } }
+    @media screen and (max-width: 39.9375em) and (max-width: 39.9375em) {
+      html.IGv2 .form-actions .small-6 .email {
+        margin-left: 0; } }
+    @media screen and (max-width: 39.9375em) {
+          html.IGv2 .form-actions .small-6 .email .show-for-small-only {
+            padding-left: 1.5rem;
+            float: left; } }
+  html.IGv2 .form-actions .medium-5 {
+    text-align: right; }
+  html.IGv2 .form-actions .small-12 {
+    text-align: left;
+    padding-left: 2.5rem; }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .form-actions .small-12 {
+        padding: 0;
+        text-align: center; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    html.IGv2 .form-actions .columns.medium-centered {
+      padding-left: 2.75rem;
+      padding-right: 2.75rem; } }
+  @media screen and (max-width: 39.9375em) {
+    html.IGv2 .form-actions .columns.medium-centered {
+      padding: 0; } }
+  @media screen and (max-width: 39.9375em) {
+    html.IGv2 .form-actions .columns.medium-centered + :not(.medium-centered) {
+      padding-left: 0; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    html.IGv2 .form-actions .columns.medium-centered + :not(.medium-centered) {
+      padding-left: 0; } }
+  @media screen and (max-width: 39.9375em) {
+    html.IGv2 .form-actions .columns:not(.medium-centered) {
+      margin-top: 0; } }
+  html.IGv2 .form-actions .columns:not(.medium-centered) .outline-btn {
+    margin-bottom: 0; }
+  @media screen and (min-width: 40em) {
+    html.IGv2 .logo-form {
+      max-width: 100rem; } }
   html.IGv2 form {
     padding: 2rem 1.5rem; }
     html.IGv2 form img {
-      margin-top: 0;
+      margin-top: 1.5rem;
       margin-bottom: 6rem;
       width: 14rem; }
+      @media screen and (min-width: 40em) {
+        html.IGv2 form img {
+          width: 16rem;
+          margin-top: 2rem; } }
     html.IGv2 form > .row:first-child {
       max-width: 126.2rem;
       position: relative; }
@@ -5505,7 +5612,7 @@ html.IGv2 {
         position: absolute;
         top: 2.7rem;
         width: 10.8rem;
-        left: 2rem; }
+        left: 3rem; }
     html.IGv2 form .row {
       max-width: 83.2rem; }
       html.IGv2 form .row .row {
@@ -5538,7 +5645,7 @@ html.IGv2 {
         margin-bottom: 2.7rem; }
     html.IGv2 form p.tp_09 {
       margin-bottom: 6.4rem; }
-    html.IGv2 form input[type=text], html.IGv2 form input[type=password], html.IGv2 form input[type=tel], html.IGv2 form input[type=email], html.IGv2 form textarea {
+    html.IGv2 form input[type=text], html.IGv2 form input[type=password], html.IGv2 form input[type=tel], html.IGv2 form input[type=email], html.IGv2 form textarea, html.IGv2 form input[type=number] {
       background-color: transparent;
       border-color: #0d263c;
       border-width: 0;
@@ -5549,14 +5656,14 @@ html.IGv2 {
       text-transform: none;
       margin-top: .8rem 0 .7rem;
       color: #0d263c; }
-      html.IGv2 form input[type=text]::-webkit-input-placeholder, html.IGv2 form input[type=password]::-webkit-input-placeholder, html.IGv2 form input[type=tel]::-webkit-input-placeholder, html.IGv2 form input[type=email]::-webkit-input-placeholder, html.IGv2 form textarea::-webkit-input-placeholder {
+      html.IGv2 form input[type=text]::-webkit-input-placeholder, html.IGv2 form input[type=password]::-webkit-input-placeholder, html.IGv2 form input[type=tel]::-webkit-input-placeholder, html.IGv2 form input[type=email]::-webkit-input-placeholder, html.IGv2 form textarea::-webkit-input-placeholder, html.IGv2 form input[type=number]::-webkit-input-placeholder {
         color: #666666; }
-      html.IGv2 form input[type=text]:-ms-input-placeholder, html.IGv2 form input[type=password]:-ms-input-placeholder, html.IGv2 form input[type=tel]:-ms-input-placeholder, html.IGv2 form input[type=email]:-ms-input-placeholder, html.IGv2 form textarea:-ms-input-placeholder {
+      html.IGv2 form input[type=text]:-ms-input-placeholder, html.IGv2 form input[type=password]:-ms-input-placeholder, html.IGv2 form input[type=tel]:-ms-input-placeholder, html.IGv2 form input[type=email]:-ms-input-placeholder, html.IGv2 form textarea:-ms-input-placeholder, html.IGv2 form input[type=number]:-ms-input-placeholder {
         color: #666666; }
-      html.IGv2 form input[type=text]::-moz-placeholder, html.IGv2 form input[type=password]::-moz-placeholder, html.IGv2 form input[type=tel]::-moz-placeholder, html.IGv2 form input[type=email]::-moz-placeholder, html.IGv2 form textarea::-moz-placeholder {
+      html.IGv2 form input[type=text]::-moz-placeholder, html.IGv2 form input[type=password]::-moz-placeholder, html.IGv2 form input[type=tel]::-moz-placeholder, html.IGv2 form input[type=email]::-moz-placeholder, html.IGv2 form textarea::-moz-placeholder, html.IGv2 form input[type=number]::-moz-placeholder {
         color: #666666;
         opacity: 1; }
-      html.IGv2 form input[type=text]:not(textarea), html.IGv2 form input[type=password]:not(textarea), html.IGv2 form input[type=tel]:not(textarea), html.IGv2 form input[type=email]:not(textarea), html.IGv2 form textarea:not(textarea) {
+      html.IGv2 form input[type=text]:not(textarea), html.IGv2 form input[type=password]:not(textarea), html.IGv2 form input[type=tel]:not(textarea), html.IGv2 form input[type=email]:not(textarea), html.IGv2 form textarea:not(textarea), html.IGv2 form input[type=number]:not(textarea) {
         line-height: 4rem; }
     html.IGv2 form label {
       font-family: "whitney_scmedium";
@@ -5597,16 +5704,16 @@ html.IGv2 {
         position: absolute;
         right: .7rem;
         color: #d42f1a; }
-      html.IGv2 form label input[type=text], html.IGv2 form label input[type=password], html.IGv2 form label input[type=tel], html.IGv2 form label input[type=email], html.IGv2 form label textarea {
+      html.IGv2 form label input[type=text], html.IGv2 form label input[type=password], html.IGv2 form label input[type=tel], html.IGv2 form label input[type=email], html.IGv2 form label textarea, html.IGv2 form label input[type=number] {
         font-family: "whitney_bookregular";
         font-size: 1.6rem;
         color: #0d263c;
         margin-bottom: 0;
         border: 1px solid transparent;
         border-radius: 6px 6px 3px 3px; }
-        html.IGv2 form label input[type=text]:focus, html.IGv2 form label input[type=password]:focus, html.IGv2 form label input[type=tel]:focus, html.IGv2 form label input[type=email]:focus, html.IGv2 form label textarea:focus {
+        html.IGv2 form label input[type=text]:focus, html.IGv2 form label input[type=password]:focus, html.IGv2 form label input[type=tel]:focus, html.IGv2 form label input[type=email]:focus, html.IGv2 form label textarea:focus, html.IGv2 form label input[type=number]:focus {
           border-color: #0d263c; }
-        html.IGv2 form label input[type=text].error + .fa, html.IGv2 form label input[type=password].error + .fa, html.IGv2 form label input[type=tel].error + .fa, html.IGv2 form label input[type=email].error + .fa, html.IGv2 form label textarea.error + .fa {
+        html.IGv2 form label input[type=text].error + .fa, html.IGv2 form label input[type=password].error + .fa, html.IGv2 form label input[type=tel].error + .fa, html.IGv2 form label input[type=email].error + .fa, html.IGv2 form label textarea.error + .fa, html.IGv2 form label input[type=number].error + .fa {
           display: block; }
       html.IGv2 form label span {
         position: relative;
@@ -5625,6 +5732,8 @@ html.IGv2 {
         html.IGv2 form label:not(.is-editing) span + textarea {
           height: 4rem;
           margin-top: -1rem; }
+      html.IGv2 form label #appointment_callTime {
+        margin-right: -5.5rem; }
     html.IGv2 form label.error {
       font-family: "whitney_bookregular";
       font-size: 1.6rem;
@@ -5648,7 +5757,7 @@ html.IGv2 {
     html.IGv2 form .section-bar {
       position: relative;
       text-align: center;
-      margin-bottom: 4rem;
+      margin-bottom: 4rem !important;
       margin-top: 4rem; }
       html.IGv2 form .section-bar p {
         background-color: #fff;
@@ -5754,10 +5863,11 @@ html.IGv2 {
   @media screen and (max-width: 39.9375em) {
     html.IGv2 .reveal-overlay .error {
       margin-top: 0 !important; } }
-  html.IGv2 .reveal-overlay .form-button {
-    margin: 0 auto;
-    float: none;
-    text-align: center; }
+  @media screen and (max-width: 39.9375em) {
+    html.IGv2 .reveal-overlay .form-button {
+      margin: 0 auto;
+      float: none;
+      text-align: center; } }
   @media screen and (max-width: 39.9375em) {
     html.IGv2 .info-toggle-small .info-toggle-content {
       height: 0;
@@ -5785,9 +5895,6 @@ html.IGv2 {
       margin-bottom: 0; }
     html.IGv2 .info-toggle-small:not(.active).section {
       padding-bottom: 1.5rem; } }
-  @media screen and (min-width: 40em) {
-    html.IGv2 .info-toggle-small .info-toggle-content {
-      height: auto !important; } }
   @media screen and (min-width: 40em) {
     html.IGv2 .info-toggle-small .info-toggle-trigger .fa-chevron-down {
       display: none; } }
@@ -5887,6 +5994,64 @@ html.IGv2 {
     html.IGv2 a.map-anchor:hover .map-container .map-icon + div {
       -ms-transform: translateY(-100%);
           transform: translateY(-100%); }
+  html.IGv2 .section.office {
+    background-color: #7ec4b9; }
+    html.IGv2 .section.office a.map-anchor {
+      float: none;
+      margin: 0 auto; }
+      @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        html.IGv2 .section.office a.map-anchor {
+          width: 19rem; } }
+      @media screen and (min-width: 64em) and (max-width: 74.9375em) {
+        html.IGv2 .section.office a.map-anchor {
+          width: 22.6rem; } }
+      @media screen and (min-width: 40em) {
+        html.IGv2 .section.office a.map-anchor {
+          padding-bottom: 3rem;
+          padding-top: 4rem; } }
+      @media screen and (max-width: 39.9375em) {
+        html.IGv2 .section.office a.map-anchor {
+          padding-bottom: 1rem;
+          padding-top: 2rem; } }
+    html.IGv2 .section.office .details {
+      text-align: center; }
+      html.IGv2 .section.office .details .tp_08 {
+        margin: 0 auto; }
+        @media screen and (min-width: 64em) {
+          html.IGv2 .section.office .details .tp_08 {
+            max-width: 30rem; } }
+        @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+          html.IGv2 .section.office .details .tp_08 {
+            max-width: 23rem; } }
+        @media screen and (min-width: 40em) {
+          html.IGv2 .section.office .details .tp_08 {
+            padding-top: 1rem; } }
+        @media screen and (max-width: 39.9375em) {
+          html.IGv2 .section.office .details .tp_08 {
+            max-width: 23rem; } }
+      @media screen and (min-width: 40em) {
+        html.IGv2 .section.office .details .tp_06 {
+          padding-top: 1.5rem; } }
+    html.IGv2 .section.office .outline-btn {
+      width: 28rem; }
+    @media screen and (min-width: 40em) {
+      html.IGv2 .section.office .form-actions {
+        padding: 5.5rem 4.5rem; } }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .section.office .form-actions {
+        float: none;
+        margin-top: 1rem; } }
+    html.IGv2 .section.office .form-actions .small-proportional-grid .columns {
+      padding-left: 0; }
+      @media screen and (min-width: 40em) {
+        html.IGv2 .section.office .form-actions .small-proportional-grid .columns {
+          padding-right: 2.5rem; } }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .section.office .form-actions .small-proportional-grid .dropdown {
+        float: none; } }
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .section.office .explore {
+        padding-top: 1.5rem; } }
   html.IGv2 .section.personnel {
     background-color: #fbf7eb; }
     @media screen and (max-width: 39.9375em) {
@@ -5957,9 +6122,7 @@ html.IGv2 {
             padding-right: 0; } }
         @media screen and (max-width: 39.9375em) {
           html.IGv2 .section.personnel > .row + .row .columns .row .columns {
-            padding: 0; }
-            html.IGv2 .section.personnel > .row + .row .columns .row .columns + .columns {
-              margin-top: 5.2rem; } }
+            padding: 0; } }
         html.IGv2 .section.personnel > .row + .row .columns .row + .row {
           margin-top: 7.5rem; }
           @media screen and (max-width: 39.9375em) {
@@ -6123,7 +6286,6 @@ html.IGv2 {
                   display: block;
                   margin-top: 3rem; } }
             html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row .outline-btn {
-              margin-bottom: 1.1rem;
               width: 28rem; }
               @media screen and (max-width: 39.9375em) {
                 html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row .outline-btn.secondary:hover {
@@ -6132,93 +6294,12 @@ html.IGv2 {
             html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row .icon {
               margin-left: 1.3rem;
               margin-right: 1.3rem; }
-            html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .dropdown {
-              float: right; }
-            @media screen and (max-width: 39.9375em) {
-              html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions {
-                margin-top: 2rem; } }
-            html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .is-dropdown-submenu {
-              border: none;
-              border-radius: 5.5px;
-              box-shadow: 0 1px 7.5px rgba(0, 0, 0, 0.35);
-              padding: .8rem 0 2.5rem;
-              min-width: 28rem; }
-              @media screen and (max-width: 39.9375em) {
-                html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .is-dropdown-submenu {
-                  left: 70%;
-                  top: 40px; } }
-            @media screen and (max-width: 39.9375em) {
-              html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .small-proportional-grid {
-                margin-bottom: 1.4rem; } }
-            html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .small-6 {
-              padding-right: 2.5rem;
-              text-align: right; }
-              @media screen and (max-width: 39.9375em) {
-                html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .small-6 {
-                  padding: 0; }
-                  html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .small-6 .phone {
-                    width: 53%;
-                    float: right;
-                    margin-right: 1.5rem; } }
-    @media screen and (max-width: 39.9375em) and (max-width: 39.9375em) {
-      html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .small-6 .phone {
-        margin-right: 0; } }
-              @media screen and (max-width: 39.9375em) {
-                    html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .small-6 .phone .show-for-small-only {
-                      padding-right: 1.5rem;
-                      float: right; }
-                  html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .small-6 .email {
-                    width: 55%;
-                    float: left;
-                    margin-left: 1.5rem; } }
-    @media screen and (max-width: 39.9375em) and (max-width: 39.9375em) {
-      html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .small-6 .email {
-        margin-left: 0; } }
-              @media screen and (max-width: 39.9375em) {
-                    html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .small-6 .email .show-for-small-only {
-                      padding-left: 1.5rem;
-                      float: left; } }
-            html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .medium-5 {
-              text-align: right; }
-            html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .small-12 {
-              text-align: left;
-              padding-left: 2.5rem; }
-              @media screen and (max-width: 39.9375em) {
-                html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .small-12 {
-                  padding: 0;
-                  text-align: center; } }
-            @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-              html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .columns.medium-centered {
-                padding-left: 2.75rem;
-                padding-right: 2.75rem; } }
-            @media screen and (max-width: 39.9375em) {
-              html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .columns.medium-centered {
-                padding: 0; } }
-            @media screen and (max-width: 39.9375em) {
-              html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .columns.medium-centered + :not(.medium-centered) {
-                padding-left: 0; } }
-            @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-              html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .columns.medium-centered + :not(.medium-centered) {
-                padding-left: 0; } }
-            @media screen and (max-width: 39.9375em) {
-              html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .columns:not(.medium-centered) {
-                margin-top: 0; } }
-            html.IGv2 .section.personnel.profile > .row + .row .columns .row + .row.form-actions .columns:not(.medium-centered) .outline-btn {
-              margin-bottom: 0; }
-  html.IGv2 .explore {
-    text-align: center; }
     @media screen and (max-width: 39.9375em) {
-      html.IGv2 .explore p {
-        margin-bottom: 0rem; } }
-    html.IGv2 .explore p .fa {
-      display: block;
-      font-size: 5rem;
-      top: -5px;
-      position: relative;
-      line-height: 4rem; }
-      @media screen and (max-width: 39.9375em) {
-        html.IGv2 .explore p .fa {
-          margin-top: -.2rem; } }
+      html.IGv2 .section.personnel .form-actions .dropdown .small-icon + ul {
+        -ms-transform: translateX(50%);
+            transform: translateX(50%);
+        left: auto;
+        top: 3.7rem; } }
   html.IGv2 .section.announcements {
     background-color: #0e75d5;
     color: white;
@@ -6405,12 +6486,21 @@ html.IGv2 {
   @media screen and (max-width: 39.9375em) {
     html.IGv2 .section.hours-languages .hours .info-toggle-content .columns:last-child {
       margin: 0 auto; } }
+  html.IGv2 .section.hours-languages .hours .info-toggle-content .columns p.show-for-small-only {
+    width: 26rem;
+    margin: 0 auto; }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    html.IGv2 .section.hours-languages .languages .info-toggle-content .columns:first-child .illustration {
+      margin: 0 auto; } }
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     html.IGv2 .section.hours-languages .languages .info-toggle-content .columns:first-child {
       margin: 0 auto;
       float: none; } }
   html.IGv2 .section.hours-languages .languages .info-toggle-content .columns:last-child ul li:nth-child(even) {
     width: auto; }
+  html.IGv2 .section.hours-languages .languages .info-toggle-content .columns p.show-for-small-only {
+    width: 26rem;
+    margin: 0 auto; }
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     html.IGv2 .section.hours-languages .hide-for-small-only .columns {
       text-align: center; }
@@ -6807,200 +6897,204 @@ html.IGv2 {
                   align-items: center;
               display: -ms-flexbox;
               display: flex; } }
-          html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .portrait {
-            border: 0;
-            margin: 4.3rem auto 1.1rem; }
-            @media screen and (max-width: 39.9375em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .portrait {
-                width: 11rem;
-                height: 14rem; }
-                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .portrait img {
-                  height: 14rem; } }
-            @media screen and (min-width: 40em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .portrait {
-                float: left;
-                margin: 0 5rem 2.5rem; } }
-            @media screen and (min-width: 64em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .portrait {
-                margin-bottom: 5rem; } }
-          @media screen and (min-width: 40em) {
-            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1:first-child, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3:first-child, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p:first-child, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:first-child {
-              float: left; } }
-          html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3 {
-            font-family: "whitney_lightregular";
-            font-size: 2.8rem;
-            line-height: 3.7rem;
-            color: #0d263c;
-            margin: 0 0 -.1rem; }
-            @media screen and (min-width: 64em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3 {
-                font-size: 5.2rem;
-                line-height: 7.2rem; } }
-            @media screen and (max-width: 39.9375em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3 {
-                line-height: 3.7rem; } }
-            @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3 {
-                line-height: 2.8rem; } }
-            @media screen and (min-width: 40em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3 {
-                margin: -0.8rem 0 .8rem; } }
-            @media screen and (min-width: 64em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3 {
-                margin: -1.9rem 0 -.3rem; } }
-          html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div {
-            margin-bottom: 5.5rem; }
-            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) {
-              clear: both; }
+          html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div {
+            width: 100%; }
+            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .portrait {
+              border: 0;
+              margin: 4.3rem auto 1.1rem; }
               @media screen and (max-width: 39.9375em) {
-                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) {
-                  margin-bottom: 0; } }
-              @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) {
-                  margin-left: 5rem; } }
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .portrait {
+                  width: 11rem;
+                  height: 14rem; }
+                  html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .portrait img {
+                    height: 14rem; } }
+              @media screen and (min-width: 40em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .portrait {
+                  float: left;
+                  margin: 0 5rem 2.5rem; } }
               @media screen and (min-width: 64em) {
-                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) {
-                  clear: none;
-                  margin-top: 2.2rem; } }
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 {
-                display: inline-block; }
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .portrait {
+                  margin-bottom: 5rem; } }
+            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .overlay-only p {
+              clear: both; }
+            @media screen and (min-width: 40em) {
+              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1:first-child, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3:first-child, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p:first-child, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:first-child {
+                float: left; } }
+            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3 {
+              font-family: "whitney_lightregular";
+              font-size: 2.8rem;
+              line-height: 3.7rem;
+              color: #0d263c;
+              margin: 0 0 -.1rem; }
+              @media screen and (min-width: 64em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3 {
+                  font-size: 5.2rem;
+                  line-height: 7.2rem; } }
+              @media screen and (max-width: 39.9375em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3 {
+                  line-height: 3.7rem; } }
+              @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3 {
+                  line-height: 2.8rem; } }
+              @media screen and (min-width: 40em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3 {
+                  margin: -0.8rem 0 .8rem; } }
+              @media screen and (min-width: 64em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h1, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div h3 {
+                  margin: -1.9rem 0 -.3rem; } }
+            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div {
+              margin-bottom: 5.5rem; }
+              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) {
+                clear: both; }
                 @media screen and (max-width: 39.9375em) {
-                  html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 {
-                    font-family: "whitney_scmedium";
-                    font-size: 1.4rem;
-                    line-height: 2.4rem;
-                    color: #0d263c;
-                    text-transform: lowercase; } }
+                  html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) {
+                    margin-bottom: 0; } }
+                @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+                  html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) {
+                    margin-left: 5rem; } }
+                @media screen and (min-width: 64em) {
+                  html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) {
+                    clear: none;
+                    margin-top: 2.2rem; } }
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 {
+                  display: inline-block; }
+                  @media screen and (max-width: 39.9375em) {
+                    html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 {
+                      font-family: "whitney_scmedium";
+                      font-size: 1.4rem;
+                      line-height: 2.4rem;
+                      color: #0d263c;
+                      text-transform: lowercase; } }
   @media screen and (max-width: 39.9375em) and (min-width: 40em) {
     html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 {
       font-size: 1.8rem; } }
-                @media screen and (max-width: 39.9375em) {
-                    html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 span {
-                      font-size: 1.6rem; }
-                      html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 span .fa {
-                        display: inline-block;
-                        border: 2px solid #0d263c;
-                        width: 2.9rem;
-                        height: 2.9rem;
-                        border-radius: 50%;
-                        line-height: 2.4rem;
-                        font-size: 1.3rem;
-                        margin-right: .2rem; }
-                        html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 span .fa.fa-phone {
-                          font-size: 1.8rem; } }
-                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 + a {
-                  position: relative;
-                  margin-left: 5.2rem; }
-                  html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 + a::after {
-                    border-left: 0.2rem solid #c1cbd0;
-                    content: "";
-                    height: 80%;
-                    left: -2.7rem;
-                    position: absolute;
-                    top: 10%; }
-                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 + a::after {
-                  margin-left: -0.2rem; }
-                @media screen and (max-width: 39.9375em) {
+                  @media screen and (max-width: 39.9375em) {
+                      html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 span {
+                        font-size: 1.6rem; }
+                        html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 span .fa {
+                          display: inline-block;
+                          border: 2px solid #0d263c;
+                          width: 2.9rem;
+                          height: 2.9rem;
+                          border-radius: 50%;
+                          line-height: 2.4rem;
+                          font-size: 1.3rem;
+                          margin-right: .2rem; }
+                          html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 span .fa.fa-phone {
+                            font-size: 1.8rem; } }
                   html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 + a {
                     position: relative;
-                    margin-left: 2.2rem; }
+                    margin-left: 5.2rem; }
                     html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 + a::after {
-                      border-left: 0.1rem solid #c1cbd0;
+                      border-left: 0.2rem solid #c1cbd0;
                       content: "";
                       height: 80%;
-                      left: -1.15rem;
+                      left: -2.7rem;
                       position: absolute;
                       top: 10%; }
                   html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 + a::after {
-                    border-color: #0d263c; } }
-          html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.social-icons {
-            text-align: center;
-            margin-bottom: 2rem; }
+                    margin-left: -0.2rem; }
+                  @media screen and (max-width: 39.9375em) {
+                    html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 + a {
+                      position: relative;
+                      margin-left: 2.2rem; }
+                      html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 + a::after {
+                        border-left: 0.1rem solid #c1cbd0;
+                        content: "";
+                        height: 80%;
+                        left: -1.15rem;
+                        position: absolute;
+                        top: 10%; }
+                    html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div div:not(:first-child) a.tp_09 + a::after {
+                      border-color: #0d263c; } }
             html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.social-icons {
-              position: relative;
-              margin-top: 3rem; }
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.social-icons::after {
-                border-top: 0.1rem solid #c1cbd0;
-                content: "";
-                width: 100%;
-                top: -1.55rem;
-                position: absolute;
-                left: 0%; }
-            @media screen and (min-width: 40em) {
+              text-align: center;
+              margin-bottom: 2rem; }
               html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.social-icons {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: 0; }
+                position: relative;
+                margin-top: 3rem; }
                 html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.social-icons::after {
-                  display: none; } }
-            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.social-icons a {
-              margin: 1.25rem; }
-          html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_08, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_07 {
-            font-family: "whitney_bookregular";
-            font-size: 1.6rem;
-            color: #0d263c;
-            margin-bottom: 0rem; }
-            @media screen and (min-width: 64em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_08, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_07 {
-                font-size: 2.2rem; } }
-            @media screen and (min-width: 40em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_08, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_07 {
-                margin-bottom: .4rem; } }
-            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_08 .icon, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_07 .icon {
-              margin-bottom: 0.6rem; }
-              @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_08 .icon, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_07 .icon {
+                  border-top: 0.1rem solid #c1cbd0;
+                  content: "";
+                  width: 100%;
+                  top: -1.55rem;
+                  position: absolute;
+                  left: 0%; }
+              @media screen and (min-width: 40em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.social-icons {
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  margin: 0; }
+                  html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.social-icons::after {
+                    display: none; } }
+              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.social-icons a {
+                margin: 1.25rem; }
+            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_08, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_07 {
+              font-family: "whitney_bookregular";
+              font-size: 1.6rem;
+              color: #0d263c;
+              margin-bottom: 0rem; }
+              @media screen and (min-width: 64em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_08, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_07 {
+                  font-size: 2.2rem; } }
+              @media screen and (min-width: 40em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_08, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_07 {
                   margin-bottom: .4rem; } }
-          html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_06, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_04 {
-            font-family: "whitney_scmedium";
-            font-size: 1.8rem;
-            line-height: 2.4rem;
-            color: #0d263c;
-            text-transform: lowercase;
-            margin-bottom: 1.2rem; }
-            @media screen and (min-width: 64em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_06, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_04 {
-                font-size: 2.2rem; } }
-            @media screen and (max-width: 39.9375em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_06, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_04 {
-                font-size: 1.6rem; } }
-            @media screen and (max-width: 39.9375em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_06, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_04 {
-                letter-spacing: 1px;
-                line-height: 1.6rem; } }
-          html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_09 {
-            font-family: "whitney_bookregular";
-            font-size: 1.6rem;
-            color: #0d263c; }
-            @media screen and (min-width: 64em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_09 {
-                font-size: 1.8rem;
-                line-height: 2.8rem; } }
-            @media screen and (max-width: 39.9375em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_09 {
-                font-size: 1.4rem;
-                line-height: 1.9rem; } }
-            @media screen and (max-width: 39.9375em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_09 {
-                letter-spacing: 1px;
-                margin-bottom: 1.8rem; } }
-          html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p:last-child {
-            text-align: left;
-            clear: both;
-            line-height: 2.5rem; }
-            @media screen and (max-width: 39.9375em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p:last-child {
-                font-size: 1.6rem;
-                margin-bottom: 6.2rem; } }
-            @media screen and (min-width: 40em) {
-              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p:last-child {
-                line-height: 3rem; } }
-          html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .overlay-only {
-            display: block; }
-          html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .overlay-hide {
-            display: none; }
+              html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_08 .icon, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_07 .icon {
+                margin-bottom: 0.6rem; }
+                @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+                  html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_08 .icon, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_07 .icon {
+                    margin-bottom: .4rem; } }
+            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_06, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_04 {
+              font-family: "whitney_scmedium";
+              font-size: 1.8rem;
+              line-height: 2.4rem;
+              color: #0d263c;
+              text-transform: lowercase;
+              margin-bottom: 1.2rem; }
+              @media screen and (min-width: 64em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_06, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_04 {
+                  font-size: 2.2rem; } }
+              @media screen and (max-width: 39.9375em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_06, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_04 {
+                  font-size: 1.6rem; } }
+              @media screen and (max-width: 39.9375em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_06, html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_04 {
+                  letter-spacing: 1px;
+                  line-height: 1.6rem; } }
+            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_09 {
+              font-family: "whitney_bookregular";
+              font-size: 1.6rem;
+              color: #0d263c; }
+              @media screen and (min-width: 64em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_09 {
+                  font-size: 1.8rem;
+                  line-height: 2.8rem; } }
+              @media screen and (max-width: 39.9375em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_09 {
+                  font-size: 1.4rem;
+                  line-height: 1.9rem; } }
+              @media screen and (max-width: 39.9375em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p.tp_09 {
+                  letter-spacing: 1px;
+                  margin-bottom: 1.8rem; } }
+            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p:last-child {
+              text-align: left;
+              clear: both;
+              line-height: 2.5rem; }
+              @media screen and (max-width: 39.9375em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p:last-child {
+                  font-size: 1.6rem;
+                  margin-bottom: 6.2rem; } }
+              @media screen and (min-width: 40em) {
+                html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div p:last-child {
+                  line-height: 3rem; } }
+            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .overlay-only {
+              display: block; }
+            html.IGv2 .personnel-bio-overlay .slick-list .slick-track .carousel-slides > div .overlay-hide {
+              display: none; }
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .personnel-bio-overlay .slick-arrow {
         display: none !important; } }
@@ -7008,6 +7102,15 @@ html.IGv2 {
       left: 0; }
     html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-next {
       right: 0; }
+  html.IGv2 .team .info-toggle-content .columns {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 3rem;
+    padding-right: 3rem; }
+    html.IGv2 .team .info-toggle-content .columns:nth-last-child(odd) {
+      margin: 0 auto;
+      float: none; }
   html.IGv2 .section.video {
     padding-top: 3.8rem;
     background: linear-gradient(to bottom, #fbf7eb, #fbf7eb 36%, white 36%); }
@@ -7084,6 +7187,8 @@ html.IGv2 {
           width: 8rem; } }
   html.IGv2 .section.careers {
     background-color: #f1f7f7; }
+    html.IGv2 .section.careers .info-toggle-content {
+      height: auto !important; }
     html.IGv2 .section.careers .row .row {
       margin: 0; }
       html.IGv2 .section.careers .row .row:first-child {
@@ -7289,7 +7394,7 @@ html.IGv2 {
     padding-bottom: 10rem; }
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .section.associations {
-        padding-bottom: 0; } }
+        padding-bottom: 2rem; } }
     html.IGv2 .section.associations h2 {
       margin-bottom: 1.5rem; }
       @media screen and (min-width: 40em) {
@@ -7383,6 +7488,7 @@ html.IGv2 {
   html.IGv2 .section.inquiries {
     background-color: #f1f7f7; }
     html.IGv2 .section.inquiries h3 {
+      text-transform: capitalize;
       margin-bottom: 2.6rem; }
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .section.inquiries h3 {
@@ -7457,8 +7563,7 @@ html.IGv2 {
         text-align: center;
         margin-top: 6rem !important; } }
     html.IGv2 .section.inquiries .contact .contact-numbers-btn .outline-btn {
-      padding-left: 4rem;
-      margin-bottom: 2rem; }
+      padding-left: 4rem; }
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .section.inquiries .contact .contact-numbers-btn {
         margin-left: auto;
@@ -7480,6 +7585,9 @@ html.IGv2 {
     @media screen and (min-width: 40em) and (max-width: 63.9375em) {
       html.IGv2 .section.inquiries .contact .email:after {
         height: 0 !important; } }
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      html.IGv2 .section.inquiries .contact .columns:last-child {
+        margin-top: 2rem; } }
     html.IGv2 .section.inquiries .contact .columns:last-child {
       position: relative;
       margin-left: 0; }
@@ -7493,7 +7601,8 @@ html.IGv2 {
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .section.inquiries .contact .columns:last-child {
         margin-top: 4.2rem;
-        text-align: center; } }
+        text-align: center;
+        margin-top: 2rem; } }
   @media screen and (max-width: 39.9375em) and (min-width: 40em) and (max-width: 63.9375em) {
     html.IGv2 .section.inquiries .contact .columns:last-child {
       padding-left: 2.5rem; } }
@@ -7635,6 +7744,8 @@ html.IGv2 {
     html.IGv2 .section.trending .row + .row .columns + .columns:last-child .outline-btn {
       right: 0;
       left: 2.3rem; } }
+  html.IGv2 .section.trending .info-toggle-content {
+    height: auto !important; }
   html.IGv2 .homepage-carousel, html.IGv2 .personnel-bio-overlay {
     max-width: 91.4rem;
     margin: 0 auto; }
@@ -7737,6 +7848,8 @@ html.IGv2 {
     @media screen and (min-width: 64em) {
       html.IGv2 .personnel-bio-overlay .slick-arrow.carousel-next {
         right: 6rem; } }
+  html.IGv2 .consultant-overlay-bio {
+    width: 100%; }
   html.IGv2 .block-link {
     cursor: pointer; }
     html.IGv2 .block-link:hover .portrait {
