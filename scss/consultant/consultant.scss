@@ -200,12 +200,16 @@ h4 {
 	}
 
 	&.cfp {
-		background-image: url("../img/certifications/cfp.png");
-		@include scale(3rem, 2rem, 2.2rem);
+		// background-image: url("../img/certifications/cfp.png");
+		// @include scale(3rem, 2rem, 2.2rem);
+		width: auto;
+		height: 1.46667rem;
 		margin-left: 3rem;
 
 		@media #{$large-up} {
-			@include scale(3rem, 2rem, 3.4rem);
+			// @include scale(3rem, 2rem, 3.4rem);
+			width: auto;
+			height: 1.46667rem;
 			margin-bottom: 0.2rem;
 		}
 	}
@@ -426,6 +430,24 @@ h4 {
 }
 
 /*------Buttons----------*/
+
+.buttons{
+	text-align: center;
+	clear: both;
+
+	a{
+		display: inline-block;
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+		margin-bottom: 1rem;
+
+		@media #{$small-only}{
+			display: block!important;
+		}
+	}
+
+
+}
 
 a.outline-btn {
    background: $igGreen none repeat scroll 0 0;
@@ -2790,14 +2812,15 @@ a.map-anchor {
 
 				.illustration {
 					@media #{$medium-up} {
-						position: absolute;
+						// position: absolute;
+						float: right;
 					}
 				}
 
 				+ .columns {
 					@media #{$medium-up} {
 						top: -.6rem;
-						padding-left: 17.5rem;
+						// padding-left: 17.5rem;
 						padding-right: 0;
 					}
 
@@ -3411,6 +3434,7 @@ a.map-anchor {
 
 /*--------------11.Events----------------------*/
 .section.events {
+
 	.row {
 		.row {
 			margin: 0;
@@ -3518,6 +3542,63 @@ a.map-anchor {
 					padding-right: 0;
     				padding-bottom: 10rem;
 				}
+			}
+		}
+	}
+
+	.event-link.hide{
+		display: none;
+	}
+
+	.medium-4{
+
+		@media #{$medium-up}{
+
+			&:first-child:nth-last-child(3),
+			&:first-child:nth-last-child(3) ~ .medium-4 {
+				width: 50%;
+			}
+
+
+
+			// &:only-child{
+
+			&:first-child:nth-last-child(2),
+			&:first-child:nth-last-child(2) ~ .medium-4 {
+				width: 80%;
+			    padding-right: 0;
+			    margin: 0 auto;
+			    float: none;
+			    padding-right: 0;
+
+			    .illustration{
+			    	float: left;
+				    margin-bottom: 1rem!important;
+				    margin-right: 3rem!important;
+			    }
+
+			    .event-date{
+			    	float: left;
+
+			    	p{
+			    		margin-bottom: 0;
+			    		margin-top: 0!important;
+			    	}
+			    }
+
+			    .event-description{
+			    	.event-link.hide{
+				    	display: block!important;
+				    	float: left;
+					    position: relative!important;
+					    margin-top: 3rem;
+				    }
+			    }
+
+			    .event-link{
+				    display: none;
+			    }
+
 			}
 		}
 	}
@@ -4234,6 +4315,9 @@ a.map-anchor {
 }
 
 .homepage-carousel{
+
+		margin-bottom: 9rem;
+
 	.slick-arrow{
 		&.carousel-prev {
 				left: 0;
