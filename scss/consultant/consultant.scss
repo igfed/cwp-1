@@ -1,5 +1,9 @@
 /*--------------------------------MAIN ELEMENTS----------------------------------------*/
 
+
+html, body{
+	overflow-x: hidden!important;
+}
 /*-------Fonts------------*/
 h1 {
 	@include font("tp_01");
@@ -382,9 +386,9 @@ h4 {
 			display: table-row;
 
 			> div.columns {
-				display: table-cell;
-				width: auto;
-				float: none;
+				// display: table-cell;
+				// width: auto;
+				// float: none;
 
 				+ div.columns {
 					@include horizontal-separator("&", .1rem, 0, 45%);
@@ -723,6 +727,8 @@ a.outline-btn {
 		    padding: .8rem 0 2.5rem;
 
 		    li {
+
+		    	text-align: left;
 		    	&.emphasize {
 		    		text-align: center;
 		    		margin-top: .2rem;
@@ -770,10 +776,6 @@ a.outline-btn {
 		    				border-color: $igGreen;
 		    			}
 		    		}
-		    	}
-
-		    	+ li {
-		    		text-align: left;
 		    	}
 		    }
 	}
@@ -1086,6 +1088,10 @@ form {
 		&:last-child {
 			.outline-btn {
 				margin-bottom: 23.9rem;
+
+				@media #{$small-only}{
+					margin-bottom: 3rem;
+				}
 			}
 		}
 	}
@@ -1515,13 +1521,21 @@ p.server-error {
 	@media #{$small-only} {
 		overflow: hidden;
 	}
+}
 
-	.reveal.full {
+.reveal.full {
+
 		@media #{$small-only} {
-			padding: 0;
+			top: 0!important;
+			min-height: 100%;
+			height: 100%;
+
+			.form-button{
+				margin-bottom: 5rem;
+				text-align: center;
+			}
 		}
 	}
-}
 
 body[data-whatinput="mouse"] {
 	select:focus {
@@ -3435,17 +3449,17 @@ a.map-anchor {
 /*--------------11.Events----------------------*/
 .section.events {
 
-	.row {
+
+	.info-toggle-content{
 		.row {
-			margin: 0;
+			margin: 0 auto;
+			height: 100%;
 
 			@media #{$medium-up} {
 				display: flex;
 			}
 
 			&:first-child {
-				max-width: 87rem;
-				// margin: 0 auto 13.5rem;
 
 				@media #{$small-only} {
 					margin-bottom: 1.9rem;
@@ -3489,8 +3503,9 @@ a.map-anchor {
 					}
 
 					@media #{$large-up} {
-						width: 22.6rem;
-						height: 22.6rem;
+						max-width: 22.6rem;
+						width: 100%;
+						height: auto;
 					}
 				}
 
@@ -3524,79 +3539,60 @@ a.map-anchor {
 
 					@media #{$medium-up} {
 						// letter-spacing: 2px;
-						position: absolute;
-						top: 100%;
-						transform: translateY(-100%);
+						// position: absolute;
+						// top: 100%;
+						// transform: translateY(-100%);
 					}
 				}
 			}
 		}
 	}
 
-	.info-toggle-content{
-		.small-12{
-			.row:nth-child(1){
-				margin: 0 auto;
 
-				.small-12{
-					padding-right: 0;
-    				padding-bottom: 10rem;
-				}
-			}
-		}
-	}
-
-	.event-link.hide{
-		display: none;
-	}
-
-	.medium-4{
+	.medium-4.event{
 
 		@media #{$medium-up}{
 
-			&:first-child:nth-last-child(3),
-			&:first-child:nth-last-child(3) ~ .medium-4 {
+			&:first-child:nth-last-child(2),
+			&:first-child:nth-last-child(2) ~ .medium-4.event {
+
 				width: 50%;
 			}
+		}
 
-
-
-			// &:only-child{
-
-			&:first-child:nth-last-child(2),
-			&:first-child:nth-last-child(2) ~ .medium-4 {
-				width: 80%;
+		@media #{$medium-up}{
+			&:only-child{
+				width: 100%;
 			    padding-right: 0;
 			    margin: 0 auto;
 			    float: none;
 			    padding-right: 0;
 
-			    .illustration{
+
+			    .event-illustration{
+			    	width: 28%;
 			    	float: left;
-				    margin-bottom: 1rem!important;
-				    margin-right: 3rem!important;
 			    }
 
-			    .event-date{
-			    	float: left;
-
-			    	p{
-			    		margin-bottom: 0;
-			    		margin-top: 0!important;
-			    	}
+			    .illustration{
+			    	float: right;
+			    	// height: 138px;
+    				// width: 138px;
 			    }
 
 			    .event-description{
-			    	.event-link.hide{
-				    	display: block!important;
-				    	float: left;
-					    position: relative!important;
-					    margin-top: 3rem;
-				    }
-			    }
+			    	// float: left;
+			    	float: right;
+			    	width: 66%;
 
-			    .event-link{
-				    display: none;
+			    	.event-date{
+			    		margin-top: 2rem;
+			    		margin-bottom: 1rem;
+			    		p{
+			    			margin-top: 0;
+			    			margin-bottom: 0;
+			    		}
+			    	}
 			    }
 
 			}

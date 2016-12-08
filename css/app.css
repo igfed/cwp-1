@@ -4836,6 +4836,8 @@ html.IGv2 {
     font-family: "whitney_bookregular";
     font-size: 1.6rem;
     color: #d42f1a; }
+  html.IGv2 html, html.IGv2 body {
+    overflow-x: hidden !important; }
   html.IGv2 h1 {
     font-family: "whitney_lightregular";
     font-size: 4rem;
@@ -5145,23 +5147,19 @@ html.IGv2 {
         width: auto !important; }
       html.IGv2 .small-proportional-grid > div {
         display: table-row; }
-        html.IGv2 .small-proportional-grid > div > div.columns {
-          display: table-cell;
-          width: auto;
-          float: none; }
-          html.IGv2 .small-proportional-grid > div > div.columns + div.columns {
-            position: relative;
-            margin-left: 0; }
-            html.IGv2 .small-proportional-grid > div > div.columns + div.columns::after {
-              border-left: 0.1rem solid #c1cbd0;
-              content: "";
-              height: 45%;
-              left: -0.05rem;
-              position: absolute;
-              top: 27.5%; }
+        html.IGv2 .small-proportional-grid > div > div.columns + div.columns {
+          position: relative;
+          margin-left: 0; }
           html.IGv2 .small-proportional-grid > div > div.columns + div.columns::after {
-            border-color: #174263;
-            top: calc(30% - 1rem); } }
+            border-left: 0.1rem solid #c1cbd0;
+            content: "";
+            height: 45%;
+            left: -0.05rem;
+            position: absolute;
+            top: 27.5%; }
+        html.IGv2 .small-proportional-grid > div > div.columns + div.columns::after {
+          border-color: #174263;
+          top: calc(30% - 1rem); } }
   html.IGv2 .clear {
     clear: both; }
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
@@ -5376,76 +5374,76 @@ html.IGv2 {
       box-shadow: 0 1px 7.5px rgba(0, 0, 0, 0.35);
       min-width: 28rem;
       padding: .8rem 0 2.5rem; }
-      html.IGv2 .dropdown.menu .is-dropdown-submenu li.emphasize {
-        text-align: center;
-        margin-top: .2rem;
-        margin-bottom: 1.7rem; }
-        html.IGv2 .dropdown.menu .is-dropdown-submenu li.emphasize {
-          position: relative;
-          margin-top: 0; }
-          html.IGv2 .dropdown.menu .is-dropdown-submenu li.emphasize::after {
-            border-top: 0.1rem solid #c1cbd0;
-            content: "";
-            width: 100%;
-            top: -0.05rem;
-            position: absolute;
-            left: 0%; }
-        html.IGv2 .dropdown.menu .is-dropdown-submenu li.emphasize::after {
-          top: auto;
-          bottom: -.9rem; }
-        html.IGv2 .dropdown.menu .is-dropdown-submenu li.emphasize a {
-          padding-top: 1.6rem;
-          padding-bottom: 2rem; }
-      html.IGv2 .dropdown.menu .is-dropdown-submenu li a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 1rem 22.25% .7rem;
-        font-family: "whitney_scmedium";
-        font-size: 1.4rem;
-        color: white;
-        text-transform: lowercase;
-        letter-spacing: 1px; }
-        @media screen and (min-width: 64em) {
-          html.IGv2 .dropdown.menu .is-dropdown-submenu li a {
-            font-size: 1.6rem; } }
-        html.IGv2 .dropdown.menu .is-dropdown-submenu li a {
-          color: #0d263c; }
-        html.IGv2 .dropdown.menu .is-dropdown-submenu li a strong {
-          margin-bottom: 0.2rem;
-          font-weight: 400;
-          display: block; }
-        html.IGv2 .dropdown.menu .is-dropdown-submenu li a span {
-          font-family: "whitney_bookregular";
-          font-size: 1.6rem;
-          color: #0d263c;
-          display: block; }
-          @media screen and (min-width: 64em) {
-            html.IGv2 .dropdown.menu .is-dropdown-submenu li a span {
-              font-size: 1.8rem;
-              line-height: 2.8rem; } }
-          @media screen and (max-width: 39.9375em) {
-            html.IGv2 .dropdown.menu .is-dropdown-submenu li a span {
-              font-size: 1.4rem;
-              line-height: 1.9rem; } }
-        html.IGv2 .dropdown.menu .is-dropdown-submenu li a:hover {
-          background-color: #dbdfe2; }
-          html.IGv2 .dropdown.menu .is-dropdown-submenu li a:hover {
-            position: relative;
-            margin-left: 0; }
-            html.IGv2 .dropdown.menu .is-dropdown-submenu li a:hover::after {
-              border-left: 0.2rem solid #c1cbd0;
-              content: "";
-              height: 30%;
-              left: -0.1rem;
-              position: absolute;
-              top: 35%; }
-          html.IGv2 .dropdown.menu .is-dropdown-submenu li a:hover::after {
-            left: calc(22.25% - 0.8rem);
-            top: calc(35% + .3rem);
-            border-color: #0ed59a; }
-      html.IGv2 .dropdown.menu .is-dropdown-submenu li + li {
+      html.IGv2 .dropdown.menu .is-dropdown-submenu li {
         text-align: left; }
+        html.IGv2 .dropdown.menu .is-dropdown-submenu li.emphasize {
+          text-align: center;
+          margin-top: .2rem;
+          margin-bottom: 1.7rem; }
+          html.IGv2 .dropdown.menu .is-dropdown-submenu li.emphasize {
+            position: relative;
+            margin-top: 0; }
+            html.IGv2 .dropdown.menu .is-dropdown-submenu li.emphasize::after {
+              border-top: 0.1rem solid #c1cbd0;
+              content: "";
+              width: 100%;
+              top: -0.05rem;
+              position: absolute;
+              left: 0%; }
+          html.IGv2 .dropdown.menu .is-dropdown-submenu li.emphasize::after {
+            top: auto;
+            bottom: -.9rem; }
+          html.IGv2 .dropdown.menu .is-dropdown-submenu li.emphasize a {
+            padding-top: 1.6rem;
+            padding-bottom: 2rem; }
+        html.IGv2 .dropdown.menu .is-dropdown-submenu li a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 1rem 22.25% .7rem;
+          font-family: "whitney_scmedium";
+          font-size: 1.4rem;
+          color: white;
+          text-transform: lowercase;
+          letter-spacing: 1px; }
+          @media screen and (min-width: 64em) {
+            html.IGv2 .dropdown.menu .is-dropdown-submenu li a {
+              font-size: 1.6rem; } }
+          html.IGv2 .dropdown.menu .is-dropdown-submenu li a {
+            color: #0d263c; }
+          html.IGv2 .dropdown.menu .is-dropdown-submenu li a strong {
+            margin-bottom: 0.2rem;
+            font-weight: 400;
+            display: block; }
+          html.IGv2 .dropdown.menu .is-dropdown-submenu li a span {
+            font-family: "whitney_bookregular";
+            font-size: 1.6rem;
+            color: #0d263c;
+            display: block; }
+            @media screen and (min-width: 64em) {
+              html.IGv2 .dropdown.menu .is-dropdown-submenu li a span {
+                font-size: 1.8rem;
+                line-height: 2.8rem; } }
+            @media screen and (max-width: 39.9375em) {
+              html.IGv2 .dropdown.menu .is-dropdown-submenu li a span {
+                font-size: 1.4rem;
+                line-height: 1.9rem; } }
+          html.IGv2 .dropdown.menu .is-dropdown-submenu li a:hover {
+            background-color: #dbdfe2; }
+            html.IGv2 .dropdown.menu .is-dropdown-submenu li a:hover {
+              position: relative;
+              margin-left: 0; }
+              html.IGv2 .dropdown.menu .is-dropdown-submenu li a:hover::after {
+                border-left: 0.2rem solid #c1cbd0;
+                content: "";
+                height: 30%;
+                left: -0.1rem;
+                position: absolute;
+                top: 35%; }
+            html.IGv2 .dropdown.menu .is-dropdown-submenu li a:hover::after {
+              left: calc(22.25% - 0.8rem);
+              top: calc(35% + .3rem);
+              border-color: #0ed59a; }
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .dropdown.menu.small-grid > li.is-dropdown-submenu-parent a.outline-btn {
         display: none; }
@@ -5639,6 +5637,9 @@ html.IGv2 {
               padding-right: 2.5rem; } }
       html.IGv2 form .row:last-child .outline-btn {
         margin-bottom: 23.9rem; }
+        @media screen and (max-width: 39.9375em) {
+          html.IGv2 form .row:last-child .outline-btn {
+            margin-bottom: 3rem; } }
     html.IGv2 form h3 {
       font-family: "whitney_bookregular";
       font-size: 2.4rem;
@@ -5941,9 +5942,14 @@ html.IGv2 {
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .reveal-overlay {
         overflow: hidden; } }
-    @media screen and (max-width: 39.9375em) {
-      html.IGv2 .reveal-overlay .reveal.full {
-        padding: 0; } }
+  @media screen and (max-width: 39.9375em) {
+    html.IGv2 .reveal.full {
+      top: 0 !important;
+      min-height: 100%;
+      height: 100%; }
+      html.IGv2 .reveal.full .form-button {
+        margin-bottom: 5rem;
+        text-align: center; } }
   html.IGv2 body[data-whatinput="mouse"] select:focus {
     outline: none; }
   html.IGv2 a.map-anchor {
@@ -7300,139 +7306,119 @@ html.IGv2 {
       html.IGv2 .section.careers .form-actions div:nth-child(2) {
         text-align: left;
         padding-left: 2.5rem; } }
-  html.IGv2 .section.events .row .row {
-    margin: 0; }
+  html.IGv2 .section.events .info-toggle-content .row {
+    margin: 0 auto;
+    height: 100%; }
     @media screen and (min-width: 40em) {
-      html.IGv2 .section.events .row .row {
+      html.IGv2 .section.events .info-toggle-content .row {
         display: -ms-flexbox;
         display: flex; } }
-    html.IGv2 .section.events .row .row:first-child {
-      max-width: 87rem; }
-      @media screen and (max-width: 39.9375em) {
-        html.IGv2 .section.events .row .row:first-child {
-          margin-bottom: 1.9rem; } }
-    html.IGv2 .section.events .row .row:last-child {
+    @media screen and (max-width: 39.9375em) {
+      html.IGv2 .section.events .info-toggle-content .row:first-child {
+        margin-bottom: 1.9rem; } }
+    html.IGv2 .section.events .info-toggle-content .row:last-child {
       margin-bottom: 7rem; }
       @media screen and (max-width: 39.9375em) {
-        html.IGv2 .section.events .row .row:last-child {
+        html.IGv2 .section.events .info-toggle-content .row:last-child {
           margin-bottom: 1rem; } }
-    html.IGv2 .section.events .row .row .columns {
+    html.IGv2 .section.events .info-toggle-content .row .columns {
       padding-bottom: 5.4rem;
       position: relative; }
       @media screen and (max-width: 39.9375em) {
-        html.IGv2 .section.events .row .row .columns {
+        html.IGv2 .section.events .info-toggle-content .row .columns {
           padding-bottom: 4.8rem; }
-          html.IGv2 .section.events .row .row .columns:last-child {
+          html.IGv2 .section.events .info-toggle-content .row .columns:last-child {
             padding-bottom: 0; } }
       @media screen and (min-width: 64em) {
-        html.IGv2 .section.events .row .row .columns {
+        html.IGv2 .section.events .info-toggle-content .row .columns {
           padding-right: 8.0586rem; }
-          html.IGv2 .section.events .row .row .columns + .columns {
+          html.IGv2 .section.events .info-toggle-content .row .columns + .columns {
             padding-left: 4.0293rem;
             padding-right: 4.0293rem; }
-            html.IGv2 .section.events .row .row .columns + .columns:last-child {
+            html.IGv2 .section.events .info-toggle-content .row .columns + .columns:last-child {
               padding-right: 0;
               padding-left: 8.0586rem; } }
       @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-        html.IGv2 .section.events .row .row .columns {
+        html.IGv2 .section.events .info-toggle-content .row .columns {
           padding-right: 3.996rem; }
-          html.IGv2 .section.events .row .row .columns + .columns {
+          html.IGv2 .section.events .info-toggle-content .row .columns + .columns {
             padding-left: 1.998rem;
             padding-right: 1.998rem; }
-            html.IGv2 .section.events .row .row .columns + .columns:last-child {
+            html.IGv2 .section.events .info-toggle-content .row .columns + .columns:last-child {
               padding-right: 0;
               padding-left: 3.996rem; } }
-      html.IGv2 .section.events .row .row .columns .illustration {
+      html.IGv2 .section.events .info-toggle-content .row .columns .illustration {
         display: block;
         margin: 0 auto 5.5rem; }
         @media screen and (max-width: 39.9375em) {
-          html.IGv2 .section.events .row .row .columns .illustration {
+          html.IGv2 .section.events .info-toggle-content .row .columns .illustration {
             margin-bottom: 2.5rem; } }
         @media screen and (min-width: 64em) {
-          html.IGv2 .section.events .row .row .columns .illustration {
-            width: 22.6rem;
-            height: 22.6rem; } }
-      html.IGv2 .section.events .row .row .columns p {
+          html.IGv2 .section.events .info-toggle-content .row .columns .illustration {
+            max-width: 22.6rem;
+            width: 100%;
+            height: auto; } }
+      html.IGv2 .section.events .info-toggle-content .row .columns p {
         font-family: "whitney_bookregular";
         font-size: 1.6rem;
         color: #0d263c; }
         @media screen and (min-width: 64em) {
-          html.IGv2 .section.events .row .row .columns p {
+          html.IGv2 .section.events .info-toggle-content .row .columns p {
             font-size: 1.8rem;
             line-height: 2.8rem; } }
         @media screen and (max-width: 39.9375em) {
-          html.IGv2 .section.events .row .row .columns p {
+          html.IGv2 .section.events .info-toggle-content .row .columns p {
             font-size: 1.4rem;
             line-height: 1.9rem; } }
-        html.IGv2 .section.events .row .row .columns p {
+        html.IGv2 .section.events .info-toggle-content .row .columns p {
           line-height: 3rem; }
           @media screen and (max-width: 39.9375em) {
-            html.IGv2 .section.events .row .row .columns p {
+            html.IGv2 .section.events .info-toggle-content .row .columns p {
               font-size: 1.6rem;
               line-height: 2.5rem; } }
-        html.IGv2 .section.events .row .row .columns p + p {
+        html.IGv2 .section.events .info-toggle-content .row .columns p + p {
           margin-top: 3rem; }
           @media screen and (max-width: 39.9375em) {
-            html.IGv2 .section.events .row .row .columns p + p {
+            html.IGv2 .section.events .info-toggle-content .row .columns p + p {
               margin-top: 2.5rem; } }
-          html.IGv2 .section.events .row .row .columns p + p + p {
+          html.IGv2 .section.events .info-toggle-content .row .columns p + p + p {
             margin-top: -1rem; }
-      html.IGv2 .section.events .row .row .columns .underline-link {
+      html.IGv2 .section.events .info-toggle-content .row .columns .underline-link {
         font-family: "whitney_scmedium";
         font-size: 1.4rem;
         color: white;
         text-transform: lowercase;
         letter-spacing: 1px; }
         @media screen and (min-width: 64em) {
-          html.IGv2 .section.events .row .row .columns .underline-link {
+          html.IGv2 .section.events .info-toggle-content .row .columns .underline-link {
             font-size: 1.6rem; } }
-        html.IGv2 .section.events .row .row .columns .underline-link {
+        html.IGv2 .section.events .info-toggle-content .row .columns .underline-link {
           color: #0d263c; }
-        @media screen and (min-width: 40em) {
-          html.IGv2 .section.events .row .row .columns .underline-link {
-            position: absolute;
-            top: 100%;
-            -ms-transform: translateY(-100%);
-                transform: translateY(-100%); } }
-  html.IGv2 .section.events .info-toggle-content .small-12 .row:nth-child(1) {
-    margin: 0 auto; }
-    html.IGv2 .section.events .info-toggle-content .small-12 .row:nth-child(1) .small-12 {
-      padding-right: 0;
-      padding-bottom: 10rem; }
-  html.IGv2 .section.events .event-link.hide {
-    display: none; }
   @media screen and (min-width: 40em) {
-    html.IGv2 .section.events .medium-4:first-child:nth-last-child(3),
-    html.IGv2 .section.events .medium-4:first-child:nth-last-child(3) ~ .medium-4 {
-      width: 50%; }
-    html.IGv2 .section.events .medium-4:first-child:nth-last-child(2),
-    html.IGv2 .section.events .medium-4:first-child:nth-last-child(2) ~ .medium-4 {
-      width: 80%;
+    html.IGv2 .section.events .medium-4.event:first-child:nth-last-child(2),
+    html.IGv2 .section.events .medium-4.event:first-child:nth-last-child(2) ~ .medium-4.event {
+      width: 50%; } }
+  @media screen and (min-width: 40em) {
+    html.IGv2 .section.events .medium-4.event:only-child {
+      width: 100%;
       padding-right: 0;
       margin: 0 auto;
       float: none;
       padding-right: 0; }
-      html.IGv2 .section.events .medium-4:first-child:nth-last-child(2) .illustration,
-      html.IGv2 .section.events .medium-4:first-child:nth-last-child(2) ~ .medium-4 .illustration {
-        float: left;
-        margin-bottom: 1rem !important;
-        margin-right: 3rem !important; }
-      html.IGv2 .section.events .medium-4:first-child:nth-last-child(2) .event-date,
-      html.IGv2 .section.events .medium-4:first-child:nth-last-child(2) ~ .medium-4 .event-date {
+      html.IGv2 .section.events .medium-4.event:only-child .event-illustration {
+        width: 28%;
         float: left; }
-        html.IGv2 .section.events .medium-4:first-child:nth-last-child(2) .event-date p,
-        html.IGv2 .section.events .medium-4:first-child:nth-last-child(2) ~ .medium-4 .event-date p {
-          margin-bottom: 0;
-          margin-top: 0 !important; }
-      html.IGv2 .section.events .medium-4:first-child:nth-last-child(2) .event-description .event-link.hide,
-      html.IGv2 .section.events .medium-4:first-child:nth-last-child(2) ~ .medium-4 .event-description .event-link.hide {
-        display: block !important;
-        float: left;
-        position: relative !important;
-        margin-top: 3rem; }
-      html.IGv2 .section.events .medium-4:first-child:nth-last-child(2) .event-link,
-      html.IGv2 .section.events .medium-4:first-child:nth-last-child(2) ~ .medium-4 .event-link {
-        display: none; } }
+      html.IGv2 .section.events .medium-4.event:only-child .illustration {
+        float: right; }
+      html.IGv2 .section.events .medium-4.event:only-child .event-description {
+        float: right;
+        width: 66%; }
+        html.IGv2 .section.events .medium-4.event:only-child .event-description .event-date {
+          margin-top: 2rem;
+          margin-bottom: 1rem; }
+          html.IGv2 .section.events .medium-4.event:only-child .event-description .event-date p {
+            margin-top: 0;
+            margin-bottom: 0; } }
   html.IGv2 .section.associations {
     padding-bottom: 10rem; }
     @media screen and (max-width: 39.9375em) {
