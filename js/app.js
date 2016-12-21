@@ -2,8 +2,8 @@
     'use strict';
 
 
-    $.fn.infoToggle = function() {
-        this.each(function() {
+    $.fn.infoToggle = function () {
+        this.each(function () {
             var $reveal = $(this),
                 $revealContent = $reveal.find('.info-toggle-content'),
                 $revealTrigger = $reveal.find('.info-toggle-trigger'),
@@ -66,8 +66,8 @@
 (function ($) {
     'use strict';
 
-    $.fn.blockLink = function() {
-        this.each(function() {
+    $.fn.blockLink = function () {
+        this.each(function () {
             var $blockLink = $(this),
                 destination = $blockLink.find('a').attr('href');
 
@@ -92,8 +92,8 @@
 (function ($) {
     'use strict';
 
-    $.fn.chooseDayOfWeek = function() {
-        this.each(function() {
+    $.fn.chooseDayOfWeek = function () {
+        this.each(function () {
             var $container = $(this);
 
             init();
@@ -112,8 +112,8 @@
 
 (function ($) {
 
-    $.fn.popupPlaceholder = function() {
-        this.each(function() {
+    $.fn.popupPlaceholder = function () {
+        this.each(function () {
             var $input = $(this),
                 $label = $input.parent('label');
 
@@ -140,7 +140,7 @@
 
 }(jQuery));
 
-(function() {
+(function () {
     'use strict';
 
     var gui,
@@ -168,16 +168,16 @@
 
         function init() {
             $.getScript(validationScript)
-                .then(function() {
+                .then(function () {
                     $.getScript(additionalScript);
                 })
-                .then(function() {
+                .then(function () {
                     form.validate();
                 });
 
             form.on('submit', handleSubmit);
 
-            form.find('.outline-btn').on('click', function(event) {
+            form.find('.outline-btn').on('click', function (event) {
                 form.submit();
                 return false;
             });
@@ -239,7 +239,7 @@
             if (!$personnelDetailsMarkup) {
                 $personnelDetailsMarkup = $('<div></div>');
                 $personnelDetailsMarkup.addClass(personnelDetailsOverlayClass);
-                $personnelDetails.each(function(i) {
+                $personnelDetails.each(function (i) {
                     $rendered = $('<div></div>');
                     $container = $('<div></div>');
                     $rendered.addClass('carousel-slides');
@@ -321,7 +321,7 @@
             if (personnelDetailsCarouselInited) {
                 $personnelDetailsMarkup.slick('unslick');
             }
-            $personnelDetailsMarkup.on('afterChange', function(event, slick, currentSlide) {
+            $personnelDetailsMarkup.on('afterChange', function (event, slick, currentSlide) {
                 newHash = $personnelDetailsMarkup
                     .find('[data-slick-index=' + currentSlide + ']')
                     .attr('personnel-token');
@@ -334,32 +334,32 @@
             });
             personnelDetailsCarouselInited = true;
             initialIndex = $personnelDetailsMarkup
-                .find('[href="' + location.hash + '"]')
-                .parents('.carousel-slides')
-                .attr('data-slick-index') | initialIndex;
+                    .find('[href="' + location.hash + '"]')
+                    .parents('.carousel-slides')
+                    .attr('data-slick-index') | initialIndex;
             $personnelDetailsMarkup.slick('slickGoTo', initialIndex, true);
         }
 
         function initSlider(target, options) {
             var defaults = {
-                    prevArrow: '<span type="button" class="carousel-prev"><img src="//www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-L.svg"></span>',
-                    nextArrow: '<span type="button" class="carousel-next"><img src="//www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-R.svg"></span>',
-                    speed: 1200,
-                    dots: true,
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
-                    responsive: [
-                        {
-                            breakpoint: 768,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1,
-                                infinite: true
-                            }
+                prevArrow: '<span type="button" class="carousel-prev"><img src="//www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-L.svg"></span>',
+                nextArrow: '<span type="button" class="carousel-next"><img src="//www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-R.svg"></span>',
+                speed: 1200,
+                dots: true,
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true
                         }
-                    ]
-                };
+                    }
+                ]
+            };
 
             target.slick($.extend(defaults, options));
         }
@@ -385,7 +385,7 @@
 
         function geocodeAddress(address, map) {
 
-            geocoder.geocode({'address': address}, function(results, status) {
+            geocoder.geocode({'address': address}, function (results, status) {
                 if (status === 'OK') {
                     setAddressOnMap(results[0].geometry.location, map);
                 } else {
@@ -403,10 +403,10 @@
         }
 
         function initMaps() {
-            mapDeferred.then(function() {
+            mapDeferred.then(function () {
                 geocoder = new google.maps.Geocoder();
 
-                $('.map-container').each(function() {
+                $('.map-container').each(function () {
                     var mapContainer = $(this),
                         parentContainer = $(mapContainer.parents('.row').get(0)),
                         mapAnchor = parentContainer.find('a:not(' + directionLinkClass + ')'),
@@ -448,7 +448,7 @@
         function setAddressOnMap(location, map) {
             map.setCenter(location);
 
-            $(window).on('resize', function() {
+            $(window).on('resize', function () {
                 map.setCenter(location);
             });
         }
@@ -588,7 +588,7 @@
         //-----
 
         function handleResize() {
-            if (player.getModule(APIModules.EXPERIENCE).experience.type == "html"){
+            if (player.getModule(APIModules.EXPERIENCE).experience.type == "html") {
                 var resizeWidth = resizeWrapper.innerWidth();
                 var resizeHeight = resizeWrapper.innerHeight();
                 player.getModule(APIModules.EXPERIENCE).setSize(resizeWidth, resizeHeight)
@@ -618,10 +618,10 @@
     }
 
     var form = $('[data-reveal] form');
-    form.each(function() {
+    form.each(function () {
         var $this = $(this)
         $this.validate();
-        $this.on('submit', function(){
+        $this.on('submit', function () {
             if ($this.valid && $this.valid()) {
                 $this.removeClass('server-error');
                 $this.addClass('submitting');
@@ -636,7 +636,7 @@
                 return false;
             }
         });
-        $this.find('.outline-btn').on('click', function(event) {
+        $this.find('.outline-btn').on('click', function (event) {
             $this.submit();
             return false;
         });
@@ -648,95 +648,104 @@
 })();
 
 function FormValidationModule(form, overlayReference) {
-        var validationScript = '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js',
-            additionalScript = '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/additional-methods.min.js',
-            overlay = overlayReference;
+    var validationScript = '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js',
+        additionalScript = '//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/additional-methods.min.js',
+        overlay = overlayReference;
 
-        init();
+    init();
 
-        function init() {
-            $.getScript(validationScript)
-                .then(function() {
-                    $.getScript(additionalScript);
-                })
-                .then(function() {
-                    form.validate();
-                });
-
-            form.on('submit', handleSubmit);
-
-            form.find('.outline-btn').on('click', function(event) {
-                form.submit();
-                return false;
+    function init() {
+        $.getScript(validationScript)
+            .then(function () {
+                $.getScript(additionalScript);
+            })
+            .then(function () {
+                form.validate();
             });
-        }
 
-        //-----
+        form.on('submit', handleSubmit);
 
-        function handleSubmit() {
-            if (form.valid && form.valid()) {
-                form.removeClass('server-error');
-                form.addClass('submitting');
-
-                //perform submission action
-                //return true;
-                //and on return:
-
-                overlay.openOverlay('forms/success.html');
-                return false;
-            } else {
-                return false;
-            }
-        }
+        form.find('.outline-btn').on('click', function (event) {
+            form.submit();
+            return false;
+        });
     }
 
-(function($){
+    //-----
 
- var $mainMenu, $searchInput, $clsBtnAccordion;
+    function handleSubmit() {
+        if (form.valid && form.valid()) {
+            form.removeClass('server-error');
+            form.addClass('submitting');
 
- // active the accordion on mobile
- $('#menu-button').on("click", function(){
-    $(this).closest("body").toggleClass("active"); 
+            //perform submission action
+            //return true;
+            //and on return:
 
- })
- // Deactive the accordion on mobile
- $clsBtnAccordion = $(".closeBtn--accordion");
- $clsBtnAccordion.on('click', function(){
-    // alert('xxx');
-    // $(this).closest("body").removeClass("active");
-    $('.header-accordion-wrap').hide();
- })
- 
- // Clear search and hide other menu item
- $mainMenu = $('.main-menu');
- $searchInput = $mainMenu.find('.search-input');
+            overlay.openOverlay('forms/success.html');
+            return false;
+        } else {
+            return false;
+        }
+    }
+}
 
- $searchInput.focus(function(){
-    $(this).closest("li")
-        .siblings()
-        .css("visibility", "hidden");
- }).blur(function(){
-    $(this).val("")
-        .closest("li").siblings()
-        .css("visibility", "visible")
- })
- 
- // Mobile reset button
-     var $mbSearchInput = $(".mb-search-input"),
-         $mbSearchReset = $(".mb-search-reset"),
-         $mbSearchForm = $(".mb-search-form");
+(function ($) {
 
-     $mbSearchInput.focus(function(){
-       if(!$mbSearchForm.hasClass("active")) 
-           $mbSearchForm.addClass('active');
-     }).blur(function(){
-       $mbSearchForm.removeClass('active')
-       $(this).val("");
-     });
+    var $mainMenu, $searchInput, $clsBtnAccordion;
 
-     $mbSearchReset.click(function(){
-       $mbSearchForm.removeClass("active");
-     });
+    // active the accordion on mobile
+    $('#menu-button').on("click", function () {
+        $(this).closest("body").toggleClass("active");
+    });
+
+
+    $("body a[href^='tel']").each(function () {
+        this.href = this.href.replace(/[ ()-]/g, "");
+    });
+
+    var cleanString = dirtyString.replace(/[|&;$%@"<>()+,]/g, "");
+    $(document).on("click", "a", function (e) {
+    });
+    $(document).on("click")
+    // Deactive the accordion on mobile
+    $clsBtnAccordion = $(".closeBtn--accordion");
+    $clsBtnAccordion.on('click', function () {
+        // alert('xxx');
+        // $(this).closest("body").removeClass("active");
+        $('.header-accordion-wrap').hide();
+    })
+
+    // Clear search and hide other menu item
+    $mainMenu = $('.main-menu');
+    $searchInput = $mainMenu.find('.search-input');
+
+    $searchInput.focus(function () {
+        $(this).closest("li")
+            .siblings()
+            .css("visibility", "hidden");
+    }).blur(function () {
+        $(this).val("")
+            .closest("li").siblings()
+            .css("visibility", "visible")
+    })
+
+    // Mobile reset button
+    var $mbSearchInput = $(".mb-search-input"),
+        $mbSearchReset = $(".mb-search-reset"),
+        $mbSearchForm = $(".mb-search-form");
+
+    $mbSearchInput.focus(function () {
+        if (!$mbSearchForm.hasClass("active"))
+            $mbSearchForm.addClass('active');
+    }).blur(function () {
+        $mbSearchForm.removeClass('active')
+        $(this).val("");
+    });
+
+    $mbSearchReset.click(function () {
+        $mbSearchForm.removeClass("active");
+    });
 
 
 })(jQuery);
