@@ -1872,6 +1872,7 @@ a.map-anchor {
 		padding-bottom: 2rem;
 		padding-bottom:0;
 
+
 		/*Media Query*/
 
 		@media #{$small-only} {
@@ -1881,6 +1882,38 @@ a.map-anchor {
 		@media screen and (min-width: 40em) and (max-width: 768px) {
 			// padding-left: 1.5rem;
 			// padding-right: 1.5rem;
+		}
+
+		.iiroc-advisor-report-button{
+			margin-top: 1rem;
+			margin-bottom: 3rem;
+		}
+
+		.certifications{
+			border-bottom: 1px solid $igBlue;
+		    width: auto;
+		    display: inline-block;
+		    padding-left: 3rem;
+		    padding-right: 3rem;
+		    padding-bottom: 1rem;
+		    margin-bottom: 0;
+
+		    @media #{$small-only}{
+		    	padding-left: 1rem;
+		    	padding-right: 1rem;
+		    	padding-bottom: 0.5rem;
+		    }
+
+		    a{
+		    	width: auto;
+    			display: inline;
+		    }
+
+		    img{
+		    	&:first-child{
+		    		margin-left: 0;
+		    	}
+		    }
 		}
 
 		> .row {

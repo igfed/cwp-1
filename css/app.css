@@ -6153,6 +6153,27 @@ html.IGv2 {
       @media screen and (max-width: 39.9375em) {
         html.IGv2 .section.personnel.profile {
           padding-top: 1.3rem; } }
+      html.IGv2 .section.personnel.profile .iiroc-advisor-report-button {
+        margin-top: 1rem;
+        margin-bottom: 3rem; }
+      html.IGv2 .section.personnel.profile .certifications {
+        border-bottom: 1px solid #0d263c;
+        width: auto;
+        display: inline-block;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 1rem;
+        margin-bottom: 0; }
+        @media screen and (max-width: 39.9375em) {
+          html.IGv2 .section.personnel.profile .certifications {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 0.5rem; } }
+        html.IGv2 .section.personnel.profile .certifications a {
+          width: auto;
+          display: inline; }
+        html.IGv2 .section.personnel.profile .certifications img:first-child {
+          margin-left: 0; }
       html.IGv2 .section.personnel.profile > .row {
         max-width: 105rem; }
         html.IGv2 .section.personnel.profile > .row + .row .columns .row {
